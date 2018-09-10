@@ -1,0 +1,31 @@
+Dec 28 17:27:07.246 HYPERVISOR: Release 0.2.17-amd64/Linux (tag 2017072410)
+Dec 28 17:27:07.246 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 49141.
+Dec 28 17:27:07.259 HYPERVISOR: exec_cmd: hypervisor version 
+Dec 28 17:27:07.259 HYPERVISOR: exec_cmd: hypervisor working_dir /home/diogof/Desktop/Projeto ARA/GNS3-project/project-files/dynamips 
+Dec 28 17:27:07.259 GENERAL: working_dir=/home/diogof/Desktop/Projeto ARA/GNS3-project/project-files/dynamips
+Dec 28 17:27:07.260 HYPERVISOR: exec_cmd: vm create R1 27 c7200 
+Dec 28 17:27:07.260 VM: VM R1 created.
+Dec 28 17:27:07.261 HYPERVISOR: exec_cmd: vm set_con_tcp_port R1 5030 
+Dec 28 17:27:07.261 HYPERVISOR: exec_cmd: c7200 get_mac_addr R1 
+Dec 28 17:27:07.262 HYPERVISOR: exec_cmd: vm get_status R1 
+Dec 28 17:27:07.263 HYPERVISOR: exec_cmd: vm slot_add_binding R1 0 0 C7200-IO-FE 
+Dec 28 17:27:07.263 HYPERVISOR: exec_cmd: vm get_status R1 
+Dec 28 17:27:07.263 HYPERVISOR: exec_cmd: vm slot_remove_binding R1 0 0 
+Dec 28 17:27:07.264 HYPERVISOR: exec_cmd: vm get_status R1 
+Dec 28 17:27:07.264 HYPERVISOR: exec_cmd: vm slot_add_binding R1 0 0 C7200-IO-2FE 
+Dec 28 17:27:07.265 HYPERVISOR: exec_cmd: vm get_status R1 
+Dec 28 17:27:07.265 HYPERVISOR: exec_cmd: vm set_idle_pc R1 0x60891b0c 
+Dec 28 17:27:07.266 HYPERVISOR: exec_cmd: vm set_ios R1 /home/diogof/GNS3/images/IOS/c7200-a3jk9s-mz.124-25d.image 
+Dec 28 17:27:07.266 HYPERVISOR: exec_cmd: vm set_ram R1 512 
+Dec 28 17:27:07.267 HYPERVISOR: exec_cmd: vm set_nvram R1 512 
+Dec 28 17:27:07.267 HYPERVISOR: exec_cmd: vm get_status R1 
+Dec 28 17:27:07.267 HYPERVISOR: exec_cmd: vm slot_add_binding R1 1 0 PA-2FE-TX 
+Dec 28 17:27:07.268 HYPERVISOR: exec_cmd: vm set_disk0 R1 0 
+Dec 28 17:27:07.269 HYPERVISOR: exec_cmd: vm set_config R1 configs/i27_startup-config.cfg 
+Dec 28 17:28:42.799 HYPERVISOR: exec_cmd: vm get_status R1 
+Dec 28 17:28:42.801 HYPERVISOR: exec_cmd: vm extract_config R1 
+Dec 28 17:28:42.803 HYPERVISOR: exec_cmd: vm delete R1 
+Dec 28 17:28:42.803 VM: VM R1 destroyed.
+Dec 28 17:28:42.809 HYPERVISOR: exec_cmd: hypervisor stop 
+Dec 28 17:28:42.842 HYPERVISOR: Stopped.
+Dec 28 17:28:42.842 GENERAL: reset done.

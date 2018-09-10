@@ -1,0 +1,50 @@
+Dec 21 00:59:04.092 HYPERVISOR: Release 0.2.17-amd64/Linux (tag 2017072410)
+Dec 21 00:59:04.092 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 41234.
+Dec 21 00:59:04.127 HYPERVISOR: exec_cmd: hypervisor version 
+Dec 21 00:59:04.129 HYPERVISOR: exec_cmd: hypervisor working_dir /home/diogof/Desktop/Projeto ARA/GNS3-project/project-files/dynamips 
+Dec 21 00:59:04.129 GENERAL: working_dir=/home/diogof/Desktop/Projeto ARA/GNS3-project/project-files/dynamips
+Dec 21 00:59:04.134 HYPERVISOR: exec_cmd: vm create Porto 7 c7200 
+Dec 21 00:59:04.134 VM: VM Porto created.
+Dec 21 00:59:04.144 HYPERVISOR: exec_cmd: vm set_con_tcp_port Porto 5006 
+Dec 21 00:59:04.146 HYPERVISOR: exec_cmd: c7200 get_mac_addr Porto 
+Dec 21 00:59:04.148 HYPERVISOR: exec_cmd: vm get_status Porto 
+Dec 21 00:59:04.150 HYPERVISOR: exec_cmd: vm slot_add_binding Porto 0 0 C7200-IO-FE 
+Dec 21 00:59:04.151 HYPERVISOR: exec_cmd: vm set_nvram Porto 512 
+Dec 21 00:59:04.153 HYPERVISOR: exec_cmd: vm get_status Porto 
+Dec 21 00:59:04.154 HYPERVISOR: exec_cmd: vm slot_add_binding Porto 1 0 PA-2FE-TX 
+Dec 21 00:59:04.156 HYPERVISOR: exec_cmd: vm set_ram Porto 512 
+Dec 21 00:59:04.158 HYPERVISOR: exec_cmd: vm get_status Porto 
+Dec 21 00:59:04.164 HYPERVISOR: exec_cmd: vm slot_remove_binding Porto 0 0 
+Dec 21 00:59:04.178 HYPERVISOR: exec_cmd: vm get_status Porto 
+Dec 21 00:59:04.185 HYPERVISOR: exec_cmd: vm slot_add_binding Porto 0 0 C7200-IO-2FE 
+Dec 21 00:59:04.188 HYPERVISOR: exec_cmd: vm get_status Porto 
+Dec 21 00:59:04.189 HYPERVISOR: exec_cmd: vm set_idle_pc Porto 0x63184bc8 
+Dec 21 00:59:04.191 HYPERVISOR: exec_cmd: vm set_disk0 Porto 0 
+Dec 21 00:59:04.192 HYPERVISOR: exec_cmd: c7200 set_mac_addr Porto ca07.490c.0000 
+Dec 21 00:59:04.194 HYPERVISOR: exec_cmd: vm set_ios Porto /home/diogof/GNS3/images/IOS/c7200-advipservicesk9-mz.152-4.S5.image 
+Dec 21 00:59:04.196 HYPERVISOR: exec_cmd: vm set_config Porto configs/i7_startup-config.cfg 
+Dec 21 00:59:04.197 HYPERVISOR: exec_cmd: vm set_config Porto configs/i7_startup-config.cfg configs/i7_private-config.cfg 
+Dec 21 00:59:05.487 HYPERVISOR: exec_cmd: nio create_udp udp-3d34336e-b536-46e5-8f3b-69f28e1f7428 10017 127.0.0.1 10018 
+Dec 21 00:59:05.488 HYPERVISOR: exec_cmd: vm slot_add_nio_binding Porto 0 1 udp-3d34336e-b536-46e5-8f3b-69f28e1f7428 
+Dec 21 00:59:05.488 HYPERVISOR: exec_cmd: vm get_status Porto 
+Dec 21 00:59:05.579 HYPERVISOR: exec_cmd: nio create_udp udp-e233e81d-fd1e-44ef-97cb-6e39554583ea 10025 127.0.0.1 10024 
+Dec 21 00:59:05.579 HYPERVISOR: exec_cmd: vm slot_add_nio_binding Porto 0 0 udp-e233e81d-fd1e-44ef-97cb-6e39554583ea 
+Dec 21 00:59:05.580 HYPERVISOR: exec_cmd: vm get_status Porto 
+Dec 21 00:59:05.783 HYPERVISOR: exec_cmd: nio create_udp udp-bc2bb212-8cda-4045-a228-a7a8e2b54793 10045 127.0.0.1 10044 
+Dec 21 00:59:05.786 HYPERVISOR: exec_cmd: vm slot_add_nio_binding Porto 1 0 udp-bc2bb212-8cda-4045-a228-a7a8e2b54793 
+Dec 21 00:59:05.788 HYPERVISOR: exec_cmd: vm get_status Porto 
+Dec 21 00:59:12.383 HYPERVISOR: exec_cmd: vm set_ghost_status Porto 2 
+Dec 21 00:59:12.393 HYPERVISOR: exec_cmd: vm set_ghost_file Porto c7200-advipservicesk9-mz.152-4.S5.image-512.ghost 
+Dec 21 00:59:12.395 HYPERVISOR: exec_cmd: vm get_status Porto 
+Dec 21 00:59:12.397 HYPERVISOR: exec_cmd: vm start Porto 
+Dec 21 01:02:08.093 HYPERVISOR: exec_cmd: vm get_status Porto 
+Dec 21 01:02:08.099 HYPERVISOR: exec_cmd: vm stop Porto 
+Dec 21 01:02:08.203 VM: VM Porto shutdown.
+Dec 21 01:02:08.204 HYPERVISOR: exec_cmd: vm extract_config Porto 
+Dec 21 01:02:16.727 HYPERVISOR: exec_cmd: vm get_status Porto 
+Dec 21 01:02:16.734 HYPERVISOR: exec_cmd: vm extract_config Porto 
+Dec 21 01:02:16.777 HYPERVISOR: exec_cmd: vm delete Porto 
+Dec 21 01:02:16.777 VM: VM Porto destroyed.
+Dec 21 01:02:16.780 HYPERVISOR: exec_cmd: hypervisor stop 
+Dec 21 01:02:17.267 HYPERVISOR: Stopped.
+Dec 21 01:02:17.267 GENERAL: reset done.

@@ -1,0 +1,56 @@
+Dec 21 00:59:04.581 HYPERVISOR: Release 0.2.17-amd64/Linux (tag 2017072410)
+Dec 21 00:59:04.581 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 33732.
+Dec 21 00:59:04.611 HYPERVISOR: exec_cmd: hypervisor version 
+Dec 21 00:59:04.613 HYPERVISOR: exec_cmd: hypervisor working_dir /home/diogof/Desktop/Projeto ARA/GNS3-project/project-files/dynamips 
+Dec 21 00:59:04.613 GENERAL: working_dir=/home/diogof/Desktop/Projeto ARA/GNS3-project/project-files/dynamips
+Dec 21 00:59:04.614 HYPERVISOR: exec_cmd: vm create Internet1 14 c7200 
+Dec 21 00:59:04.614 VM: VM Internet1 created.
+Dec 21 00:59:04.615 HYPERVISOR: exec_cmd: vm set_con_tcp_port Internet1 5023 
+Dec 21 00:59:04.615 HYPERVISOR: exec_cmd: c7200 get_mac_addr Internet1 
+Dec 21 00:59:04.616 HYPERVISOR: exec_cmd: vm get_status Internet1 
+Dec 21 00:59:04.617 HYPERVISOR: exec_cmd: vm slot_add_binding Internet1 0 0 C7200-IO-FE 
+Dec 21 00:59:04.617 HYPERVISOR: exec_cmd: vm set_nvram Internet1 512 
+Dec 21 00:59:04.618 HYPERVISOR: exec_cmd: vm get_status Internet1 
+Dec 21 00:59:04.619 HYPERVISOR: exec_cmd: vm slot_add_binding Internet1 1 0 PA-2FE-TX 
+Dec 21 00:59:04.619 HYPERVISOR: exec_cmd: vm set_ram Internet1 512 
+Dec 21 00:59:04.620 HYPERVISOR: exec_cmd: vm get_status Internet1 
+Dec 21 00:59:04.621 HYPERVISOR: exec_cmd: vm slot_remove_binding Internet1 0 0 
+Dec 21 00:59:04.622 HYPERVISOR: exec_cmd: vm get_status Internet1 
+Dec 21 00:59:04.622 HYPERVISOR: exec_cmd: vm slot_add_binding Internet1 0 0 C7200-IO-2FE 
+Dec 21 00:59:04.623 HYPERVISOR: exec_cmd: vm get_status Internet1 
+Dec 21 00:59:04.624 HYPERVISOR: exec_cmd: vm set_idle_pc Internet1 0x63184bc8 
+Dec 21 00:59:04.624 HYPERVISOR: exec_cmd: vm set_disk0 Internet1 0 
+Dec 21 00:59:04.625 HYPERVISOR: exec_cmd: c7200 set_mac_addr Internet1 ca0e.3a18.0000 
+Dec 21 00:59:04.626 HYPERVISOR: exec_cmd: vm set_ios Internet1 /home/diogof/GNS3/images/IOS/c7200-advipservicesk9-mz.152-4.S5.image 
+Dec 21 00:59:04.627 HYPERVISOR: exec_cmd: vm set_config Internet1 configs/i14_startup-config.cfg 
+Dec 21 00:59:06.131 HYPERVISOR: exec_cmd: nio create_udp udp-21a14b3b-bbb0-4d4a-9305-0a9fc6877bef 10078 127.0.0.1 10079 
+Dec 21 00:59:06.132 HYPERVISOR: exec_cmd: vm slot_add_nio_binding Internet1 0 0 udp-21a14b3b-bbb0-4d4a-9305-0a9fc6877bef 
+Dec 21 00:59:06.133 HYPERVISOR: exec_cmd: vm get_status Internet1 
+Dec 21 00:59:11.550 HYPERVISOR: exec_cmd: vm create Ghost 0 c7200 
+Dec 21 00:59:11.550 VM: VM Ghost created.
+Dec 21 00:59:11.552 HYPERVISOR: exec_cmd: vm set_ios Ghost /home/diogof/GNS3/images/IOS/c7200-advipservicesk9-mz.152-4.S5.image 
+Dec 21 00:59:11.554 HYPERVISOR: exec_cmd: vm set_ghost_status Ghost 1 
+Dec 21 00:59:11.555 HYPERVISOR: exec_cmd: vm set_ghost_file Ghost c7200-advipservicesk9-mz.152-4.S5.image-512.ghost 
+Dec 21 00:59:11.564 HYPERVISOR: exec_cmd: vm set_ram Ghost 512 
+Dec 21 00:59:11.570 HYPERVISOR: exec_cmd: vm get_status Ghost 
+Dec 21 00:59:11.573 HYPERVISOR: exec_cmd: vm start Ghost 
+Dec 21 00:59:11.888 HYPERVISOR: exec_cmd: vm get_status Ghost 
+Dec 21 00:59:11.889 HYPERVISOR: exec_cmd: vm stop Ghost 
+Dec 21 00:59:12.065 VM: VM Ghost shutdown.
+Dec 21 00:59:12.067 HYPERVISOR: exec_cmd: vm clean_delete Ghost 
+Dec 21 00:59:12.067 VM: VM Ghost destroyed.
+Dec 21 00:59:12.073 HYPERVISOR: exec_cmd: vm set_ghost_status Internet1 2 
+Dec 21 00:59:12.075 HYPERVISOR: exec_cmd: vm set_ghost_file Internet1 c7200-advipservicesk9-mz.152-4.S5.image-512.ghost 
+Dec 21 00:59:12.077 HYPERVISOR: exec_cmd: vm get_status Internet1 
+Dec 21 00:59:12.080 HYPERVISOR: exec_cmd: vm start Internet1 
+Dec 21 01:02:07.529 HYPERVISOR: exec_cmd: vm get_status Internet1 
+Dec 21 01:02:07.536 HYPERVISOR: exec_cmd: vm stop Internet1 
+Dec 21 01:02:07.620 VM: VM Internet1 shutdown.
+Dec 21 01:02:07.621 HYPERVISOR: exec_cmd: vm extract_config Internet1 
+Dec 21 01:02:16.729 HYPERVISOR: exec_cmd: vm get_status Internet1 
+Dec 21 01:02:16.734 HYPERVISOR: exec_cmd: vm extract_config Internet1 
+Dec 21 01:02:16.741 HYPERVISOR: exec_cmd: vm delete Internet1 
+Dec 21 01:02:16.741 VM: VM Internet1 destroyed.
+Dec 21 01:02:16.747 HYPERVISOR: exec_cmd: hypervisor stop 
+Dec 21 01:02:17.235 HYPERVISOR: Stopped.
+Dec 21 01:02:17.235 GENERAL: reset done.

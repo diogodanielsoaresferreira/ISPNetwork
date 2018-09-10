@@ -1,0 +1,35 @@
+-- /etc/network/interface ---
+
+auto lo
+iface lo inet loopback
+
+auto eth0
+iface eth0 inet static
+	address 65.0.1.4
+	netmask 255.255.255.0
+	gateway 65.0.1.1
+
+iface eth0 inet6 static
+	address 2301:65::4
+	netmask 64
+	gateway 2301:65::1
+
+
+-- /etc/asterisk/sip.conf --
+
+
+[Server1]
+type=peer
+host=192.100.1.3
+secret=labcom
+context=phones
+
+
+-- /etc/asterisk/extensions.conf --
+[phones]
+
+exten => _X., 1, Answer(500)
+exten => _X., n, Playback(vm-received)
+exten => _X., n, Playback(vm-goodbye)
+exten => _X., n, Hangup()
+

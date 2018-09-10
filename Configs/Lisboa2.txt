@@ -1,0 +1,241 @@
+
+
+----------------------
+--- Router Lisboa2 ---
+----------------------
+
+conf t
+ipv6 unicast-routing
+ip cef
+mpls ip
+mpls traffic-eng tunnels
+
+int f0/0
+ip add 4.4.4.10 255.255.255.252
+ipv6 add 2001:4:4::A/126
+no shut
+
+int f0/1
+ip add 4.4.4.6 255.255.255.252
+ipv6 add 2001:4:4::6/126
+no shut
+
+int f1/0
+ip add 10.0.1.1 255.255.255.252
+ipv6 add 2001:100:1:1::1/126
+ip ospf 1 area 0
+ipv6 ospf 1 area 0
+mpls ip
+mpls traffic-eng tunnels
+ip rsvp bandwidth 100000 100000
+no shut
+
+
+int f2/0
+ip add 10.2.0.1 255.255.255.0
+ip add 192.100.1.129 255.255.255.128 secondary
+ipv6 add 3001:10:2::1/48
+ipv6 add 2001:100:1:101::1/64
+ip ospf 1 area 0
+ipv6 ospf 1 area 0
+no shut
+
+int atm3/0
+no shut
+
+int atm3/0.1 point-to-point
+ip add 10.0.0.2 255.255.255.252
+ipv6 add 2001:100:1:10::2/126
+ip ospf 1 area 0
+ipv6 ospf 1 area 0
+mpls ip
+mpls traffic-eng tunnels
+ip rsvp bandwidth 100000 100000
+ip ospf network broadcast
+
+pvc 102/0
+encapsulation aal5snap
+protocol ip 10.0.0.1 broadcast
+protocol ipv6 2001:100:1:10::1 broadcast
+exit
+
+int atm3/0.2 point-to-point
+ip add 10.0.0.9 255.255.255.252
+ipv6 add 2001:100:1:10::9/126
+ip ospf 1 area 0
+ipv6 ospf 1 area 0
+mpls ip
+mpls traffic-eng tunnels
+ip rsvp bandwidth 100000 100000
+ip ospf network broadcast
+
+pvc 103/0
+encapsulation aal5snap
+protocol ip 10.0.0.10 broadcast
+protocol ipv6 2001:100:1:10::10 broadcast
+exit
+
+int lo0
+ip add 10.0.2.2 255.255.255.255
+ipv6 add 2001:100:1:2::2/128
+ip ospf 1 area 0
+ipv6 ospf 1 area 0
+no shut
+
+exit
+
+
+! non-transit AS
+ip as-path access-list 1 permit ^$
+
+! Internal AS
+ip as-path access-list 10 permit ^65400$
+
+
+! Internal public routes
+! Allow to netD1
+ip prefix-list intPublic seq 10 permit 192.100.1.0/24 le 32 
+! Allow to netA
+ip prefix-list intPublic seq 20 permit 110.1.1.0/24 le 32 
+! Allow to netB
+ip prefix-list intPublic seq 30 permit 111.1.1.0/24 le 32 
+! Allow to netC
+ip prefix-list intPublic seq 40 permit 112.1.1.0/24 le 32 
+! Deny all other routes
+ip prefix-list intPublic seq 100 deny 0.0.0.0/0 le 32
+
+
+! IPv6 only allow ip's that need connection to the internet
+! Allow to netD1
+ipv6 prefix-list intPublicv6 seq 10 permit 2001:100:1:100::/64 le 128
+! Allow to netA
+ipv6 prefix-list intPublicv6 seq 20 permit 3001:110::/48 le 128
+! Allow to netB
+ipv6 prefix-list intPublicv6 seq 30 permit 3001:111::/48 le 128
+! Allow to netC
+ipv6 prefix-list intPublicv6 seq 40 permit 3001:112::/48 le 128
+! Allow to public hosts/servers in Lisboa Datacenter
+ipv6 prefix-list intPublicv6 seq 50 permit 2001:100:1:101::/64 le 128
+! Deny all other routes
+ipv6 prefix-list intPublicv6 seq 100 deny ::/0 le 128
+
+
+! Remove lo0 announcements
+ip prefix-list remLo0 seq 10 deny 10.0.2.1/32
+ip prefix-list remLo0 seq 20 deny 10.0.2.2/32
+ip prefix-list remLo0 seq 30 deny 10.0.2.3/32
+ip prefix-list remLo0 seq 40 deny 10.0.2.4/32
+ip prefix-list remLo0 seq 100 permit 0.0.0.0/0 le 32
+
+
+! Remove lo0 announcements
+ipv6 prefix-list remLo0v6 seq 10 deny 2001:100:1:2::1/128
+ipv6 prefix-list remLo0v6 seq 20 deny 2001:100:1:2::2/128
+ipv6 prefix-list remLo0v6 seq 30 deny 2001:100:1:2::3/128
+ipv6 prefix-list remLo0v6 seq 40 deny 2001:100:1:2::4/128
+ipv6 prefix-list remLo0v6 seq 100 permit ::/0 le 128
+
+! Not receive the default route announcements from Aveiro and Oeiras OSPF
+ip prefix-list denyDefaultRoute seq 5 deny 0.0.0.0/0
+ip prefix-list denyDefaultRoute seq 10 permit 0.0.0.0/0 le 32
+
+! Not receive the default route announcements from Aveiro and Oeiras OSPF
+ipv6 prefix-list denyDefaultRoutev6 seq 5 deny ::/0
+ipv6 prefix-list denyDefaultRoutev6 seq 10 permit ::/0 le 128
+
+! Higher local-preference to PT1
+route-map internetToPT1 permit 10
+! All traffic to the internet goes through him
+set local-preference 200
+! Announce to Oeiras route to AS 2000
+! And do not announce Porto route
+set weight 100
+
+
+! Matches empty path and private AS
+route-map nonTransit permit 10
+match as-path 1 10
+exit
+
+
+router bgp 1000
+address-family ipv4 unicast
+redistribute ospf 1 match internal external 1 external 2
+
+
+neighbor 4.4.4.5 remote-as 20000
+neighbor 4.4.4.5 remove-private-as all
+neighbor 4.4.4.5 route-map nonTransit out
+neighbor 4.4.4.5 prefix-list intPublic out
+
+neighbor 4.4.4.9 remote-as 40000
+neighbor 4.4.4.9 remove-private-as all
+neighbor 4.4.4.9 route-map nonTransit out
+neighbor 4.4.4.9 prefix-list intPublic out
+neighbor 4.4.4.9 route-map internetToPT1 in
+
+neighbor 10.0.2.1 remote-as 1000
+neighbor 10.0.2.1 update-source lo0
+neighbor 10.0.2.1 next-hop-self
+neighbor 10.0.2.1 prefix-list remLo0 out
+
+neighbor 10.0.2.3 remote-as 1000
+neighbor 10.0.2.3 update-source lo0
+neighbor 10.0.2.3 next-hop-self
+neighbor 10.0.2.3 prefix-list remLo0 out
+
+neighbor 10.0.2.4 remote-as 1000
+neighbor 10.0.2.4 update-source lo0
+neighbor 10.0.2.4 next-hop-self
+neighbor 10.0.2.4 prefix-list remLo0 out
+
+
+
+address-family ipv6 unicast
+redistribute ospf 1 match internal external 1 external 2
+
+neighbor 2001:4:4::5 remote-as 20000
+neighbor 2001:4:4::5 remove-private-as all
+neighbor 2001:4:4::5 route-map nonTransit out
+neighbor 2001:4:4::5 prefix-list intPublicv6 out
+
+neighbor 2001:4:4::9 remote-as 40000
+neighbor 2001:4:4::9 remove-private-as all
+neighbor 2001:4:4::9 route-map nonTransit out
+neighbor 2001:4:4::9 prefix-list intPublicv6 out
+neighbor 2001:4:4::9 route-map internetToPT1 in
+
+neighbor 2001:100:1:2::1 remote-as 1000
+neighbor 2001:100:1:2::1 update-source lo0
+neighbor 2001:100:1:2::1 next-hop-self
+neighbor 2001:100:1:2::1 prefix-list remLo0v6 out
+
+neighbor 2001:100:1:2::3 remote-as 1000
+neighbor 2001:100:1:2::3 update-source lo0
+neighbor 2001:100:1:2::3 next-hop-self
+neighbor 2001:100:1:2::3 prefix-list remLo0v6 out
+
+neighbor 2001:100:1:2::4 remote-as 1000
+neighbor 2001:100:1:2::4 update-source lo0
+neighbor 2001:100:1:2::4 next-hop-self
+neighbor 2001:100:1:2::4 prefix-list remLo0v6 out
+
+
+exit
+
+router ospf 1
+router-id 2.2.2.2
+passive-interface f2/0
+distribute-list prefix denyDefaultRoute in
+mpls traffic-eng area 0
+mpls traffic-eng router-id lo0
+exit
+
+ipv6 router ospf 1
+router-id 2.2.2.2
+passive-interface f2/0
+distribute-list prefix denyDefaultRoutev6 in
+exit
+
+end
+write

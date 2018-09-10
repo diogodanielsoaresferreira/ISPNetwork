@@ -1,0 +1,55 @@
+Jan 05 13:03:53.840 HYPERVISOR: Release 0.2.14-x86/Windows (tag 2014092320)
+Jan 05 13:03:53.840 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 63845.
+Jan 05 13:03:53.950 HYPERVISOR: exec_cmd: hypervisor version 
+Jan 05 13:03:53.965 HYPERVISOR: exec_cmd: hypervisor working_dir D:\dl-pc\Universidade\4ano\1semestre\ARA\Projeto\ARA-project\ATM-project\project-files\dynamips 
+Jan 05 13:03:53.965 GENERAL: working_dir=D:\dl-pc\Universidade\4ano\1semestre\ARA\Projeto\ARA-project\ATM-project\project-files\dynamips
+Jan 05 13:03:53.981 HYPERVISOR: exec_cmd: vm create EmpC 9 c7200 
+Jan 05 13:03:53.981 VM: VM EmpC created.
+Jan 05 13:03:53.996 HYPERVISOR: exec_cmd: vm set_con_tcp_port EmpC 5008 
+Jan 05 13:03:54.012 HYPERVISOR: exec_cmd: c7200 get_mac_addr EmpC 
+Jan 05 13:03:54.028 HYPERVISOR: exec_cmd: vm get_status EmpC 
+Jan 05 13:03:54.043 HYPERVISOR: exec_cmd: vm slot_add_binding EmpC 0 0 C7200-IO-FE 
+Jan 05 13:03:54.059 HYPERVISOR: exec_cmd: vm set_nvram EmpC 512 
+Jan 05 13:03:54.090 HYPERVISOR: exec_cmd: vm get_status EmpC 
+Jan 05 13:03:54.106 HYPERVISOR: exec_cmd: vm set_idle_pc EmpC 0x6318687c 
+Jan 05 13:03:54.137 HYPERVISOR: exec_cmd: vm set_exec_area EmpC 64 
+Jan 05 13:03:54.153 HYPERVISOR: exec_cmd: vm set_ram EmpC 512 
+Jan 05 13:03:54.168 HYPERVISOR: exec_cmd: c7200 set_mac_addr EmpC ca09.1b58.0000 
+Jan 05 13:03:54.184 HYPERVISOR: exec_cmd: vm set_disk0 EmpC 0 
+Jan 05 13:03:54.200 HYPERVISOR: exec_cmd: vm set_ios EmpC C:/Users/dl-pc/GNS3/images/IOS/c7200-advipservicesk9-mz.152-4.S5.image 
+Jan 05 13:03:54.246 HYPERVISOR: exec_cmd: vm get_status EmpC 
+Jan 05 13:03:54.246 HYPERVISOR: exec_cmd: vm slot_remove_binding EmpC 0 0 
+Jan 05 13:03:54.278 HYPERVISOR: exec_cmd: vm get_status EmpC 
+Jan 05 13:03:54.293 HYPERVISOR: exec_cmd: vm slot_add_binding EmpC 0 0 C7200-IO-2FE 
+Jan 05 13:03:54.317 HYPERVISOR: exec_cmd: vm set_config EmpC configs/i9_startup-config.cfg 
+Jan 05 13:03:54.326 HYPERVISOR: exec_cmd: vm set_config EmpC configs/i9_startup-config.cfg configs/i9_private-config.cfg 
+Jan 05 13:03:58.526 HYPERVISOR: exec_cmd: nio create_udp udp-de36e567-9b05-450f-aef9-d45f65d08b5a 10014 127.0.0.1 10015 
+Jan 05 13:03:58.557 HYPERVISOR: exec_cmd: vm slot_add_nio_binding EmpC 0 1 udp-de36e567-9b05-450f-aef9-d45f65d08b5a 
+Jan 05 13:03:58.573 HYPERVISOR: exec_cmd: vm get_status EmpC 
+Jan 05 13:04:00.479 HYPERVISOR: exec_cmd: nio create_udp udp-aaec2df3-8bd4-4859-8259-bc5a8496c8e6 10103 127.0.0.1 10102 
+Jan 05 13:04:00.510 HYPERVISOR: exec_cmd: vm slot_add_nio_binding EmpC 0 0 udp-aaec2df3-8bd4-4859-8259-bc5a8496c8e6 
+Jan 05 13:04:00.526 HYPERVISOR: exec_cmd: vm get_status EmpC 
+Jan 05 13:12:05.404 HYPERVISOR: exec_cmd: vm extract_config EmpC 
+Jan 05 13:20:00.116 HYPERVISOR: exec_cmd: vm set_ghost_status EmpC 2 
+Jan 05 13:20:00.192 HYPERVISOR: exec_cmd: vm set_ghost_file EmpC c7200-advipservicesk9-mz.152-4.S5.image-512.ghost 
+Jan 05 13:20:00.244 HYPERVISOR: exec_cmd: vm get_status EmpC 
+Jan 05 13:20:00.264 HYPERVISOR: exec_cmd: vm start EmpC 
+Jan 05 13:22:05.343 HYPERVISOR: exec_cmd: vm get_status EmpC 
+Jan 05 13:22:05.351 HYPERVISOR: exec_cmd: vm stop EmpC 
+Jan 05 13:22:05.535 VM: VM EmpC shutdown.
+Jan 05 13:22:05.539 HYPERVISOR: exec_cmd: vm extract_config EmpC 
+Jan 05 13:23:11.943 HYPERVISOR: exec_cmd: vm get_status EmpC 
+Jan 05 13:23:12.067 HYPERVISOR: exec_cmd: vm start EmpC 
+Jan 05 13:27:55.220 HYPERVISOR: exec_cmd: vm get_status EmpC 
+Jan 05 13:27:55.236 HYPERVISOR: exec_cmd: vm stop EmpC 
+Jan 05 13:27:55.400 VM: VM EmpC shutdown.
+Jan 05 13:27:55.403 HYPERVISOR: exec_cmd: vm extract_config EmpC 
+Jan 05 13:27:56.877 HYPERVISOR: exec_cmd: vm extract_config EmpC 
+Jan 05 13:27:57.860 HYPERVISOR: exec_cmd: vm extract_config EmpC 
+Jan 05 13:28:14.335 HYPERVISOR: exec_cmd: vm get_status EmpC 
+Jan 05 13:28:14.428 HYPERVISOR: exec_cmd: vm extract_config EmpC 
+Jan 05 13:28:14.548 HYPERVISOR: exec_cmd: vm delete EmpC 
+Jan 05 13:28:14.548 VM: VM EmpC destroyed.
+Jan 05 13:28:14.655 HYPERVISOR: exec_cmd: hypervisor stop 
+Jan 05 13:28:14.913 HYPERVISOR: Stopped.
+Jan 05 13:28:14.913 GENERAL: reset done.

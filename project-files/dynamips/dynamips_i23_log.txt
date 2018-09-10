@@ -1,0 +1,53 @@
+Jan 05 13:03:55.092 HYPERVISOR: Release 0.2.14-x86/Windows (tag 2014092320)
+Jan 05 13:03:55.092 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 63879.
+Jan 05 13:03:55.217 HYPERVISOR: exec_cmd: hypervisor version 
+Jan 05 13:03:55.233 HYPERVISOR: exec_cmd: hypervisor working_dir D:\dl-pc\Universidade\4ano\1semestre\ARA\Projeto\ARA-project\ATM-project\project-files\dynamips 
+Jan 05 13:03:55.233 GENERAL: working_dir=D:\dl-pc\Universidade\4ano\1semestre\ARA\Projeto\ARA-project\ATM-project\project-files\dynamips
+Jan 05 13:03:55.249 HYPERVISOR: exec_cmd: vm create Internet1 14 c7200 
+Jan 05 13:03:55.249 VM: VM Internet1 created.
+Jan 05 13:03:55.264 HYPERVISOR: exec_cmd: vm set_con_tcp_port Internet1 5023 
+Jan 05 13:03:55.280 HYPERVISOR: exec_cmd: c7200 get_mac_addr Internet1 
+Jan 05 13:03:55.294 HYPERVISOR: exec_cmd: vm get_status Internet1 
+Jan 05 13:03:55.295 HYPERVISOR: exec_cmd: vm slot_add_binding Internet1 0 0 C7200-IO-FE 
+Jan 05 13:03:55.319 HYPERVISOR: exec_cmd: vm set_nvram Internet1 512 
+Jan 05 13:03:55.327 HYPERVISOR: exec_cmd: vm get_status Internet1 
+Jan 05 13:03:55.349 HYPERVISOR: exec_cmd: vm set_idle_pc Internet1 0x6318687c 
+Jan 05 13:03:55.357 HYPERVISOR: exec_cmd: vm set_exec_area Internet1 64 
+Jan 05 13:03:55.372 HYPERVISOR: exec_cmd: vm get_status Internet1 
+Jan 05 13:03:55.390 HYPERVISOR: exec_cmd: vm slot_add_binding Internet1 1 0 PA-2FE-TX 
+Jan 05 13:03:55.399 HYPERVISOR: exec_cmd: vm set_ram Internet1 512 
+Jan 05 13:03:55.415 HYPERVISOR: exec_cmd: c7200 set_mac_addr Internet1 ca0e.3a18.0000 
+Jan 05 13:03:55.430 HYPERVISOR: exec_cmd: vm set_disk0 Internet1 0 
+Jan 05 13:03:55.448 HYPERVISOR: exec_cmd: vm set_ios Internet1 C:/Users/dl-pc/GNS3/images/IOS/c7200-advipservicesk9-mz.152-4.S5.image 
+Jan 05 13:03:55.464 HYPERVISOR: exec_cmd: vm get_status Internet1 
+Jan 05 13:03:55.495 HYPERVISOR: exec_cmd: vm slot_remove_binding Internet1 0 0 
+Jan 05 13:03:55.527 HYPERVISOR: exec_cmd: vm get_status Internet1 
+Jan 05 13:03:55.546 HYPERVISOR: exec_cmd: vm slot_add_binding Internet1 0 0 C7200-IO-2FE 
+Jan 05 13:03:55.573 HYPERVISOR: exec_cmd: vm set_config Internet1 configs/i14_startup-config.cfg 
+Jan 05 13:03:59.369 HYPERVISOR: exec_cmd: nio create_udp udp-43bbe763-cfdf-4cd6-905f-594b5c0065d3 10054 127.0.0.1 10055 
+Jan 05 13:03:59.369 HYPERVISOR: exec_cmd: vm slot_add_nio_binding Internet1 0 0 udp-43bbe763-cfdf-4cd6-905f-594b5c0065d3 
+Jan 05 13:03:59.401 HYPERVISOR: exec_cmd: vm get_status Internet1 
+Jan 05 13:12:05.436 HYPERVISOR: exec_cmd: vm extract_config Internet1 
+Jan 05 13:19:23.046 HYPERVISOR: exec_cmd: vm set_ghost_status Internet1 2 
+Jan 05 13:19:23.137 HYPERVISOR: exec_cmd: vm set_ghost_file Internet1 c7200-advipservicesk9-mz.152-4.S5.image-512.ghost 
+Jan 05 13:19:23.144 HYPERVISOR: exec_cmd: vm get_status Internet1 
+Jan 05 13:19:23.167 HYPERVISOR: exec_cmd: vm start Internet1 
+Jan 05 13:22:04.903 HYPERVISOR: exec_cmd: vm get_status Internet1 
+Jan 05 13:22:04.927 HYPERVISOR: exec_cmd: vm stop Internet1 
+Jan 05 13:22:05.055 VM: VM Internet1 shutdown.
+Jan 05 13:22:05.055 HYPERVISOR: exec_cmd: vm extract_config Internet1 
+Jan 05 13:23:00.067 HYPERVISOR: exec_cmd: vm get_status Internet1 
+Jan 05 13:23:00.163 HYPERVISOR: exec_cmd: vm start Internet1 
+Jan 05 13:27:54.660 HYPERVISOR: exec_cmd: vm get_status Internet1 
+Jan 05 13:27:54.671 HYPERVISOR: exec_cmd: vm stop Internet1 
+Jan 05 13:27:54.859 VM: VM Internet1 shutdown.
+Jan 05 13:27:54.871 HYPERVISOR: exec_cmd: vm extract_config Internet1 
+Jan 05 13:27:56.948 HYPERVISOR: exec_cmd: vm extract_config Internet1 
+Jan 05 13:27:57.959 HYPERVISOR: exec_cmd: vm extract_config Internet1 
+Jan 05 13:28:14.339 HYPERVISOR: exec_cmd: vm get_status Internet1 
+Jan 05 13:28:14.432 HYPERVISOR: exec_cmd: vm extract_config Internet1 
+Jan 05 13:28:14.555 HYPERVISOR: exec_cmd: vm delete Internet1 
+Jan 05 13:28:14.555 VM: VM Internet1 destroyed.
+Jan 05 13:28:14.660 HYPERVISOR: exec_cmd: hypervisor stop 
+Jan 05 13:28:14.969 HYPERVISOR: Stopped.
+Jan 05 13:28:14.969 GENERAL: reset done.

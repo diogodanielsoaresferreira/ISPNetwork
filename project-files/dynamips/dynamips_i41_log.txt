@@ -1,0 +1,31 @@
+Jan 05 13:03:57.307 HYPERVISOR: Release 0.2.14-x86/Windows (tag 2014092320)
+Jan 05 13:03:57.307 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 63915.
+Jan 05 13:03:57.416 HYPERVISOR: exec_cmd: hypervisor version 
+Jan 05 13:03:57.432 HYPERVISOR: exec_cmd: hypervisor working_dir D:\dl-pc\Universidade\4ano\1semestre\ARA\Projeto\ARA-project\ATM-project\project-files\dynamips 
+Jan 05 13:03:57.432 GENERAL: working_dir=D:\dl-pc\Universidade\4ano\1semestre\ARA\Projeto\ARA-project\ATM-project\project-files\dynamips
+Jan 05 13:03:57.448 HYPERVISOR: exec_cmd: atmsw create ATM2 
+Jan 05 13:04:00.307 HYPERVISOR: exec_cmd: nio create_udp udp-a9a48923-e8c7-4f91-a281-cc6648c08e2c 10093 127.0.0.1 10092 
+Jan 05 13:04:00.354 HYPERVISOR: exec_cmd: nio create_udp udp-8f3696c4-6e3c-49bf-9aa8-10c7d07d8996 10096 127.0.0.1 10097 
+Jan 05 13:04:00.729 HYPERVISOR: exec_cmd: nio create_udp udp-cad534fe-7b96-4bff-9331-7f5265abe0b5 10114 127.0.0.1 10115 
+Jan 05 13:04:00.744 HYPERVISOR: exec_cmd: atmsw create_vcc ATM2 udp-cad534fe-7b96-4bff-9331-7f5265abe0b5 123 0 udp-8f3696c4-6e3c-49bf-9aa8-10c7d07d8996 102 0 
+Jan 05 13:04:00.776 HYPERVISOR: exec_cmd: atmsw create_vcc ATM2 udp-8f3696c4-6e3c-49bf-9aa8-10c7d07d8996 102 0 udp-cad534fe-7b96-4bff-9331-7f5265abe0b5 123 0 
+Jan 05 13:04:00.807 HYPERVISOR: exec_cmd: atmsw create_vcc ATM2 udp-cad534fe-7b96-4bff-9331-7f5265abe0b5 121 0 udp-a9a48923-e8c7-4f91-a281-cc6648c08e2c 101 0 
+Jan 05 13:04:00.838 HYPERVISOR: exec_cmd: atmsw create_vcc ATM2 udp-a9a48923-e8c7-4f91-a281-cc6648c08e2c 101 0 udp-cad534fe-7b96-4bff-9331-7f5265abe0b5 121 0 
+Jan 05 13:04:10.945 HYPERVISOR: exec_cmd: atmsw delete_vcc ATM2 udp-8f3696c4-6e3c-49bf-9aa8-10c7d07d8996 102 0 udp-cad534fe-7b96-4bff-9331-7f5265abe0b5 123 0 
+Jan 05 13:04:10.977 HYPERVISOR: exec_cmd: atmsw delete_vcc ATM2 udp-cad534fe-7b96-4bff-9331-7f5265abe0b5 123 0 udp-8f3696c4-6e3c-49bf-9aa8-10c7d07d8996 102 0 
+Jan 05 13:04:11.008 HYPERVISOR: exec_cmd: nio delete udp-8f3696c4-6e3c-49bf-9aa8-10c7d07d8996 
+Jan 05 13:04:13.812 HYPERVISOR: exec_cmd: atmsw delete_vcc ATM2 udp-cad534fe-7b96-4bff-9331-7f5265abe0b5 121 0 udp-a9a48923-e8c7-4f91-a281-cc6648c08e2c 101 0 
+Jan 05 13:04:13.820 HYPERVISOR: exec_cmd: atmsw delete_vcc ATM2 udp-a9a48923-e8c7-4f91-a281-cc6648c08e2c 101 0 udp-cad534fe-7b96-4bff-9331-7f5265abe0b5 121 0 
+Jan 05 13:04:13.844 HYPERVISOR: exec_cmd: nio delete udp-cad534fe-7b96-4bff-9331-7f5265abe0b5 
+Jan 05 13:04:16.141 HYPERVISOR: exec_cmd: nio delete udp-a9a48923-e8c7-4f91-a281-cc6648c08e2c 
+Jan 05 13:08:52.154 HYPERVISOR: exec_cmd: nio create_udp udp-a5d5b8f7-6c1a-47b0-ba0f-a5b109a8f7bd 10095 127.0.0.1 10094 
+Jan 05 13:10:43.054 HYPERVISOR: exec_cmd: nio create_udp udp-c363fd80-3eaa-4e97-a97d-61fbe4394119 10099 127.0.0.1 10098 
+Jan 05 13:10:43.054 HYPERVISOR: exec_cmd: atmsw create_vcc ATM2 udp-c363fd80-3eaa-4e97-a97d-61fbe4394119 102 0 udp-a5d5b8f7-6c1a-47b0-ba0f-a5b109a8f7bd 102 0 
+Jan 05 13:10:43.070 HYPERVISOR: exec_cmd: atmsw create_vcc ATM2 udp-a5d5b8f7-6c1a-47b0-ba0f-a5b109a8f7bd 102 0 udp-c363fd80-3eaa-4e97-a97d-61fbe4394119 102 0 
+Jan 05 13:11:28.669 HYPERVISOR: exec_cmd: nio create_udp udp-b2df0981-90e4-4782-a859-3810582e9383 10104 127.0.0.1 10105 
+Jan 05 13:11:28.685 HYPERVISOR: exec_cmd: atmsw create_vcc ATM2 udp-b2df0981-90e4-4782-a859-3810582e9383 103 0 udp-a5d5b8f7-6c1a-47b0-ba0f-a5b109a8f7bd 103 0 
+Jan 05 13:11:28.716 HYPERVISOR: exec_cmd: atmsw create_vcc ATM2 udp-a5d5b8f7-6c1a-47b0-ba0f-a5b109a8f7bd 103 0 udp-b2df0981-90e4-4782-a859-3810582e9383 103 0 
+Jan 05 13:28:13.700 HYPERVISOR: exec_cmd: atmsw delete ATM2 
+Jan 05 13:28:13.820 HYPERVISOR: exec_cmd: hypervisor stop 
+Jan 05 13:28:13.912 HYPERVISOR: Stopped.
+Jan 05 13:28:13.912 GENERAL: reset done.

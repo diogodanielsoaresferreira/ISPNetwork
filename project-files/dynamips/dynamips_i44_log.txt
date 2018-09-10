@@ -1,0 +1,78 @@
+Dec 28 19:45:18.163 HYPERVISOR: Release 0.2.14-x86/Windows (tag 2014092320)
+Dec 28 19:45:18.163 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 50646.
+Dec 28 19:45:18.179 HYPERVISOR: exec_cmd: hypervisor version 
+Dec 28 19:45:18.194 HYPERVISOR: exec_cmd: hypervisor working_dir D:\dl-pc\Universidade\4ano\1semestre\ARA\Projeto\ARA-project\ATM-project\project-files\dynamips 
+Dec 28 19:45:18.194 GENERAL: working_dir=D:\dl-pc\Universidade\4ano\1semestre\ARA\Projeto\ARA-project\ATM-project\project-files\dynamips
+Dec 28 19:45:18.194 HYPERVISOR: exec_cmd: vm create R1 26 c7200 
+Dec 28 19:45:18.194 VM: VM R1 created.
+Dec 28 19:45:18.194 HYPERVISOR: exec_cmd: vm set_con_tcp_port R1 5000 
+Dec 28 19:45:18.210 HYPERVISOR: exec_cmd: c7200 get_mac_addr R1 
+Dec 28 19:45:18.210 HYPERVISOR: exec_cmd: vm get_status R1 
+Dec 28 19:45:18.210 HYPERVISOR: exec_cmd: vm slot_add_binding R1 0 0 C7200-IO-FE 
+Dec 28 19:45:18.210 HYPERVISOR: exec_cmd: vm set_nvram R1 512 
+Dec 28 19:45:18.226 HYPERVISOR: exec_cmd: vm get_status R1 
+Dec 28 19:45:18.226 HYPERVISOR: exec_cmd: vm set_idle_pc R1 0x60891b0c 
+Dec 28 19:45:18.226 HYPERVISOR: exec_cmd: vm set_disk0 R1 0 
+Dec 28 19:45:18.226 HYPERVISOR: exec_cmd: vm set_ram R1 512 
+Dec 28 19:45:18.241 HYPERVISOR: exec_cmd: vm set_exec_area R1 64 
+Dec 28 19:45:18.241 HYPERVISOR: exec_cmd: vm set_ios R1 C:/Users/dl-pc/GNS3/images/IOS/c7200-a3jk9s-mz.124-25d.bin 
+Dec 28 19:45:18.241 HYPERVISOR: exec_cmd: vm set_config R1 configs/i26_startup-config.cfg 
+Dec 28 19:45:30.193 HYPERVISOR: exec_cmd: vm extract_config R1 
+Dec 28 19:46:03.997 HYPERVISOR: exec_cmd: nio create_udp udp-38fe6e86-5b25-4463-86f2-0787e3565a3d 10000 127.0.0.1 10001 
+Dec 28 19:46:04.013 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R1 0 0 udp-38fe6e86-5b25-4463-86f2-0787e3565a3d 
+Dec 28 19:46:04.013 HYPERVISOR: exec_cmd: vm get_status R1 
+Dec 28 19:46:31.303 HYPERVISOR: exec_cmd: vm get_status R1 
+Dec 28 19:46:31.303 HYPERVISOR: exec_cmd: vm slot_add_binding R1 2 0 PA-2FE-TX 
+Dec 28 19:46:31.303 HYPERVISOR: exec_cmd: vm get_status R1 
+Dec 28 19:46:31.319 HYPERVISOR: exec_cmd: vm slot_add_binding R1 1 0 PA-2FE-TX 
+Dec 28 19:46:39.474 HYPERVISOR: exec_cmd: nio create_udp udp-96aa018a-ab7b-44cb-98d1-7a7d10165037 10002 127.0.0.1 10003 
+Dec 28 19:46:39.490 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R1 1 0 udp-96aa018a-ab7b-44cb-98d1-7a7d10165037 
+Dec 28 19:46:39.490 HYPERVISOR: exec_cmd: vm get_status R1 
+Dec 28 19:46:46.515 HYPERVISOR: exec_cmd: nio create_udp udp-2424077b-66d8-4212-b307-4b35a74cbffe 10062 127.0.0.1 10063 
+Dec 28 19:46:46.531 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R1 1 1 udp-2424077b-66d8-4212-b307-4b35a74cbffe 
+Dec 28 19:46:46.546 HYPERVISOR: exec_cmd: vm get_status R1 
+Dec 28 19:46:52.615 HYPERVISOR: exec_cmd: nio create_udp udp-dfd68b10-c3bb-4d95-9cb3-b7dc4f546e91 10104 127.0.0.1 10105 
+Dec 28 19:46:52.630 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R1 2 0 udp-dfd68b10-c3bb-4d95-9cb3-b7dc4f546e91 
+Dec 28 19:46:52.630 HYPERVISOR: exec_cmd: vm get_status R1 
+Dec 28 19:47:03.740 HYPERVISOR: exec_cmd: vm rename R1 Aveiro 
+Dec 28 19:52:03.349 HYPERVISOR: exec_cmd: vm extract_config Aveiro 
+Dec 28 19:52:17.131 HYPERVISOR: exec_cmd: vm extract_config Aveiro 
+Dec 28 19:52:22.834 HYPERVISOR: exec_cmd: vm extract_config Aveiro 
+Dec 28 19:52:26.287 HYPERVISOR: exec_cmd: vm extract_config Aveiro 
+Dec 28 19:53:25.240 HYPERVISOR: exec_cmd: vm extract_config Aveiro 
+Dec 28 19:54:01.037 HYPERVISOR: exec_cmd: vm extract_config Aveiro 
+Dec 28 19:54:17.506 HYPERVISOR: exec_cmd: vm extract_config Aveiro 
+Dec 28 19:54:47.740 HYPERVISOR: exec_cmd: vm extract_config Aveiro 
+Dec 28 19:54:56.350 HYPERVISOR: exec_cmd: vm extract_config Aveiro 
+Dec 28 19:54:58.600 HYPERVISOR: exec_cmd: vm extract_config Aveiro 
+Dec 28 19:55:00.381 HYPERVISOR: exec_cmd: vm extract_config Aveiro 
+Dec 28 19:57:25.303 HYPERVISOR: exec_cmd: vm extract_config Aveiro 
+Dec 28 19:57:32.475 HYPERVISOR: exec_cmd: vm extract_config Aveiro 
+Dec 28 19:57:43.103 HYPERVISOR: exec_cmd: vm set_ghost_status Aveiro 2 
+Dec 28 19:57:43.103 HYPERVISOR: exec_cmd: vm set_ghost_file Aveiro c7200-a3jk9s-mz.124-25d.bin-512.ghost 
+Dec 28 19:57:43.119 HYPERVISOR: exec_cmd: vm get_status Aveiro 
+Dec 28 19:57:43.119 HYPERVISOR: exec_cmd: vm start Aveiro 
+Dec 28 20:01:38.319 HYPERVISOR: exec_cmd: vm extract_config Aveiro 
+Dec 28 20:01:38.833 HYPERVISOR: exec_cmd: vm extract_config Aveiro 
+Dec 28 20:01:43.054 HYPERVISOR: exec_cmd: vm extract_config Aveiro 
+Dec 28 20:01:43.070 HYPERVISOR: exec_cmd: vm extract_config Aveiro 
+Dec 28 20:13:51.674 HYPERVISOR: exec_cmd: vm extract_config Aveiro 
+Dec 28 20:13:53.112 HYPERVISOR: exec_cmd: vm get_status Aveiro 
+Dec 28 20:13:53.128 HYPERVISOR: exec_cmd: vm stop Aveiro 
+Dec 28 20:13:53.348 VM: VM Aveiro shutdown.
+Dec 28 20:13:53.363 HYPERVISOR: exec_cmd: vm extract_config Aveiro 
+Dec 28 20:13:57.350 HYPERVISOR: exec_cmd: vm get_status Aveiro 
+Dec 28 20:13:57.366 HYPERVISOR: exec_cmd: vm start Aveiro 
+Dec 28 20:16:07.023 HYPERVISOR: exec_cmd: vm extract_config Aveiro 
+Dec 28 20:20:08.796 HYPERVISOR: exec_cmd: vm get_status Aveiro 
+Dec 28 20:20:08.818 HYPERVISOR: exec_cmd: vm stop Aveiro 
+Dec 28 20:20:09.066 VM: VM Aveiro shutdown.
+Dec 28 20:20:09.081 HYPERVISOR: exec_cmd: vm extract_config Aveiro 
+Dec 28 20:20:12.928 HYPERVISOR: exec_cmd: vm extract_config Aveiro 
+Dec 28 20:20:17.327 HYPERVISOR: exec_cmd: vm get_status Aveiro 
+Dec 28 20:20:17.463 HYPERVISOR: exec_cmd: vm extract_config Aveiro 
+Dec 28 20:20:17.726 HYPERVISOR: exec_cmd: vm delete Aveiro 
+Dec 28 20:20:17.726 VM: VM Aveiro destroyed.
+Dec 28 20:20:17.850 HYPERVISOR: exec_cmd: hypervisor stop 
+Dec 28 20:20:18.225 HYPERVISOR: Stopped.
+Dec 28 20:20:18.225 GENERAL: reset done.

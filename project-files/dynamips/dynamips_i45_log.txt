@@ -1,0 +1,42 @@
+Dec 28 19:45:19.860 HYPERVISOR: Release 0.2.14-x86/Windows (tag 2014092320)
+Dec 28 19:45:19.860 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 50648.
+Dec 28 19:45:19.876 HYPERVISOR: exec_cmd: hypervisor version 
+Dec 28 19:45:19.876 HYPERVISOR: exec_cmd: hypervisor working_dir D:\dl-pc\Universidade\4ano\1semestre\ARA\Projeto\ARA-project\ATM-project\project-files\dynamips 
+Dec 28 19:45:19.876 GENERAL: working_dir=D:\dl-pc\Universidade\4ano\1semestre\ARA\Projeto\ARA-project\ATM-project\project-files\dynamips
+Dec 28 19:45:19.876 HYPERVISOR: exec_cmd: vm create R2 27 c7200 
+Dec 28 19:45:19.876 VM: VM R2 created.
+Dec 28 19:45:19.876 HYPERVISOR: exec_cmd: vm set_con_tcp_port R2 5030 
+Dec 28 19:45:19.892 HYPERVISOR: exec_cmd: c7200 get_mac_addr R2 
+Dec 28 19:45:19.892 HYPERVISOR: exec_cmd: vm get_status R2 
+Dec 28 19:45:19.892 HYPERVISOR: exec_cmd: vm slot_add_binding R2 0 0 C7200-IO-FE 
+Dec 28 19:45:19.892 HYPERVISOR: exec_cmd: vm set_nvram R2 512 
+Dec 28 19:45:19.907 HYPERVISOR: exec_cmd: vm get_status R2 
+Dec 28 19:45:19.907 HYPERVISOR: exec_cmd: vm set_idle_pc R2 0x60891b0c 
+Dec 28 19:45:19.907 HYPERVISOR: exec_cmd: vm set_disk0 R2 0 
+Dec 28 19:45:19.923 HYPERVISOR: exec_cmd: vm set_ram R2 512 
+Dec 28 19:45:19.923 HYPERVISOR: exec_cmd: vm set_exec_area R2 64 
+Dec 28 19:45:19.923 HYPERVISOR: exec_cmd: vm set_ios R2 C:/Users/dl-pc/GNS3/images/IOS/c7200-a3jk9s-mz.124-25d.bin 
+Dec 28 19:45:19.923 HYPERVISOR: exec_cmd: vm set_config R2 configs/i27_startup-config.cfg 
+Dec 28 19:45:30.154 HYPERVISOR: exec_cmd: vm extract_config R2 
+Dec 28 19:52:03.287 HYPERVISOR: exec_cmd: vm extract_config R2 
+Dec 28 19:52:17.068 HYPERVISOR: exec_cmd: vm extract_config R2 
+Dec 28 19:52:22.787 HYPERVISOR: exec_cmd: vm extract_config R2 
+Dec 28 19:52:26.240 HYPERVISOR: exec_cmd: vm extract_config R2 
+Dec 28 19:53:25.193 HYPERVISOR: exec_cmd: vm extract_config R2 
+Dec 28 19:54:00.975 HYPERVISOR: exec_cmd: vm extract_config R2 
+Dec 28 19:54:17.459 HYPERVISOR: exec_cmd: vm extract_config R2 
+Dec 28 19:54:47.693 HYPERVISOR: exec_cmd: vm extract_config R2 
+Dec 28 19:54:56.303 HYPERVISOR: exec_cmd: vm extract_config R2 
+Dec 28 19:54:58.537 HYPERVISOR: exec_cmd: vm extract_config R2 
+Dec 28 19:55:00.335 HYPERVISOR: exec_cmd: vm extract_config R2 
+Dec 28 19:57:25.209 HYPERVISOR: exec_cmd: vm extract_config R2 
+Dec 28 19:57:32.397 HYPERVISOR: exec_cmd: vm extract_config R2 
+Dec 28 20:01:38.225 HYPERVISOR: exec_cmd: vm extract_config R2 
+Dec 28 20:01:38.739 HYPERVISOR: exec_cmd: vm extract_config R2 
+Dec 28 20:01:41.210 HYPERVISOR: exec_cmd: vm get_status R2 
+Dec 28 20:01:41.210 HYPERVISOR: exec_cmd: vm extract_config R2 
+Dec 28 20:01:41.225 HYPERVISOR: exec_cmd: vm delete R2 
+Dec 28 20:01:41.225 VM: VM R2 destroyed.
+Dec 28 20:01:41.225 HYPERVISOR: exec_cmd: hypervisor stop 
+Dec 28 20:01:41.350 HYPERVISOR: Stopped.
+Dec 28 20:01:41.350 GENERAL: reset done.

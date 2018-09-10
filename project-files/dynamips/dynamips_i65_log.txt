@@ -1,0 +1,32 @@
+Dec 28 17:05:42.600 HYPERVISOR: Release 0.2.17-amd64/Linux (tag 2017072410)
+Dec 28 17:05:42.600 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 37777.
+Dec 28 17:05:42.634 HYPERVISOR: exec_cmd: hypervisor version 
+Dec 28 17:05:42.637 HYPERVISOR: exec_cmd: hypervisor working_dir /home/diogof/Desktop/Projeto ARA/GNS3-project/project-files/dynamips 
+Dec 28 17:05:42.637 GENERAL: working_dir=/home/diogof/Desktop/Projeto ARA/GNS3-project/project-files/dynamips
+Dec 28 17:05:42.639 HYPERVISOR: exec_cmd: vm create LI1 16 c7200 
+Dec 28 17:05:42.640 VM: VM LI1 created.
+Dec 28 17:05:42.643 HYPERVISOR: exec_cmd: vm set_con_tcp_port LI1 5029 
+Dec 28 17:05:42.648 HYPERVISOR: exec_cmd: c7200 get_mac_addr LI1 
+Dec 28 17:05:42.658 HYPERVISOR: exec_cmd: vm get_status LI1 
+Dec 28 17:05:42.660 HYPERVISOR: exec_cmd: vm slot_add_binding LI1 0 0 C7200-IO-FE 
+Dec 28 17:05:42.661 HYPERVISOR: exec_cmd: vm set_ram LI1 512 
+Dec 28 17:05:42.663 HYPERVISOR: exec_cmd: vm set_disk0 LI1 0 
+Dec 28 17:05:42.664 HYPERVISOR: exec_cmd: vm set_ios LI1 /home/diogof/GNS3/images/IOS/c7200-advipservicesk9-mz.152-4.S5.image 
+Dec 28 17:05:42.671 HYPERVISOR: exec_cmd: vm set_nvram LI1 512 
+Dec 28 17:05:42.681 HYPERVISOR: exec_cmd: vm get_status LI1 
+Dec 28 17:05:42.683 HYPERVISOR: exec_cmd: vm set_idle_pc LI1 0x6318687c 
+Dec 28 17:05:42.685 HYPERVISOR: exec_cmd: c7200 set_mac_addr LI1 ca10.2570.0000 
+Dec 28 17:05:42.686 HYPERVISOR: exec_cmd: vm set_config LI1 configs/i16_startup-config.cfg 
+Dec 28 17:05:42.687 HYPERVISOR: exec_cmd: vm set_config LI1 configs/i16_startup-config.cfg configs/i16_private-config.cfg 
+Dec 28 17:05:44.805 HYPERVISOR: exec_cmd: nio create_udp udp-38df3df8-1d97-45c7-a3ef-1cc0ecce8ecb 10082 127.0.0.1 10083 
+Dec 28 17:05:44.806 HYPERVISOR: exec_cmd: vm slot_add_nio_binding LI1 0 0 udp-38df3df8-1d97-45c7-a3ef-1cc0ecce8ecb 
+Dec 28 17:05:44.811 HYPERVISOR: exec_cmd: vm get_status LI1 
+Dec 28 17:05:54.772 HYPERVISOR: exec_cmd: vm extract_config LI1 
+Dec 28 17:28:44.294 HYPERVISOR: exec_cmd: vm extract_config LI1 
+Dec 28 17:28:56.941 HYPERVISOR: exec_cmd: vm get_status LI1 
+Dec 28 17:28:56.960 HYPERVISOR: exec_cmd: vm extract_config LI1 
+Dec 28 17:28:56.970 HYPERVISOR: exec_cmd: vm delete LI1 
+Dec 28 17:28:56.970 VM: VM LI1 destroyed.
+Dec 28 17:28:56.982 HYPERVISOR: exec_cmd: hypervisor stop 
+Dec 28 17:28:57.376 HYPERVISOR: Stopped.
+Dec 28 17:28:57.376 GENERAL: reset done.

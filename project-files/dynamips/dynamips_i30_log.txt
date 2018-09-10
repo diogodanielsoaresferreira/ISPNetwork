@@ -1,0 +1,47 @@
+Jan 05 13:03:55.667 HYPERVISOR: Release 0.2.14-x86/Windows (tag 2014092320)
+Jan 05 13:03:55.667 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 63890.
+Jan 05 13:03:55.744 HYPERVISOR: exec_cmd: hypervisor version 
+Jan 05 13:03:55.776 HYPERVISOR: exec_cmd: hypervisor working_dir D:\dl-pc\Universidade\4ano\1semestre\ARA\Projeto\ARA-project\ATM-project\project-files\dynamips 
+Jan 05 13:03:55.776 GENERAL: working_dir=D:\dl-pc\Universidade\4ano\1semestre\ARA\Projeto\ARA-project\ATM-project\project-files\dynamips
+Jan 05 13:03:55.791 HYPERVISOR: exec_cmd: vm create PP 18 c7200 
+Jan 05 13:03:55.791 VM: VM PP created.
+Jan 05 13:03:55.807 HYPERVISOR: exec_cmd: vm set_con_tcp_port PP 5033 
+Jan 05 13:03:55.822 HYPERVISOR: exec_cmd: c7200 get_mac_addr PP 
+Jan 05 13:03:55.854 HYPERVISOR: exec_cmd: vm get_status PP 
+Jan 05 13:03:55.869 HYPERVISOR: exec_cmd: vm slot_add_binding PP 0 0 C7200-IO-FE 
+Jan 05 13:03:55.885 HYPERVISOR: exec_cmd: vm set_nvram PP 512 
+Jan 05 13:03:55.916 HYPERVISOR: exec_cmd: vm get_status PP 
+Jan 05 13:03:55.932 HYPERVISOR: exec_cmd: vm set_idle_pc PP 0x6318687c 
+Jan 05 13:03:55.948 HYPERVISOR: exec_cmd: vm set_exec_area PP 64 
+Jan 05 13:03:55.963 HYPERVISOR: exec_cmd: vm set_ram PP 512 
+Jan 05 13:03:55.979 HYPERVISOR: exec_cmd: c7200 set_mac_addr PP ca12.2198.0000 
+Jan 05 13:03:56.010 HYPERVISOR: exec_cmd: vm set_disk0 PP 0 
+Jan 05 13:03:56.026 HYPERVISOR: exec_cmd: vm set_ios PP C:/Users/dl-pc/GNS3/images/IOS/c7200-advipservicesk9-mz.152-4.S5.image 
+Jan 05 13:03:56.041 HYPERVISOR: exec_cmd: vm set_config PP configs/i18_startup-config.cfg 
+Jan 05 13:03:59.666 HYPERVISOR: exec_cmd: nio create_udp udp-2c7d8af6-fdd4-412e-a71e-beb159a42a66 10067 127.0.0.1 10066 
+Jan 05 13:03:59.698 HYPERVISOR: exec_cmd: vm slot_add_nio_binding PP 0 0 udp-2c7d8af6-fdd4-412e-a71e-beb159a42a66 
+Jan 05 13:03:59.729 HYPERVISOR: exec_cmd: vm get_status PP 
+Jan 05 13:12:05.373 HYPERVISOR: exec_cmd: vm extract_config PP 
+Jan 05 13:18:51.421 HYPERVISOR: exec_cmd: vm set_ghost_status PP 2 
+Jan 05 13:18:51.452 HYPERVISOR: exec_cmd: vm set_ghost_file PP c7200-advipservicesk9-mz.152-4.S5.image-512.ghost 
+Jan 05 13:18:51.477 HYPERVISOR: exec_cmd: vm get_status PP 
+Jan 05 13:18:51.524 HYPERVISOR: exec_cmd: vm start PP 
+Jan 05 13:22:04.427 HYPERVISOR: exec_cmd: vm get_status PP 
+Jan 05 13:22:04.431 HYPERVISOR: exec_cmd: vm stop PP 
+Jan 05 13:22:04.623 VM: VM PP shutdown.
+Jan 05 13:22:04.659 HYPERVISOR: exec_cmd: vm extract_config PP 
+Jan 05 13:22:10.171 HYPERVISOR: exec_cmd: vm get_status PP 
+Jan 05 13:22:10.227 HYPERVISOR: exec_cmd: vm start PP 
+Jan 05 13:27:54.238 HYPERVISOR: exec_cmd: vm get_status PP 
+Jan 05 13:27:54.242 HYPERVISOR: exec_cmd: vm stop PP 
+Jan 05 13:27:54.450 VM: VM PP shutdown.
+Jan 05 13:27:54.494 HYPERVISOR: exec_cmd: vm extract_config PP 
+Jan 05 13:27:56.849 HYPERVISOR: exec_cmd: vm extract_config PP 
+Jan 05 13:27:57.834 HYPERVISOR: exec_cmd: vm extract_config PP 
+Jan 05 13:28:14.332 HYPERVISOR: exec_cmd: vm get_status PP 
+Jan 05 13:28:14.426 HYPERVISOR: exec_cmd: vm extract_config PP 
+Jan 05 13:28:14.544 HYPERVISOR: exec_cmd: vm delete PP 
+Jan 05 13:28:14.544 VM: VM PP destroyed.
+Jan 05 13:28:14.653 HYPERVISOR: exec_cmd: hypervisor stop 
+Jan 05 13:28:14.821 HYPERVISOR: Stopped.
+Jan 05 13:28:14.821 GENERAL: reset done.

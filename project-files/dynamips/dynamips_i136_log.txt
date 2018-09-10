@@ -1,0 +1,12 @@
+Dec 21 01:02:18.892 HYPERVISOR: Release 0.2.17-amd64/Linux (tag 2017072410)
+Dec 21 01:02:18.892 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 47067.
+Dec 21 01:02:18.960 HYPERVISOR: exec_cmd: hypervisor version 
+Dec 21 01:02:18.967 HYPERVISOR: exec_cmd: hypervisor working_dir /home/diogof/Desktop/Projeto ARA/GNS3-project/project-files/dynamips 
+Dec 21 01:02:18.967 GENERAL: working_dir=/home/diogof/Desktop/Projeto ARA/GNS3-project/project-files/dynamips
+Dec 21 01:02:18.972 HYPERVISOR: exec_cmd: ethsw create Datacenter Lisboa 
+Dec 21 01:02:20.462 HYPERVISOR: exec_cmd: nio create_udp udp-214d3719-97e1-4d79-b595-e2361fca53e5 10053 127.0.0.1 10052 
+Dec 21 01:02:20.472 HYPERVISOR: exec_cmd: ethsw add_nio Datacenter Lisboa udp-214d3719-97e1-4d79-b595-e2361fca53e5 
+Dec 21 01:02:20.486 HYPERVISOR: exec_cmd: ethsw set_access_port Datacenter Lisboa udp-214d3719-97e1-4d79-b595-e2361fca53e5 1 
+Dec 21 01:02:20.658 HYPERVISOR: exec_cmd: nio create_udp udp-bcf3f2f2-2fd8-413a-874e-7fbee38ded58 10071 127.0.0.1 10070 
+Dec 21 01:02:20.659 HYPERVISOR: exec_cmd: ethsw add_nio Datacenter Lisboa udp-bcf3f2f2-2fd8-413a-874e-7fbee38ded58 
+Dec 21 01:02:20.679 HYPERVISOR: exec_cmd: ethsw set_access_port Datacenter Lisboa udp-bcf3f2f2-2fd8-413a-874e-7fbee38ded58 1 

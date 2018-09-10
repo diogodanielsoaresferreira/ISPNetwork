@@ -1,0 +1,70 @@
+Jan 05 13:03:54.321 HYPERVISOR: Release 0.2.14-x86/Windows (tag 2014092320)
+Jan 05 13:03:54.321 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 63857.
+Jan 05 13:03:54.419 HYPERVISOR: exec_cmd: hypervisor version 
+Jan 05 13:03:54.466 HYPERVISOR: exec_cmd: hypervisor working_dir D:\dl-pc\Universidade\4ano\1semestre\ARA\Projeto\ARA-project\ATM-project\project-files\dynamips 
+Jan 05 13:03:54.466 GENERAL: working_dir=D:\dl-pc\Universidade\4ano\1semestre\ARA\Projeto\ARA-project\ATM-project\project-files\dynamips
+Jan 05 13:03:54.466 HYPERVISOR: exec_cmd: vm create Madrid 12 c7200 
+Jan 05 13:03:54.466 VM: VM Madrid created.
+Jan 05 13:03:54.497 HYPERVISOR: exec_cmd: vm set_con_tcp_port Madrid 5011 
+Jan 05 13:03:54.497 HYPERVISOR: exec_cmd: c7200 get_mac_addr Madrid 
+Jan 05 13:03:54.513 HYPERVISOR: exec_cmd: vm get_status Madrid 
+Jan 05 13:03:54.529 HYPERVISOR: exec_cmd: vm slot_add_binding Madrid 0 0 C7200-IO-FE 
+Jan 05 13:03:54.544 HYPERVISOR: exec_cmd: vm get_status Madrid 
+Jan 05 13:03:54.560 HYPERVISOR: exec_cmd: vm slot_add_binding Madrid 2 0 PA-2FE-TX 
+Jan 05 13:03:54.591 HYPERVISOR: exec_cmd: vm set_nvram Madrid 512 
+Jan 05 13:03:54.607 HYPERVISOR: exec_cmd: vm get_status Madrid 
+Jan 05 13:03:54.622 HYPERVISOR: exec_cmd: vm set_idle_pc Madrid 0x6318687c 
+Jan 05 13:03:54.669 HYPERVISOR: exec_cmd: vm set_exec_area Madrid 64 
+Jan 05 13:03:54.685 HYPERVISOR: exec_cmd: vm get_status Madrid 
+Jan 05 13:03:54.701 HYPERVISOR: exec_cmd: vm slot_add_binding Madrid 1 0 PA-2FE-TX 
+Jan 05 13:03:54.716 HYPERVISOR: exec_cmd: vm set_ram Madrid 512 
+Jan 05 13:03:54.732 HYPERVISOR: exec_cmd: c7200 set_mac_addr Madrid ca0c.18b8.0000 
+Jan 05 13:03:54.747 HYPERVISOR: exec_cmd: vm set_disk0 Madrid 0 
+Jan 05 13:03:54.763 HYPERVISOR: exec_cmd: vm set_ios Madrid C:/Users/dl-pc/GNS3/images/IOS/c7200-advipservicesk9-mz.152-4.S5.image 
+Jan 05 13:03:54.779 HYPERVISOR: exec_cmd: vm get_status Madrid 
+Jan 05 13:03:54.811 HYPERVISOR: exec_cmd: vm slot_remove_binding Madrid 0 0 
+Jan 05 13:03:54.827 HYPERVISOR: exec_cmd: vm get_status Madrid 
+Jan 05 13:03:54.842 HYPERVISOR: exec_cmd: vm slot_add_binding Madrid 0 0 C7200-IO-2FE 
+Jan 05 13:03:54.874 HYPERVISOR: exec_cmd: vm set_config Madrid configs/i12_startup-config.cfg 
+Jan 05 13:03:58.651 HYPERVISOR: exec_cmd: nio create_udp udp-ce0e265c-2b5f-439d-9c66-0d565abd546e 10020 127.0.0.1 10021 
+Jan 05 13:03:58.682 HYPERVISOR: exec_cmd: vm slot_add_nio_binding Madrid 2 0 udp-ce0e265c-2b5f-439d-9c66-0d565abd546e 
+Jan 05 13:03:58.698 HYPERVISOR: exec_cmd: vm get_status Madrid 
+Jan 05 13:03:58.729 HYPERVISOR: exec_cmd: nio create_udp udp-9e2d5b28-32ae-42d2-96ca-075cbcb35230 10023 127.0.0.1 10022 
+Jan 05 13:03:58.744 HYPERVISOR: exec_cmd: vm slot_add_nio_binding Madrid 2 1 udp-9e2d5b28-32ae-42d2-96ca-075cbcb35230 
+Jan 05 13:03:58.760 HYPERVISOR: exec_cmd: vm get_status Madrid 
+Jan 05 13:03:58.791 HYPERVISOR: exec_cmd: nio create_udp udp-720dd972-3e9c-48b2-b941-a92b53275381 10025 127.0.0.1 10024 
+Jan 05 13:03:58.807 HYPERVISOR: exec_cmd: vm slot_add_nio_binding Madrid 0 1 udp-720dd972-3e9c-48b2-b941-a92b53275381 
+Jan 05 13:03:58.838 HYPERVISOR: exec_cmd: vm get_status Madrid 
+Jan 05 13:03:58.869 HYPERVISOR: exec_cmd: nio create_udp udp-4fc57c66-3b4a-4508-8beb-939129ede189 10026 127.0.0.1 10027 
+Jan 05 13:03:58.885 HYPERVISOR: exec_cmd: vm slot_add_nio_binding Madrid 0 0 udp-4fc57c66-3b4a-4508-8beb-939129ede189 
+Jan 05 13:03:58.916 HYPERVISOR: exec_cmd: vm get_status Madrid 
+Jan 05 13:04:00.432 HYPERVISOR: exec_cmd: nio create_udp udp-8b96aa60-0d95-4613-8d74-81afe75b2da0 10101 127.0.0.1 10100 
+Jan 05 13:04:00.448 HYPERVISOR: exec_cmd: vm slot_add_nio_binding Madrid 1 0 udp-8b96aa60-0d95-4613-8d74-81afe75b2da0 
+Jan 05 13:04:00.463 HYPERVISOR: exec_cmd: vm get_status Madrid 
+Jan 05 13:04:00.588 HYPERVISOR: exec_cmd: nio create_udp udp-6becb7ae-f3df-47d3-b4bb-5d7fee3d271e 10108 127.0.0.1 10109 
+Jan 05 13:04:00.604 HYPERVISOR: exec_cmd: vm slot_add_nio_binding Madrid 1 1 udp-6becb7ae-f3df-47d3-b4bb-5d7fee3d271e 
+Jan 05 13:04:00.619 HYPERVISOR: exec_cmd: vm get_status Madrid 
+Jan 05 13:12:05.389 HYPERVISOR: exec_cmd: vm extract_config Madrid 
+Jan 05 13:19:57.703 HYPERVISOR: exec_cmd: vm set_ghost_status Madrid 2 
+Jan 05 13:19:57.719 HYPERVISOR: exec_cmd: vm set_ghost_file Madrid c7200-advipservicesk9-mz.152-4.S5.image-512.ghost 
+Jan 05 13:19:57.735 HYPERVISOR: exec_cmd: vm get_status Madrid 
+Jan 05 13:19:57.779 HYPERVISOR: exec_cmd: vm start Madrid 
+Jan 05 13:22:05.319 HYPERVISOR: exec_cmd: vm get_status Madrid 
+Jan 05 13:22:05.327 HYPERVISOR: exec_cmd: vm stop Madrid 
+Jan 05 13:22:05.619 VM: VM Madrid shutdown.
+Jan 05 13:22:05.623 HYPERVISOR: exec_cmd: vm extract_config Madrid 
+Jan 05 13:23:10.743 HYPERVISOR: exec_cmd: vm get_status Madrid 
+Jan 05 13:23:10.899 HYPERVISOR: exec_cmd: vm start Madrid 
+Jan 05 13:27:55.201 HYPERVISOR: exec_cmd: vm get_status Madrid 
+Jan 05 13:27:55.210 HYPERVISOR: exec_cmd: vm stop Madrid 
+Jan 05 13:27:55.458 VM: VM Madrid shutdown.
+Jan 05 13:27:55.461 HYPERVISOR: exec_cmd: vm extract_config Madrid 
+Jan 05 13:27:56.871 HYPERVISOR: exec_cmd: vm extract_config Madrid 
+Jan 05 13:27:57.856 HYPERVISOR: exec_cmd: vm extract_config Madrid 
+Jan 05 13:28:14.291 HYPERVISOR: exec_cmd: vm get_status Madrid 
+Jan 05 13:28:14.391 HYPERVISOR: exec_cmd: vm extract_config Madrid 
+Jan 05 13:28:14.499 HYPERVISOR: exec_cmd: vm delete Madrid 
+Jan 05 13:28:14.499 VM: VM Madrid destroyed.
+Jan 05 13:28:14.627 HYPERVISOR: exec_cmd: hypervisor stop 
+Jan 05 13:28:14.821 HYPERVISOR: Stopped.
+Jan 05 13:28:14.821 GENERAL: reset done.

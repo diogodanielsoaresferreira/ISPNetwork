@@ -1,0 +1,31 @@
+Dec 28 17:05:42.657 HYPERVISOR: Release 0.2.17-amd64/Linux (tag 2017072410)
+Dec 28 17:05:42.657 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 58939.
+Dec 28 17:05:42.686 HYPERVISOR: exec_cmd: hypervisor version 
+Dec 28 17:05:42.688 HYPERVISOR: exec_cmd: hypervisor working_dir /home/diogof/Desktop/Projeto ARA/GNS3-project/project-files/dynamips 
+Dec 28 17:05:42.688 GENERAL: working_dir=/home/diogof/Desktop/Projeto ARA/GNS3-project/project-files/dynamips
+Dec 28 17:05:42.693 HYPERVISOR: exec_cmd: vm create OE2 17 c7200 
+Dec 28 17:05:42.694 VM: VM OE2 created.
+Dec 28 17:05:42.699 HYPERVISOR: exec_cmd: vm set_con_tcp_port OE2 5032 
+Dec 28 17:05:42.701 HYPERVISOR: exec_cmd: c7200 get_mac_addr OE2 
+Dec 28 17:05:42.702 HYPERVISOR: exec_cmd: vm get_status OE2 
+Dec 28 17:05:42.711 HYPERVISOR: exec_cmd: vm slot_add_binding OE2 0 0 C7200-IO-FE 
+Dec 28 17:05:42.722 HYPERVISOR: exec_cmd: vm set_ram OE2 512 
+Dec 28 17:05:42.724 HYPERVISOR: exec_cmd: vm set_disk0 OE2 0 
+Dec 28 17:05:42.725 HYPERVISOR: exec_cmd: vm set_ios OE2 /home/diogof/GNS3/images/IOS/c7200-advipservicesk9-mz.152-4.S5.image 
+Dec 28 17:05:42.727 HYPERVISOR: exec_cmd: vm set_nvram OE2 512 
+Dec 28 17:05:42.728 HYPERVISOR: exec_cmd: vm get_status OE2 
+Dec 28 17:05:42.728 HYPERVISOR: exec_cmd: vm set_idle_pc OE2 0x6318687c 
+Dec 28 17:05:42.729 HYPERVISOR: exec_cmd: c7200 set_mac_addr OE2 ca11.00f4.0000 
+Dec 28 17:05:42.730 HYPERVISOR: exec_cmd: vm set_config OE2 configs/i17_startup-config.cfg 
+Dec 28 17:05:44.874 HYPERVISOR: exec_cmd: nio create_udp udp-6fe40dd2-2188-48c3-8e10-5393cd7d987c 10088 127.0.0.1 10089 
+Dec 28 17:05:44.875 HYPERVISOR: exec_cmd: vm slot_add_nio_binding OE2 0 0 udp-6fe40dd2-2188-48c3-8e10-5393cd7d987c 
+Dec 28 17:05:44.878 HYPERVISOR: exec_cmd: vm get_status OE2 
+Dec 28 17:05:54.726 HYPERVISOR: exec_cmd: vm extract_config OE2 
+Dec 28 17:28:44.275 HYPERVISOR: exec_cmd: vm extract_config OE2 
+Dec 28 17:28:56.948 HYPERVISOR: exec_cmd: vm get_status OE2 
+Dec 28 17:28:56.962 HYPERVISOR: exec_cmd: vm extract_config OE2 
+Dec 28 17:28:56.972 HYPERVISOR: exec_cmd: vm delete OE2 
+Dec 28 17:28:56.972 VM: VM OE2 destroyed.
+Dec 28 17:28:56.983 HYPERVISOR: exec_cmd: hypervisor stop 
+Dec 28 17:28:57.449 HYPERVISOR: Stopped.
+Dec 28 17:28:57.449 GENERAL: reset done.

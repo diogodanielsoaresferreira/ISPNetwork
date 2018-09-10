@@ -1,0 +1,12 @@
+Dec 21 01:02:18.823 HYPERVISOR: Release 0.2.17-amd64/Linux (tag 2017072410)
+Dec 21 01:02:18.823 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 36338.
+Dec 21 01:02:18.856 HYPERVISOR: exec_cmd: hypervisor version 
+Dec 21 01:02:18.858 HYPERVISOR: exec_cmd: hypervisor working_dir /home/diogof/Desktop/Projeto ARA/GNS3-project/project-files/dynamips 
+Dec 21 01:02:18.858 GENERAL: working_dir=/home/diogof/Desktop/Projeto ARA/GNS3-project/project-files/dynamips
+Dec 21 01:02:18.860 HYPERVISOR: exec_cmd: ethsw create netL1 
+Dec 21 01:02:20.266 HYPERVISOR: exec_cmd: nio create_udp udp-32602265-3856-41cc-9661-a59298235ec0 10038 127.0.0.1 10036 
+Dec 21 01:02:20.270 HYPERVISOR: exec_cmd: ethsw add_nio netL1 udp-32602265-3856-41cc-9661-a59298235ec0 
+Dec 21 01:02:20.274 HYPERVISOR: exec_cmd: ethsw set_access_port netL1 udp-32602265-3856-41cc-9661-a59298235ec0 1 
+Dec 21 01:02:20.696 HYPERVISOR: exec_cmd: nio create_udp udp-65d2e7ea-4a9f-46f0-ae5b-513f2b7fca3a 10075 127.0.0.1 10074 
+Dec 21 01:02:20.697 HYPERVISOR: exec_cmd: ethsw add_nio netL1 udp-65d2e7ea-4a9f-46f0-ae5b-513f2b7fca3a 
+Dec 21 01:02:20.715 HYPERVISOR: exec_cmd: ethsw set_access_port netL1 udp-65d2e7ea-4a9f-46f0-ae5b-513f2b7fca3a 1 

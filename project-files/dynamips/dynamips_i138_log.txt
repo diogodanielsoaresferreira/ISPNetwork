@@ -1,0 +1,12 @@
+Dec 21 01:02:18.948 HYPERVISOR: Release 0.2.17-amd64/Linux (tag 2017072410)
+Dec 21 01:02:18.948 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 41642.
+Dec 21 01:02:18.987 HYPERVISOR: exec_cmd: hypervisor version 
+Dec 21 01:02:18.992 HYPERVISOR: exec_cmd: hypervisor working_dir /home/diogof/Desktop/Projeto ARA/GNS3-project/project-files/dynamips 
+Dec 21 01:02:18.992 GENERAL: working_dir=/home/diogof/Desktop/Projeto ARA/GNS3-project/project-files/dynamips
+Dec 21 01:02:18.997 HYPERVISOR: exec_cmd: ethsw create Datacenter Oeiras 
+Dec 21 01:02:20.506 HYPERVISOR: exec_cmd: nio create_udp udp-aac8b556-26c1-4dc4-8d13-b97413a71d93 10059 127.0.0.1 10058 
+Dec 21 01:02:20.507 HYPERVISOR: exec_cmd: ethsw add_nio Datacenter Oeiras udp-aac8b556-26c1-4dc4-8d13-b97413a71d93 
+Dec 21 01:02:20.518 HYPERVISOR: exec_cmd: ethsw set_access_port Datacenter Oeiras udp-aac8b556-26c1-4dc4-8d13-b97413a71d93 1 
+Dec 21 01:02:20.551 HYPERVISOR: exec_cmd: nio create_udp udp-31b633ea-b6c4-4445-8c5a-9e38138c6273 10061 127.0.0.1 10060 
+Dec 21 01:02:20.559 HYPERVISOR: exec_cmd: ethsw add_nio Datacenter Oeiras udp-31b633ea-b6c4-4445-8c5a-9e38138c6273 
+Dec 21 01:02:20.578 HYPERVISOR: exec_cmd: ethsw set_access_port Datacenter Oeiras udp-31b633ea-b6c4-4445-8c5a-9e38138c6273 1 

@@ -1,0 +1,53 @@
+Jan 05 13:03:56.401 HYPERVISOR: Release 0.2.14-x86/Windows (tag 2014092320)
+Jan 05 13:03:56.401 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 63899.
+Jan 05 13:03:56.479 HYPERVISOR: exec_cmd: hypervisor version 
+Jan 05 13:03:56.494 HYPERVISOR: exec_cmd: hypervisor working_dir D:\dl-pc\Universidade\4ano\1semestre\ARA\Projeto\ARA-project\ATM-project\project-files\dynamips 
+Jan 05 13:03:56.494 GENERAL: working_dir=D:\dl-pc\Universidade\4ano\1semestre\ARA\Projeto\ARA-project\ATM-project\project-files\dynamips
+Jan 05 13:03:56.510 HYPERVISOR: exec_cmd: vm create OeirasServer1 22 c7200 
+Jan 05 13:03:56.510 VM: VM OeirasServer1 created.
+Jan 05 13:03:56.573 HYPERVISOR: exec_cmd: vm set_con_tcp_port OeirasServer1 5010 
+Jan 05 13:03:56.573 HYPERVISOR: exec_cmd: c7200 get_mac_addr OeirasServer1 
+Jan 05 13:03:56.588 HYPERVISOR: exec_cmd: vm get_status OeirasServer1 
+Jan 05 13:03:56.604 HYPERVISOR: exec_cmd: vm slot_add_binding OeirasServer1 0 0 C7200-IO-FE 
+Jan 05 13:03:56.619 HYPERVISOR: exec_cmd: vm set_nvram OeirasServer1 512 
+Jan 05 13:03:56.635 HYPERVISOR: exec_cmd: vm get_status OeirasServer1 
+Jan 05 13:03:56.651 HYPERVISOR: exec_cmd: vm set_idle_pc OeirasServer1 0x6318687c 
+Jan 05 13:03:56.666 HYPERVISOR: exec_cmd: vm set_exec_area OeirasServer1 64 
+Jan 05 13:03:56.666 HYPERVISOR: exec_cmd: vm get_status OeirasServer1 
+Jan 05 13:03:56.697 HYPERVISOR: exec_cmd: vm slot_add_binding OeirasServer1 1 0 PA-2FE-TX 
+Jan 05 13:03:56.713 HYPERVISOR: exec_cmd: vm set_ram OeirasServer1 512 
+Jan 05 13:03:56.744 HYPERVISOR: exec_cmd: c7200 set_mac_addr OeirasServer1 ca16.7b6b.0000 
+Jan 05 13:03:56.760 HYPERVISOR: exec_cmd: vm set_disk0 OeirasServer1 0 
+Jan 05 13:03:56.776 HYPERVISOR: exec_cmd: vm set_ios OeirasServer1 C:/Users/dl-pc/GNS3/images/IOS/c7200-advipservicesk9-mz.152-4.S5.image 
+Jan 05 13:03:56.791 HYPERVISOR: exec_cmd: vm get_status OeirasServer1 
+Jan 05 13:03:56.807 HYPERVISOR: exec_cmd: vm slot_remove_binding OeirasServer1 0 0 
+Jan 05 13:03:56.822 HYPERVISOR: exec_cmd: vm get_status OeirasServer1 
+Jan 05 13:03:56.854 HYPERVISOR: exec_cmd: vm slot_add_binding OeirasServer1 0 0 C7200-IO-2FE 
+Jan 05 13:03:56.869 HYPERVISOR: exec_cmd: vm set_config OeirasServer1 configs/i22_startup-config.cfg 
+Jan 05 13:03:59.963 HYPERVISOR: exec_cmd: nio create_udp udp-9005f573-801e-43fe-878b-5f71bf57e390 10079 127.0.0.1 10078 
+Jan 05 13:03:59.963 HYPERVISOR: exec_cmd: vm slot_add_nio_binding OeirasServer1 0 0 udp-9005f573-801e-43fe-878b-5f71bf57e390 
+Jan 05 13:03:59.979 HYPERVISOR: exec_cmd: vm get_status OeirasServer1 
+Jan 05 13:12:05.420 HYPERVISOR: exec_cmd: vm extract_config OeirasServer1 
+Jan 05 13:18:50.805 HYPERVISOR: exec_cmd: vm set_ghost_status OeirasServer1 2 
+Jan 05 13:18:50.813 HYPERVISOR: exec_cmd: vm set_ghost_file OeirasServer1 c7200-advipservicesk9-mz.152-4.S5.image-512.ghost 
+Jan 05 13:18:50.817 HYPERVISOR: exec_cmd: vm get_status OeirasServer1 
+Jan 05 13:18:50.821 HYPERVISOR: exec_cmd: vm start OeirasServer1 
+Jan 05 13:22:04.307 HYPERVISOR: exec_cmd: vm get_status OeirasServer1 
+Jan 05 13:22:04.319 HYPERVISOR: exec_cmd: vm stop OeirasServer1 
+Jan 05 13:22:04.527 VM: VM OeirasServer1 shutdown.
+Jan 05 13:22:04.531 HYPERVISOR: exec_cmd: vm extract_config OeirasServer1 
+Jan 05 13:22:09.427 HYPERVISOR: exec_cmd: vm get_status OeirasServer1 
+Jan 05 13:22:09.519 HYPERVISOR: exec_cmd: vm start OeirasServer1 
+Jan 05 13:27:54.062 HYPERVISOR: exec_cmd: vm get_status OeirasServer1 
+Jan 05 13:27:54.065 HYPERVISOR: exec_cmd: vm stop OeirasServer1 
+Jan 05 13:27:54.294 VM: VM OeirasServer1 shutdown.
+Jan 05 13:27:54.317 HYPERVISOR: exec_cmd: vm extract_config OeirasServer1 
+Jan 05 13:27:56.911 HYPERVISOR: exec_cmd: vm extract_config OeirasServer1 
+Jan 05 13:27:57.922 HYPERVISOR: exec_cmd: vm extract_config OeirasServer1 
+Jan 05 13:28:14.307 HYPERVISOR: exec_cmd: vm get_status OeirasServer1 
+Jan 05 13:28:14.403 HYPERVISOR: exec_cmd: vm extract_config OeirasServer1 
+Jan 05 13:28:14.513 HYPERVISOR: exec_cmd: vm delete OeirasServer1 
+Jan 05 13:28:14.513 VM: VM OeirasServer1 destroyed.
+Jan 05 13:28:14.635 HYPERVISOR: exec_cmd: hypervisor stop 
+Jan 05 13:28:14.913 HYPERVISOR: Stopped.
+Jan 05 13:28:14.913 GENERAL: reset done.

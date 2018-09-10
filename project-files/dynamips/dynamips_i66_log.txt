@@ -1,0 +1,32 @@
+Dec 28 17:05:42.619 HYPERVISOR: Release 0.2.17-amd64/Linux (tag 2017072410)
+Dec 28 17:05:42.619 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 41741.
+Dec 28 17:05:42.649 HYPERVISOR: exec_cmd: hypervisor version 
+Dec 28 17:05:42.659 HYPERVISOR: exec_cmd: hypervisor working_dir /home/diogof/Desktop/Projeto ARA/GNS3-project/project-files/dynamips 
+Dec 28 17:05:42.659 GENERAL: working_dir=/home/diogof/Desktop/Projeto ARA/GNS3-project/project-files/dynamips
+Dec 28 17:05:42.661 HYPERVISOR: exec_cmd: vm create MA 19 c7200 
+Dec 28 17:05:42.661 VM: VM MA created.
+Dec 28 17:05:42.662 HYPERVISOR: exec_cmd: vm set_con_tcp_port MA 5031 
+Dec 28 17:05:42.663 HYPERVISOR: exec_cmd: c7200 get_mac_addr MA 
+Dec 28 17:05:42.670 HYPERVISOR: exec_cmd: vm get_status MA 
+Dec 28 17:05:42.680 HYPERVISOR: exec_cmd: vm slot_add_binding MA 0 0 C7200-IO-FE 
+Dec 28 17:05:42.682 HYPERVISOR: exec_cmd: vm set_ram MA 512 
+Dec 28 17:05:42.684 HYPERVISOR: exec_cmd: vm set_disk0 MA 0 
+Dec 28 17:05:42.685 HYPERVISOR: exec_cmd: vm set_ios MA /home/diogof/GNS3/images/IOS/c7200-advipservicesk9-mz.152-4.S5.image 
+Dec 28 17:05:42.687 HYPERVISOR: exec_cmd: vm set_nvram MA 512 
+Dec 28 17:05:42.688 HYPERVISOR: exec_cmd: vm get_status MA 
+Dec 28 17:05:42.693 HYPERVISOR: exec_cmd: vm set_idle_pc MA 0x6318687c 
+Dec 28 17:05:42.699 HYPERVISOR: exec_cmd: c7200 set_mac_addr MA ca13.3748.0000 
+Dec 28 17:05:42.701 HYPERVISOR: exec_cmd: vm set_config MA configs/i19_startup-config.cfg 
+Dec 28 17:05:42.702 HYPERVISOR: exec_cmd: vm set_config MA configs/i19_startup-config.cfg configs/i19_private-config.cfg 
+Dec 28 17:05:44.856 HYPERVISOR: exec_cmd: nio create_udp udp-06e8ed96-412a-4ebc-a653-f0143d32e142 10086 127.0.0.1 10087 
+Dec 28 17:05:44.858 HYPERVISOR: exec_cmd: vm slot_add_nio_binding MA 0 0 udp-06e8ed96-412a-4ebc-a653-f0143d32e142 
+Dec 28 17:05:44.863 HYPERVISOR: exec_cmd: vm get_status MA 
+Dec 28 17:05:54.733 HYPERVISOR: exec_cmd: vm extract_config MA 
+Dec 28 17:28:44.279 HYPERVISOR: exec_cmd: vm extract_config MA 
+Dec 28 17:28:56.949 HYPERVISOR: exec_cmd: vm get_status MA 
+Dec 28 17:28:56.962 HYPERVISOR: exec_cmd: vm extract_config MA 
+Dec 28 17:28:56.973 HYPERVISOR: exec_cmd: vm delete MA 
+Dec 28 17:28:56.973 VM: VM MA destroyed.
+Dec 28 17:28:56.983 HYPERVISOR: exec_cmd: hypervisor stop 
+Dec 28 17:28:57.391 HYPERVISOR: Stopped.
+Dec 28 17:28:57.391 GENERAL: reset done.

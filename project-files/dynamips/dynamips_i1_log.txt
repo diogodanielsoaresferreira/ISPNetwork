@@ -1,0 +1,55 @@
+Jan 05 13:03:53.185 HYPERVISOR: Release 0.2.14-x86/Windows (tag 2014092320)
+Jan 05 13:03:53.185 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 63832.
+Jan 05 13:03:53.468 HYPERVISOR: exec_cmd: hypervisor version 
+Jan 05 13:03:53.484 HYPERVISOR: exec_cmd: hypervisor working_dir D:\dl-pc\Universidade\4ano\1semestre\ARA\Projeto\ARA-project\ATM-project\project-files\dynamips 
+Jan 05 13:03:53.820 GENERAL: working_dir=D:\dl-pc\Universidade\4ano\1semestre\ARA\Projeto\ARA-project\ATM-project\project-files\dynamips
+Jan 05 13:03:53.840 HYPERVISOR: exec_cmd: vm create EmpB2 3 c7200 
+Jan 05 13:03:53.840 VM: VM EmpB2 created.
+Jan 05 13:03:53.856 HYPERVISOR: exec_cmd: vm set_con_tcp_port EmpB2 5002 
+Jan 05 13:03:53.871 HYPERVISOR: exec_cmd: c7200 get_mac_addr EmpB2 
+Jan 05 13:03:53.903 HYPERVISOR: exec_cmd: vm get_status EmpB2 
+Jan 05 13:03:53.918 HYPERVISOR: exec_cmd: vm slot_add_binding EmpB2 0 0 C7200-IO-FE 
+Jan 05 13:03:53.934 HYPERVISOR: exec_cmd: vm set_nvram EmpB2 512 
+Jan 05 13:03:53.950 HYPERVISOR: exec_cmd: vm get_status EmpB2 
+Jan 05 13:03:53.965 HYPERVISOR: exec_cmd: vm set_idle_pc EmpB2 0x6318687c 
+Jan 05 13:03:53.981 HYPERVISOR: exec_cmd: vm set_exec_area EmpB2 64 
+Jan 05 13:03:53.996 HYPERVISOR: exec_cmd: vm set_ram EmpB2 512 
+Jan 05 13:03:54.012 HYPERVISOR: exec_cmd: c7200 set_mac_addr EmpB2 ca03.3e50.0000 
+Jan 05 13:03:54.028 HYPERVISOR: exec_cmd: vm set_disk0 EmpB2 0 
+Jan 05 13:03:54.043 HYPERVISOR: exec_cmd: vm set_ios EmpB2 C:/Users/dl-pc/GNS3/images/IOS/c7200-advipservicesk9-mz.152-4.S5.image 
+Jan 05 13:03:54.059 HYPERVISOR: exec_cmd: vm get_status EmpB2 
+Jan 05 13:03:54.090 HYPERVISOR: exec_cmd: vm slot_remove_binding EmpB2 0 0 
+Jan 05 13:03:54.106 HYPERVISOR: exec_cmd: vm get_status EmpB2 
+Jan 05 13:03:54.137 HYPERVISOR: exec_cmd: vm slot_add_binding EmpB2 0 0 C7200-IO-2FE 
+Jan 05 13:03:54.153 HYPERVISOR: exec_cmd: vm set_config EmpB2 configs/i3_startup-config.cfg 
+Jan 05 13:03:54.168 HYPERVISOR: exec_cmd: vm set_config EmpB2 configs/i3_startup-config.cfg configs/i3_private-config.cfg 
+Jan 05 13:03:58.338 HYPERVISOR: exec_cmd: nio create_udp udp-666d3bbc-e6f3-4143-b501-7e7352d48f35 10005 127.0.0.1 10004 
+Jan 05 13:03:58.369 HYPERVISOR: exec_cmd: vm slot_add_nio_binding EmpB2 0 0 udp-666d3bbc-e6f3-4143-b501-7e7352d48f35 
+Jan 05 13:03:58.369 HYPERVISOR: exec_cmd: vm get_status EmpB2 
+Jan 05 13:03:58.401 HYPERVISOR: exec_cmd: nio create_udp udp-94396d17-c815-44f1-aad1-d9b64fe427c4 10008 127.0.0.1 10009 
+Jan 05 13:03:58.432 HYPERVISOR: exec_cmd: vm slot_add_nio_binding EmpB2 0 1 udp-94396d17-c815-44f1-aad1-d9b64fe427c4 
+Jan 05 13:03:58.463 HYPERVISOR: exec_cmd: vm get_status EmpB2 
+Jan 05 13:12:05.436 HYPERVISOR: exec_cmd: vm extract_config EmpB2 
+Jan 05 13:20:19.177 HYPERVISOR: exec_cmd: vm set_ghost_status EmpB2 2 
+Jan 05 13:20:19.317 HYPERVISOR: exec_cmd: vm set_ghost_file EmpB2 c7200-advipservicesk9-mz.152-4.S5.image-512.ghost 
+Jan 05 13:20:19.365 HYPERVISOR: exec_cmd: vm get_status EmpB2 
+Jan 05 13:20:19.429 HYPERVISOR: exec_cmd: vm start EmpB2 
+Jan 05 13:22:05.571 HYPERVISOR: exec_cmd: vm get_status EmpB2 
+Jan 05 13:22:05.587 HYPERVISOR: exec_cmd: vm stop EmpB2 
+Jan 05 13:22:05.815 VM: VM EmpB2 shutdown.
+Jan 05 13:22:05.823 HYPERVISOR: exec_cmd: vm extract_config EmpB2 
+Jan 05 13:23:29.913 HYPERVISOR: exec_cmd: vm get_status EmpB2 
+Jan 05 13:23:29.945 HYPERVISOR: exec_cmd: vm start EmpB2 
+Jan 05 13:27:55.423 HYPERVISOR: exec_cmd: vm get_status EmpB2 
+Jan 05 13:27:55.432 HYPERVISOR: exec_cmd: vm stop EmpB2 
+Jan 05 13:27:55.598 VM: VM EmpB2 shutdown.
+Jan 05 13:27:55.601 HYPERVISOR: exec_cmd: vm extract_config EmpB2 
+Jan 05 13:27:56.943 HYPERVISOR: exec_cmd: vm extract_config EmpB2 
+Jan 05 13:27:57.953 HYPERVISOR: exec_cmd: vm extract_config EmpB2 
+Jan 05 13:28:14.280 HYPERVISOR: exec_cmd: vm get_status EmpB2 
+Jan 05 13:28:14.384 HYPERVISOR: exec_cmd: vm extract_config EmpB2 
+Jan 05 13:28:14.490 HYPERVISOR: exec_cmd: vm delete EmpB2 
+Jan 05 13:28:14.490 VM: VM EmpB2 destroyed.
+Jan 05 13:28:14.620 HYPERVISOR: exec_cmd: hypervisor stop 
+Jan 05 13:28:14.821 HYPERVISOR: Stopped.
+Jan 05 13:28:14.821 GENERAL: reset done.

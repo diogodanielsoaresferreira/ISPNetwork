@@ -1,0 +1,65 @@
+--------------------
+--- Internet 1   ---
+--------------------
+
+conf t
+ipv6 unicast-routing
+
+int f0/0
+ip add 4.4.4.18 255.255.255.252
+ipv6 add 2001:4:4::12/126
+no shut
+
+int f0/1
+ip add 2.2.2.1 255.255.255.128
+ipv6 add 2001:2:2::1/80
+no shut
+
+exit
+
+router bgp 1500
+address-family ipv4 unicast
+redistribute connected
+neighbor 4.4.4.17 remote-as 20000
+neighbor 4.4.4.17 default-originate
+
+address-family ipv6 unicast
+redistribute connected
+neighbor 2001:4:4::11 remote-as 20000
+neighbor 2001:4:4::11 default-originate
+
+end
+write
+
+--------------------
+--- Internet 2   ---
+--------------------
+
+conf t
+ipv6 unicast-routing
+
+int f0/0
+ip add 4.4.4.22 255.255.255.252
+ipv6 add 2001:4:4::16/126
+no shut
+
+int f0/1
+ip add 2.2.2.129 255.255.255.128
+ipv6 add 2001:2:2:1::1/80
+no shut
+
+exit
+
+router bgp 2500
+address-family ipv4 unicast
+redistribute connected
+neighbor 4.4.4.21 remote-as 40000
+neighbor 4.4.4.21 default-originate
+
+address-family ipv6 unicast
+redistribute connected
+neighbor 2001:4:4::15 remote-as 40000
+neighbor 2001:4:4::15 default-originate
+
+end
+write

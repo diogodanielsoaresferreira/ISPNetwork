@@ -1,0 +1,81 @@
+Dec 21 01:02:18.483 HYPERVISOR: Release 0.2.17-amd64/Linux (tag 2017072410)
+Dec 21 01:02:18.483 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 46681.
+Dec 21 01:02:18.514 HYPERVISOR: exec_cmd: hypervisor version 
+Dec 21 01:02:18.516 HYPERVISOR: exec_cmd: hypervisor working_dir /home/diogof/Desktop/Projeto ARA/GNS3-project/project-files/dynamips 
+Dec 21 01:02:18.516 GENERAL: working_dir=/home/diogof/Desktop/Projeto ARA/GNS3-project/project-files/dynamips
+Dec 21 01:02:18.518 HYPERVISOR: exec_cmd: vm create EmpA1 5 c7200 
+Dec 21 01:02:18.518 VM: VM EmpA1 created.
+Dec 21 01:02:18.521 HYPERVISOR: exec_cmd: vm set_con_tcp_port EmpA1 5004 
+Dec 21 01:02:18.523 HYPERVISOR: exec_cmd: c7200 get_mac_addr EmpA1 
+Dec 21 01:02:18.525 HYPERVISOR: exec_cmd: vm get_status EmpA1 
+Dec 21 01:02:18.527 HYPERVISOR: exec_cmd: vm slot_add_binding EmpA1 0 0 C7200-IO-FE 
+Dec 21 01:02:18.529 HYPERVISOR: exec_cmd: vm set_nvram EmpA1 512 
+Dec 21 01:02:18.535 HYPERVISOR: exec_cmd: vm set_ram EmpA1 512 
+Dec 21 01:02:18.550 HYPERVISOR: exec_cmd: vm get_status EmpA1 
+Dec 21 01:02:18.552 HYPERVISOR: exec_cmd: vm slot_remove_binding EmpA1 0 0 
+Dec 21 01:02:18.553 HYPERVISOR: exec_cmd: vm get_status EmpA1 
+Dec 21 01:02:18.554 HYPERVISOR: exec_cmd: vm slot_add_binding EmpA1 0 0 C7200-IO-2FE 
+Dec 21 01:02:18.558 HYPERVISOR: exec_cmd: vm get_status EmpA1 
+Dec 21 01:02:18.560 HYPERVISOR: exec_cmd: vm set_idle_pc EmpA1 0x63184bc8 
+Dec 21 01:02:18.563 HYPERVISOR: exec_cmd: vm set_disk0 EmpA1 0 
+Dec 21 01:02:18.568 HYPERVISOR: exec_cmd: c7200 set_mac_addr EmpA1 ca05.25dc.0000 
+Dec 21 01:02:18.571 HYPERVISOR: exec_cmd: vm set_ios EmpA1 /home/diogof/GNS3/images/IOS/c7200-advipservicesk9-mz.152-4.S5.image 
+Dec 21 01:02:18.575 HYPERVISOR: exec_cmd: vm set_config EmpA1 configs/i5_startup-config.cfg 
+Dec 21 01:02:18.578 HYPERVISOR: exec_cmd: vm set_config EmpA1 configs/i5_startup-config.cfg configs/i5_private-config.cfg 
+Dec 21 01:02:19.891 HYPERVISOR: exec_cmd: nio create_udp udp-a89c9b04-8745-43c8-bd7f-851e0f4bd00c 10008 127.0.0.1 10004 
+Dec 21 01:02:19.892 HYPERVISOR: exec_cmd: vm slot_add_nio_binding EmpA1 0 0 udp-a89c9b04-8745-43c8-bd7f-851e0f4bd00c 
+Dec 21 01:02:19.897 HYPERVISOR: exec_cmd: vm get_status EmpA1 
+Dec 21 01:02:19.939 HYPERVISOR: exec_cmd: nio create_udp udp-fa908a9e-8c61-423e-a173-2a1bb7173421 10005 127.0.0.1 10009 
+Dec 21 01:02:19.944 HYPERVISOR: exec_cmd: vm slot_add_nio_binding EmpA1 0 1 udp-fa908a9e-8c61-423e-a173-2a1bb7173421 
+Dec 21 01:02:19.948 HYPERVISOR: exec_cmd: vm get_status EmpA1 
+Dec 21 01:02:31.090 HYPERVISOR: exec_cmd: vm set_ghost_status EmpA1 2 
+Dec 21 01:02:31.094 HYPERVISOR: exec_cmd: vm set_ghost_file EmpA1 c7200-advipservicesk9-mz.152-4.S5.image-512.ghost 
+Dec 21 01:02:31.095 HYPERVISOR: exec_cmd: vm get_status EmpA1 
+Dec 21 01:02:31.096 HYPERVISOR: exec_cmd: vm start EmpA1 
+Dec 21 01:10:26.144 HYPERVISOR: exec_cmd: vm extract_config EmpA1 
+Dec 21 01:10:27.583 HYPERVISOR: exec_cmd: vm get_status EmpA1 
+Dec 21 01:10:27.583 HYPERVISOR: exec_cmd: vm stop EmpA1 
+Dec 21 01:10:27.689 VM: VM EmpA1 shutdown.
+Dec 21 01:10:27.692 HYPERVISOR: exec_cmd: vm extract_config EmpA1 
+Dec 21 01:10:29.910 HYPERVISOR: exec_cmd: vm get_status EmpA1 
+Dec 21 01:10:29.916 HYPERVISOR: exec_cmd: vm start EmpA1 
+Dec 21 01:17:14.274 HYPERVISOR: exec_cmd: vm extract_config EmpA1 
+Dec 21 01:17:15.310 HYPERVISOR: exec_cmd: vm get_status EmpA1 
+Dec 21 01:17:15.311 HYPERVISOR: exec_cmd: vm stop EmpA1 
+Dec 21 01:17:15.410 VM: VM EmpA1 shutdown.
+Dec 21 01:17:15.411 HYPERVISOR: exec_cmd: vm extract_config EmpA1 
+Dec 21 01:17:18.389 HYPERVISOR: exec_cmd: vm get_status EmpA1 
+Dec 21 01:17:18.391 HYPERVISOR: exec_cmd: vm start EmpA1 
+Dec 21 01:20:58.188 HYPERVISOR: exec_cmd: vm extract_config EmpA1 
+Dec 21 01:28:22.483 HYPERVISOR: exec_cmd: vm get_status EmpA1 
+Dec 21 01:28:22.483 HYPERVISOR: exec_cmd: vm stop EmpA1 
+Dec 21 01:28:22.581 VM: VM EmpA1 shutdown.
+Dec 21 01:28:22.582 HYPERVISOR: exec_cmd: vm extract_config EmpA1 
+Dec 21 01:28:22.827 HYPERVISOR: exec_cmd: vm extract_config EmpA1 
+Dec 21 01:28:55.355 HYPERVISOR: exec_cmd: vm get_status EmpA1 
+Dec 21 01:28:55.357 HYPERVISOR: exec_cmd: vm start EmpA1 
+Dec 21 01:35:06.358 HYPERVISOR: exec_cmd: vm extract_config EmpA1 
+Dec 21 01:35:07.983 HYPERVISOR: exec_cmd: vm get_status EmpA1 
+Dec 21 01:35:07.983 HYPERVISOR: exec_cmd: vm stop EmpA1 
+Dec 21 01:35:08.116 VM: VM EmpA1 shutdown.
+Dec 21 01:35:08.122 HYPERVISOR: exec_cmd: vm extract_config EmpA1 
+Dec 21 01:35:10.618 HYPERVISOR: exec_cmd: vm get_status EmpA1 
+Dec 21 01:35:10.623 HYPERVISOR: exec_cmd: vm start EmpA1 
+Dec 21 01:42:52.857 HYPERVISOR: exec_cmd: vm get_status EmpA1 
+Dec 21 01:42:52.857 HYPERVISOR: exec_cmd: vm stop EmpA1 
+Dec 21 01:42:52.957 VM: VM EmpA1 shutdown.
+Dec 21 01:42:52.958 HYPERVISOR: exec_cmd: vm extract_config EmpA1 
+Dec 21 01:42:55.349 HYPERVISOR: exec_cmd: vm get_status EmpA1 
+Dec 21 01:42:55.349 HYPERVISOR: exec_cmd: vm start EmpA1 
+Dec 21 01:46:11.341 HYPERVISOR: exec_cmd: vm get_status EmpA1 
+Dec 21 01:46:11.342 HYPERVISOR: exec_cmd: vm stop EmpA1 
+Dec 21 01:46:11.435 VM: VM EmpA1 shutdown.
+Dec 21 01:46:11.436 HYPERVISOR: exec_cmd: vm extract_config EmpA1 
+Dec 21 01:46:14.482 HYPERVISOR: exec_cmd: vm get_status EmpA1 
+Dec 21 01:46:14.483 HYPERVISOR: exec_cmd: vm start EmpA1 
+Dec 21 02:29:17.529 HYPERVISOR: exec_cmd: vm extract_config EmpA1 
+Dec 21 03:05:28.762 HYPERVISOR: exec_cmd: vm extract_config EmpA1 
+Dec 21 03:05:29.455 HYPERVISOR: exec_cmd: vm get_status EmpA1 
+Dec 21 03:05:29.457 HYPERVISOR: exec_cmd: vm stop EmpA1 
+Dec 21 03:05:29.563 VM: VM EmpA1 shutdown.
+Dec 21 03:05:29.566 HYPERVISOR: exec_cmd: vm extract_config EmpA1 

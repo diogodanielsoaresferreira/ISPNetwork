@@ -1,0 +1,25 @@
+Dec 28 17:05:42.372 HYPERVISOR: Release 0.2.17-amd64/Linux (tag 2017072410)
+Dec 28 17:05:42.372 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 38891.
+Dec 28 17:05:42.399 HYPERVISOR: exec_cmd: hypervisor version 
+Dec 28 17:05:42.409 HYPERVISOR: exec_cmd: hypervisor working_dir /home/diogof/Desktop/Projeto ARA/GNS3-project/project-files/dynamips 
+Dec 28 17:05:42.409 GENERAL: working_dir=/home/diogof/Desktop/Projeto ARA/GNS3-project/project-files/dynamips
+Dec 28 17:05:42.414 HYPERVISOR: exec_cmd: ethsw create Datacenter Lisboa 
+Dec 28 17:05:44.490 HYPERVISOR: exec_cmd: nio create_udp udp-2668bf8e-888d-4a3a-a992-ef24d84d34f9 10051 127.0.0.1 10050 
+Dec 28 17:05:44.491 HYPERVISOR: exec_cmd: ethsw add_nio Datacenter Lisboa udp-2668bf8e-888d-4a3a-a992-ef24d84d34f9 
+Dec 28 17:05:44.501 HYPERVISOR: exec_cmd: ethsw set_access_port Datacenter Lisboa udp-2668bf8e-888d-4a3a-a992-ef24d84d34f9 1 
+Dec 28 17:05:44.718 HYPERVISOR: exec_cmd: nio create_udp udp-4abf2c81-cc96-4074-ad1c-75d0b3568235 10072 127.0.0.1 10073 
+Dec 28 17:05:44.727 HYPERVISOR: exec_cmd: ethsw add_nio Datacenter Lisboa udp-4abf2c81-cc96-4074-ad1c-75d0b3568235 
+Dec 28 17:05:44.741 HYPERVISOR: exec_cmd: ethsw set_access_port Datacenter Lisboa udp-4abf2c81-cc96-4074-ad1c-75d0b3568235 1 
+Dec 28 17:05:45.005 HYPERVISOR: exec_cmd: nio create_udp udp-a07652f5-c377-48e7-af2e-49652099b1af 10099 127.0.0.1 10101 
+Dec 28 17:05:45.006 HYPERVISOR: exec_cmd: ethsw add_nio Datacenter Lisboa udp-a07652f5-c377-48e7-af2e-49652099b1af 
+Dec 28 17:05:45.023 HYPERVISOR: exec_cmd: ethsw set_access_port Datacenter Lisboa udp-a07652f5-c377-48e7-af2e-49652099b1af 1 
+Dec 28 17:05:45.037 HYPERVISOR: exec_cmd: nio create_udp udp-5243be52-2718-4051-ba5e-2a8e0dd23a15 10102 127.0.0.1 10103 
+Dec 28 17:05:45.040 HYPERVISOR: exec_cmd: ethsw add_nio Datacenter Lisboa udp-5243be52-2718-4051-ba5e-2a8e0dd23a15 
+Dec 28 17:05:45.044 HYPERVISOR: exec_cmd: ethsw set_access_port Datacenter Lisboa udp-5243be52-2718-4051-ba5e-2a8e0dd23a15 1 
+Dec 28 17:05:45.052 HYPERVISOR: exec_cmd: nio create_udp udp-65554225-3953-483f-a646-9316853d3ba9 10104 127.0.0.1 10105 
+Dec 28 17:05:45.053 HYPERVISOR: exec_cmd: ethsw add_nio Datacenter Lisboa udp-65554225-3953-483f-a646-9316853d3ba9 
+Dec 28 17:05:45.069 HYPERVISOR: exec_cmd: ethsw set_access_port Datacenter Lisboa udp-65554225-3953-483f-a646-9316853d3ba9 1 
+Dec 28 17:28:56.325 HYPERVISOR: exec_cmd: ethsw delete Datacenter Lisboa 
+Dec 28 17:28:56.413 HYPERVISOR: exec_cmd: hypervisor stop 
+Dec 28 17:28:56.656 HYPERVISOR: Stopped.
+Dec 28 17:28:56.656 GENERAL: reset done.

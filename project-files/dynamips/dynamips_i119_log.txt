@@ -1,0 +1,86 @@
+Dec 21 01:02:18.503 HYPERVISOR: Release 0.2.17-amd64/Linux (tag 2017072410)
+Dec 21 01:02:18.503 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 60226.
+Dec 21 01:02:18.526 HYPERVISOR: exec_cmd: hypervisor version 
+Dec 21 01:02:18.528 HYPERVISOR: exec_cmd: hypervisor working_dir /home/diogof/Desktop/Projeto ARA/GNS3-project/project-files/dynamips 
+Dec 21 01:02:18.528 GENERAL: working_dir=/home/diogof/Desktop/Projeto ARA/GNS3-project/project-files/dynamips
+Dec 21 01:02:18.534 HYPERVISOR: exec_cmd: vm create Porto 7 c7200 
+Dec 21 01:02:18.534 VM: VM Porto created.
+Dec 21 01:02:18.549 HYPERVISOR: exec_cmd: vm set_con_tcp_port Porto 5006 
+Dec 21 01:02:18.551 HYPERVISOR: exec_cmd: c7200 get_mac_addr Porto 
+Dec 21 01:02:18.553 HYPERVISOR: exec_cmd: vm get_status Porto 
+Dec 21 01:02:18.554 HYPERVISOR: exec_cmd: vm slot_add_binding Porto 0 0 C7200-IO-FE 
+Dec 21 01:02:18.557 HYPERVISOR: exec_cmd: vm set_nvram Porto 512 
+Dec 21 01:02:18.560 HYPERVISOR: exec_cmd: vm get_status Porto 
+Dec 21 01:02:18.563 HYPERVISOR: exec_cmd: vm slot_add_binding Porto 1 0 PA-2FE-TX 
+Dec 21 01:02:18.567 HYPERVISOR: exec_cmd: vm set_ram Porto 512 
+Dec 21 01:02:18.571 HYPERVISOR: exec_cmd: vm get_status Porto 
+Dec 21 01:02:18.575 HYPERVISOR: exec_cmd: vm slot_remove_binding Porto 0 0 
+Dec 21 01:02:18.578 HYPERVISOR: exec_cmd: vm get_status Porto 
+Dec 21 01:02:18.581 HYPERVISOR: exec_cmd: vm slot_add_binding Porto 0 0 C7200-IO-2FE 
+Dec 21 01:02:18.595 HYPERVISOR: exec_cmd: vm get_status Porto 
+Dec 21 01:02:18.613 HYPERVISOR: exec_cmd: vm set_idle_pc Porto 0x63184bc8 
+Dec 21 01:02:18.615 HYPERVISOR: exec_cmd: vm set_disk0 Porto 0 
+Dec 21 01:02:18.616 HYPERVISOR: exec_cmd: c7200 set_mac_addr Porto ca07.490c.0000 
+Dec 21 01:02:18.617 HYPERVISOR: exec_cmd: vm set_ios Porto /home/diogof/GNS3/images/IOS/c7200-advipservicesk9-mz.152-4.S5.image 
+Dec 21 01:02:18.618 HYPERVISOR: exec_cmd: vm set_config Porto configs/i7_startup-config.cfg 
+Dec 21 01:02:18.619 HYPERVISOR: exec_cmd: vm set_config Porto configs/i7_startup-config.cfg configs/i7_private-config.cfg 
+Dec 21 01:02:20.082 HYPERVISOR: exec_cmd: nio create_udp udp-8cdb8501-7c61-4039-b92f-7c8af565a258 10021 127.0.0.1 10018 
+Dec 21 01:02:20.088 HYPERVISOR: exec_cmd: vm slot_add_nio_binding Porto 0 1 udp-8cdb8501-7c61-4039-b92f-7c8af565a258 
+Dec 21 01:02:20.091 HYPERVISOR: exec_cmd: vm get_status Porto 
+Dec 21 01:02:20.155 HYPERVISOR: exec_cmd: nio create_udp udp-2f12689b-9d51-48d4-940d-63526a067fcd 10025 127.0.0.1 10024 
+Dec 21 01:02:20.156 HYPERVISOR: exec_cmd: vm slot_add_nio_binding Porto 0 0 udp-2f12689b-9d51-48d4-940d-63526a067fcd 
+Dec 21 01:02:20.160 HYPERVISOR: exec_cmd: vm get_status Porto 
+Dec 21 01:02:20.347 HYPERVISOR: exec_cmd: nio create_udp udp-529165e1-5e57-491d-af4a-c6585a909355 10045 127.0.0.1 10044 
+Dec 21 01:02:20.349 HYPERVISOR: exec_cmd: vm slot_add_nio_binding Porto 1 0 udp-529165e1-5e57-491d-af4a-c6585a909355 
+Dec 21 01:02:20.352 HYPERVISOR: exec_cmd: vm get_status Porto 
+Dec 21 01:02:30.905 HYPERVISOR: exec_cmd: vm set_ghost_status Porto 2 
+Dec 21 01:02:30.920 HYPERVISOR: exec_cmd: vm set_ghost_file Porto c7200-advipservicesk9-mz.152-4.S5.image-512.ghost 
+Dec 21 01:02:30.927 HYPERVISOR: exec_cmd: vm get_status Porto 
+Dec 21 01:02:30.930 HYPERVISOR: exec_cmd: vm start Porto 
+Dec 21 01:10:26.173 HYPERVISOR: exec_cmd: vm extract_config Porto 
+Dec 21 01:10:27.548 HYPERVISOR: exec_cmd: vm get_status Porto 
+Dec 21 01:10:27.550 HYPERVISOR: exec_cmd: vm stop Porto 
+Dec 21 01:10:27.685 VM: VM Porto shutdown.
+Dec 21 01:10:27.686 HYPERVISOR: exec_cmd: vm extract_config Porto 
+Dec 21 01:10:29.877 HYPERVISOR: exec_cmd: vm get_status Porto 
+Dec 21 01:10:29.881 HYPERVISOR: exec_cmd: vm start Porto 
+Dec 21 01:17:14.336 HYPERVISOR: exec_cmd: vm extract_config Porto 
+Dec 21 01:17:15.280 HYPERVISOR: exec_cmd: vm get_status Porto 
+Dec 21 01:17:15.281 HYPERVISOR: exec_cmd: vm stop Porto 
+Dec 21 01:17:15.404 VM: VM Porto shutdown.
+Dec 21 01:17:15.404 HYPERVISOR: exec_cmd: vm extract_config Porto 
+Dec 21 01:17:18.296 HYPERVISOR: exec_cmd: vm get_status Porto 
+Dec 21 01:17:18.316 HYPERVISOR: exec_cmd: vm start Porto 
+Dec 21 01:20:58.191 HYPERVISOR: exec_cmd: vm extract_config Porto 
+Dec 21 01:28:22.430 HYPERVISOR: exec_cmd: vm get_status Porto 
+Dec 21 01:28:22.432 HYPERVISOR: exec_cmd: vm stop Porto 
+Dec 21 01:28:22.538 VM: VM Porto shutdown.
+Dec 21 01:28:22.539 HYPERVISOR: exec_cmd: vm extract_config Porto 
+Dec 21 01:28:22.830 HYPERVISOR: exec_cmd: vm extract_config Porto 
+Dec 21 01:28:55.279 HYPERVISOR: exec_cmd: vm get_status Porto 
+Dec 21 01:28:55.295 HYPERVISOR: exec_cmd: vm start Porto 
+Dec 21 01:35:06.362 HYPERVISOR: exec_cmd: vm extract_config Porto 
+Dec 21 01:35:07.958 HYPERVISOR: exec_cmd: vm get_status Porto 
+Dec 21 01:35:07.965 HYPERVISOR: exec_cmd: vm stop Porto 
+Dec 21 01:35:08.137 VM: VM Porto shutdown.
+Dec 21 01:35:08.157 HYPERVISOR: exec_cmd: vm extract_config Porto 
+Dec 21 01:35:10.538 HYPERVISOR: exec_cmd: vm get_status Porto 
+Dec 21 01:35:10.539 HYPERVISOR: exec_cmd: vm start Porto 
+Dec 21 01:42:52.793 HYPERVISOR: exec_cmd: vm get_status Porto 
+Dec 21 01:42:52.794 HYPERVISOR: exec_cmd: vm stop Porto 
+Dec 21 01:42:52.922 VM: VM Porto shutdown.
+Dec 21 01:42:52.923 HYPERVISOR: exec_cmd: vm extract_config Porto 
+Dec 21 01:42:55.306 HYPERVISOR: exec_cmd: vm get_status Porto 
+Dec 21 01:42:55.310 HYPERVISOR: exec_cmd: vm start Porto 
+Dec 21 01:46:11.234 HYPERVISOR: exec_cmd: vm get_status Porto 
+Dec 21 01:46:11.237 HYPERVISOR: exec_cmd: vm stop Porto 
+Dec 21 01:46:11.354 VM: VM Porto shutdown.
+Dec 21 01:46:11.356 HYPERVISOR: exec_cmd: vm extract_config Porto 
+Dec 21 01:46:28.560 HYPERVISOR: exec_cmd: vm get_status Porto 
+Dec 21 01:46:28.561 HYPERVISOR: exec_cmd: vm start Porto 
+Dec 21 02:29:17.559 HYPERVISOR: exec_cmd: vm extract_config Porto 
+Dec 21 03:05:28.795 HYPERVISOR: exec_cmd: vm extract_config Porto 
+Dec 21 03:05:29.435 HYPERVISOR: exec_cmd: vm get_status Porto 
+Dec 21 03:05:29.435 HYPERVISOR: exec_cmd: vm stop Porto 
+Dec 21 03:05:29.549 VM: VM Porto shutdown.
+Dec 21 03:05:29.553 HYPERVISOR: exec_cmd: vm extract_config Porto 

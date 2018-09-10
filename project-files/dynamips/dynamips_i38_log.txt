@@ -1,0 +1,92 @@
+Jan 05 13:03:56.932 HYPERVISOR: Release 0.2.14-x86/Windows (tag 2014092320)
+Jan 05 13:03:56.932 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 63909.
+Jan 05 13:03:57.026 HYPERVISOR: exec_cmd: hypervisor version 
+Jan 05 13:03:57.041 HYPERVISOR: exec_cmd: hypervisor working_dir D:\dl-pc\Universidade\4ano\1semestre\ARA\Projeto\ARA-project\ATM-project\project-files\dynamips 
+Jan 05 13:03:57.041 GENERAL: working_dir=D:\dl-pc\Universidade\4ano\1semestre\ARA\Projeto\ARA-project\ATM-project\project-files\dynamips
+Jan 05 13:03:57.073 HYPERVISOR: exec_cmd: vm create Porto 1 c7200 
+Jan 05 13:03:57.073 VM: VM Porto created.
+Jan 05 13:03:57.119 HYPERVISOR: exec_cmd: vm set_con_tcp_port Porto 5006 
+Jan 05 13:03:57.135 HYPERVISOR: exec_cmd: c7200 get_mac_addr Porto 
+Jan 05 13:03:57.151 HYPERVISOR: exec_cmd: vm get_status Porto 
+Jan 05 13:03:57.166 HYPERVISOR: exec_cmd: vm slot_add_binding Porto 0 0 C7200-IO-FE 
+Jan 05 13:03:57.182 HYPERVISOR: exec_cmd: vm get_status Porto 
+Jan 05 13:03:57.198 HYPERVISOR: exec_cmd: vm slot_add_binding Porto 2 0 PA-A1 
+Jan 05 13:03:57.213 HYPERVISOR: exec_cmd: vm set_nvram Porto 512 
+Jan 05 13:03:57.229 HYPERVISOR: exec_cmd: vm get_status Porto 
+Jan 05 13:03:57.244 HYPERVISOR: exec_cmd: vm set_idle_pc Porto 0x60891b0c 
+Jan 05 13:03:57.276 HYPERVISOR: exec_cmd: vm set_exec_area Porto 64 
+Jan 05 13:03:57.291 HYPERVISOR: exec_cmd: vm get_status Porto 
+Jan 05 13:03:57.323 HYPERVISOR: exec_cmd: vm slot_add_binding Porto 1 0 PA-2FE-TX 
+Jan 05 13:03:57.338 HYPERVISOR: exec_cmd: vm set_ram Porto 512 
+Jan 05 13:03:57.354 HYPERVISOR: exec_cmd: c7200 set_mac_addr Porto ca01.3430.0000 
+Jan 05 13:03:57.369 HYPERVISOR: exec_cmd: vm set_disk0 Porto 0 
+Jan 05 13:03:57.385 HYPERVISOR: exec_cmd: vm set_ios Porto C:/Users/dl-pc/GNS3/images/IOS/c7200-a3jk9s-mz.124-25d.image 
+Jan 05 13:03:57.401 HYPERVISOR: exec_cmd: vm get_status Porto 
+Jan 05 13:03:57.432 HYPERVISOR: exec_cmd: vm slot_remove_binding Porto 0 0 
+Jan 05 13:03:57.448 HYPERVISOR: exec_cmd: vm get_status Porto 
+Jan 05 13:03:57.463 HYPERVISOR: exec_cmd: vm slot_add_binding Porto 0 0 C7200-IO-2FE 
+Jan 05 13:03:57.494 HYPERVISOR: exec_cmd: vm set_config Porto configs/i1_startup-config.cfg 
+Jan 05 13:04:00.401 HYPERVISOR: exec_cmd: nio create_udp udp-d4489bf6-c18f-4451-841e-b2eb9889759a 10100 127.0.0.1 10101 
+Jan 05 13:04:00.432 HYPERVISOR: exec_cmd: vm slot_add_nio_binding Porto 0 0 udp-d4489bf6-c18f-4451-841e-b2eb9889759a 
+Jan 05 13:04:00.448 HYPERVISOR: exec_cmd: vm get_status Porto 
+Jan 05 13:04:00.479 HYPERVISOR: exec_cmd: nio create_udp udp-b2b00935-3b6c-4184-8bff-79422ea02e9d 10102 127.0.0.1 10103 
+Jan 05 13:04:00.494 HYPERVISOR: exec_cmd: vm slot_add_nio_binding Porto 0 1 udp-b2b00935-3b6c-4184-8bff-79422ea02e9d 
+Jan 05 13:04:00.510 HYPERVISOR: exec_cmd: vm get_status Porto 
+Jan 05 13:04:00.541 HYPERVISOR: exec_cmd: nio create_udp udp-0f00fcef-9065-4310-a4bc-a124d5ecda71 10105 127.0.0.1 10104 
+Jan 05 13:04:00.557 HYPERVISOR: exec_cmd: vm slot_add_nio_binding Porto 2 0 udp-0f00fcef-9065-4310-a4bc-a124d5ecda71 
+Jan 05 13:04:00.588 HYPERVISOR: exec_cmd: vm get_status Porto 
+Jan 05 13:04:18.593 HYPERVISOR: exec_cmd: vm get_status Porto 
+Jan 05 13:04:18.608 HYPERVISOR: exec_cmd: vm slot_remove_nio_binding Porto 2 0 
+Jan 05 13:04:18.608 HYPERVISOR: exec_cmd: nio delete udp-0f00fcef-9065-4310-a4bc-a124d5ecda71 
+Jan 05 13:08:57.025 HYPERVISOR: exec_cmd: nio create_udp udp-a6b21b45-03f7-4baf-ab73-f82354dc5455 10096 127.0.0.1 10097 
+Jan 05 13:08:57.040 HYPERVISOR: exec_cmd: vm slot_add_nio_binding Porto 2 0 udp-a6b21b45-03f7-4baf-ab73-f82354dc5455 
+Jan 05 13:08:57.040 HYPERVISOR: exec_cmd: vm get_status Porto 
+Jan 05 13:10:16.370 HYPERVISOR: exec_cmd: vm get_status Porto 
+Jan 05 13:10:16.370 HYPERVISOR: exec_cmd: vm slot_remove_nio_binding Porto 2 0 
+Jan 05 13:10:16.386 HYPERVISOR: exec_cmd: nio delete udp-a6b21b45-03f7-4baf-ab73-f82354dc5455 
+Jan 05 13:10:37.575 HYPERVISOR: exec_cmd: nio create_udp udp-2af577c8-ece4-47e3-b1bc-df222084e527 10096 127.0.0.1 10097 
+Jan 05 13:10:37.591 HYPERVISOR: exec_cmd: vm slot_add_nio_binding Porto 2 0 udp-2af577c8-ece4-47e3-b1bc-df222084e527 
+Jan 05 13:10:37.591 HYPERVISOR: exec_cmd: vm get_status Porto 
+Jan 05 13:12:05.451 HYPERVISOR: exec_cmd: vm extract_config Porto 
+Jan 05 13:12:09.718 HYPERVISOR: exec_cmd: vm create Ghost 0 c7200 
+Jan 05 13:12:09.718 VM: VM Ghost created.
+Jan 05 13:12:09.718 HYPERVISOR: exec_cmd: vm set_ios Ghost C:/Users/dl-pc/GNS3/images/IOS/c7200-a3jk9s-mz.124-25d.image 
+Jan 05 13:12:09.718 HYPERVISOR: exec_cmd: vm set_ghost_status Ghost 1 
+Jan 05 13:12:09.734 HYPERVISOR: exec_cmd: vm set_ghost_file Ghost c7200-a3jk9s-mz.124-25d.image-512.ghost 
+Jan 05 13:12:09.734 HYPERVISOR: exec_cmd: vm set_ram Ghost 512 
+Jan 05 13:12:09.734 HYPERVISOR: exec_cmd: vm get_status Ghost 
+Jan 05 13:12:09.749 HYPERVISOR: exec_cmd: vm start Ghost 
+Jan 05 13:12:10.306 HYPERVISOR: exec_cmd: vm get_status Ghost 
+Jan 05 13:12:10.314 HYPERVISOR: exec_cmd: vm stop Ghost 
+Jan 05 13:12:10.467 VM: VM Ghost shutdown.
+Jan 05 13:12:10.467 HYPERVISOR: exec_cmd: vm clean_delete Ghost 
+Jan 05 13:12:10.467 VM: VM Ghost destroyed.
+Jan 05 13:12:10.482 HYPERVISOR: exec_cmd: vm set_ghost_status Porto 2 
+Jan 05 13:12:10.498 HYPERVISOR: exec_cmd: vm set_ghost_file Porto c7200-a3jk9s-mz.124-25d.image-512.ghost 
+Jan 05 13:12:10.498 HYPERVISOR: exec_cmd: vm get_status Porto 
+Jan 05 13:12:10.498 HYPERVISOR: exec_cmd: vm start Porto 
+Jan 05 13:14:45.759 HYPERVISOR: exec_cmd: vm get_status Porto 
+Jan 05 13:14:45.759 HYPERVISOR: exec_cmd: vm stop Porto 
+Jan 05 13:14:45.977 VM: VM Porto shutdown.
+Jan 05 13:14:45.977 HYPERVISOR: exec_cmd: vm extract_config Porto 
+Jan 05 13:14:48.999 HYPERVISOR: exec_cmd: vm get_status Porto 
+Jan 05 13:14:48.999 HYPERVISOR: exec_cmd: vm start Porto 
+Jan 05 13:22:04.031 HYPERVISOR: exec_cmd: vm get_status Porto 
+Jan 05 13:22:04.047 HYPERVISOR: exec_cmd: vm stop Porto 
+Jan 05 13:22:04.311 VM: VM Porto shutdown.
+Jan 05 13:22:04.323 HYPERVISOR: exec_cmd: vm extract_config Porto 
+Jan 05 13:22:09.031 HYPERVISOR: exec_cmd: vm get_status Porto 
+Jan 05 13:22:09.051 HYPERVISOR: exec_cmd: vm start Porto 
+Jan 05 13:27:53.810 HYPERVISOR: exec_cmd: vm get_status Porto 
+Jan 05 13:27:53.832 HYPERVISOR: exec_cmd: vm stop Porto 
+Jan 05 13:27:54.117 VM: VM Porto shutdown.
+Jan 05 13:27:54.152 HYPERVISOR: exec_cmd: vm extract_config Porto 
+Jan 05 13:27:56.953 HYPERVISOR: exec_cmd: vm extract_config Porto 
+Jan 05 13:27:57.965 HYPERVISOR: exec_cmd: vm extract_config Porto 
+Jan 05 13:28:14.324 HYPERVISOR: exec_cmd: vm get_status Porto 
+Jan 05 13:28:14.417 HYPERVISOR: exec_cmd: vm extract_config Porto 
+Jan 05 13:28:14.618 HYPERVISOR: exec_cmd: vm delete Porto 
+Jan 05 13:28:14.618 VM: VM Porto destroyed.
+Jan 05 13:28:14.745 HYPERVISOR: exec_cmd: hypervisor stop 
+Jan 05 13:28:14.913 HYPERVISOR: Stopped.
+Jan 05 13:28:14.913 GENERAL: reset done.

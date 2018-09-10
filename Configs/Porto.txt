@@ -1,0 +1,253 @@
+--------------------
+--- Router Porto ---
+--------------------
+
+conf t
+ipv6 unicast-routing
+ip cef
+mpls ip
+
+int f0/0
+ip add 4.4.4.2 255.255.255.252
+ipv6 add 2001:4:4::2/126
+! Deny routes to Proxy 2 Network
+ip access-group 101 out
+ipv6 traffic-filter denySIPProxy2Net out
+no shut
+
+int f0/1
+ip add 4.4.4.25 255.255.255.252
+ipv6 add 2001:4:4::19/126
+no shut
+
+int atm2/0
+no shut
+
+int atm2/0.1 point-to-point
+ip add 10.0.0.1 255.255.255.252
+ipv6 add 2001:100:1:10::1/126
+ip ospf 1 area 0
+ipv6 ospf 1 area 0
+mpls ip
+ip ospf network broadcast
+
+pvc 102/0
+encapsulation aal5snap
+protocol ip 10.0.0.2 broadcast
+protocol ipv6 2001:100:1:10::2 broadcast
+
+int atm2/0.2 point-to-point
+ip add 10.0.0.5 255.255.255.252
+ipv6 add 2001:100:1:10::5/126
+ip ospf 1 area 0
+ipv6 ospf 1 area 0
+mpls ip
+ip ospf network broadcast
+
+pvc 101/0
+encapsulation aal5snap
+protocol ip 10.0.0.6 broadcast
+protocol ipv6 2001:100:1:10::6 broadcast
+exit
+
+int lo0
+ip add 10.0.2.1 255.255.255.255
+ipv6 add 2001:100:1:2::1/128
+ip ospf 1 area 0
+ipv6 ospf 1 area 0
+no shut
+
+exit
+
+! non-transit AS
+ip as-path access-list 1 permit ^$
+! Internal AS
+ip as-path access-list 10 permit ^65400$
+! Routes from ISP ES
+ip as-path access-list 20 permit ^20000$
+
+! Extended access-list to packets to the SIP Proxy 2 network
+access-list 101 deny ip any 65.0.1.0 0.0.0.255
+access-list 101 permit ip any any
+
+ipv6 access-list denySIPProxy2Net
+deny any 2301:65::/48
+permit any any
+
+! Internal public routes
+! Allow to netD1
+ip prefix-list intPublic seq 10 permit 192.100.1.0/24 le 32 
+! Allow to netA
+ip prefix-list intPublic seq 20 permit 110.1.1.0/24 le 32 
+! Allow to netB
+ip prefix-list intPublic seq 30 permit 111.1.1.0/24 le 32 
+! Allow to netC
+ip prefix-list intPublic seq 40 permit 112.1.1.0/24 le 32 
+! Deny all other routes
+ip prefix-list intPublic seq 100 deny 0.0.0.0/0 le 32
+
+
+! IPv6 only allow ip's that need connection to the internet
+! Allow to netD1
+ipv6 prefix-list intPublicv6 seq 10 permit 2001:100:1:100::/64 le 128
+! Allow to netA
+ipv6 prefix-list intPublicv6 seq 20 permit 3001:110::/48 le 128
+! Allow to netB
+ipv6 prefix-list intPublicv6 seq 30 permit 3001:111::/48 le 128
+! Allow to netC
+ipv6 prefix-list intPublicv6 seq 40 permit 3001:112::/48 le 128
+! Allow to public hosts/servers in Lisboa Datacenter
+ipv6 prefix-list intPublicv6 seq 50 permit 2001:100:1:101::/64 le 128
+! Deny all other routes
+ipv6 prefix-list intPublicv6 seq 100 deny ::/0 le 128
+
+
+! Do not announce private routes to empC
+ip prefix-list routeToPrivateAS seq 10 deny 10.0.0.0/8 le 32
+ip prefix-list routeToPrivateAS seq 20 deny 172.16.0.0/12 le 32
+ip prefix-list routeToPrivateAS seq 30 deny 192.168.0.0/16 le 32
+ip prefix-list routeToPrivateAS seq 100 permit 0.0.0.0/0 le 32
+
+! Deny all datacenters to Empc
+ipv6 prefix-list routeToPrivateASv6 seq 10 deny 3001:10:2::/48 le 128
+! Deny all loopback interfaces to Empc
+ipv6 prefix-list routeToPrivateASv6 seq 20 deny 2001:100:1:2::/64 le 128
+ipv6 prefix-list routeToPrivateASv6 seq 30 permit ::/0 le 128
+
+
+! Remove lo0 announcements
+ip prefix-list remLo0 seq 10 deny 10.0.2.1/32
+ip prefix-list remLo0 seq 20 deny 10.0.2.2/32
+ip prefix-list remLo0 seq 30 deny 10.0.2.3/32
+ip prefix-list remLo0 seq 40 deny 10.0.2.4/32
+ip prefix-list remLo0 seq 100 permit 0.0.0.0/0 le 32
+
+
+! Remove lo0 announcements
+ipv6 prefix-list remLo0v6 seq 10 deny 2001:100:1:2::1/128
+ipv6 prefix-list remLo0v6 seq 20 deny 2001:100:1:2::2/128
+ipv6 prefix-list remLo0v6 seq 30 deny 2001:100:1:2::3/128
+ipv6 prefix-list remLo0v6 seq 40 deny 2001:100:1:2::4/128
+ipv6 prefix-list remLo0v6 seq 100 permit ::/0 le 128
+
+! Deny default announcements
+ip prefix-list denyDefault seq 10 deny 0.0.0.0/0
+ip prefix-list denyDefault seq 100 permit 0.0.0.0/0 le 32
+
+! Deny default announcements
+ipv6 prefix-list denyDefaultv6 seq 10 deny ::/0
+ipv6 prefix-list denyDefaultv6 seq 100 permit ::/0 le 128
+
+! Not receive the default route announcements from Aveiro and Oeiras OSPF
+ip prefix-list denyDefaultRoute seq 5 deny 0.0.0.0/0
+ip prefix-list denyDefaultRoute seq 10 permit 0.0.0.0/0 le 32
+
+! Not receive the default route announcements from Aveiro and Oeiras OSPF
+ipv6 prefix-list denyDefaultRoutev6 seq 5 deny ::/0
+ipv6 prefix-list denyDefaultRoutev6 seq 10 permit ::/0 le 128
+
+!Deny SIP Proxy network
+ip prefix-list denySIPProxyNet seq 10 deny 65.0.1.0/24 le 32
+ip prefix-list denySIPProxyNet seq 100 permit 0.0.0.0/0 le 32
+
+!Deny SIP Proxy network
+ipv6 prefix-list denySIPProxyNetv6 seq 10 deny 2301:65::/48 le 128
+ipv6 prefix-list denySIPProxyNetv6 seq 100 permit ::/0 le 128
+
+! Matches empty path and private AS
+route-map nonTransit permit 10
+match as-path 1 10
+
+! Higher local preference to routes from Madrid
+route-map fromMadrid permit 10
+! All traffic coming from AS 2000 from Aveiro
+! Goes preferencially to Porto
+! Except default route
+! And SIP Network route
+match ip address prefix-list denyDefault
+match ipv6 address prefix-list denyDefaultv6
+match as-path 20
+set local-preference 200
+route-map fromMadrid permit 20
+
+
+router bgp 1000
+address-family ipv4 unicast
+redistribute ospf 1 match internal external 1 external 2
+
+
+neighbor 4.4.4.1 remote-as 20000
+neighbor 4.4.4.1 remove-private-as all
+neighbor 4.4.4.1 route-map nonTransit out
+neighbor 4.4.4.1 prefix-list intPublic out
+neighbor 4.4.4.1 route-map fromMadrid in
+neighbor 4.4.4.1 prefix-list denySIPProxyNet in
+
+neighbor 4.4.4.26 remote-as 65400
+neighbor 4.4.4.26 prefix-list routeToPrivateAS out
+neighbor 4.4.4.26 default-originate
+
+neighbor 10.0.2.2 remote-as 1000
+neighbor 10.0.2.2 update-source lo0
+neighbor 10.0.2.2 next-hop-self
+neighbor 10.0.2.2 prefix-list remLo0 out
+
+
+neighbor 10.0.2.3 remote-as 1000
+neighbor 10.0.2.3 update-source lo0
+neighbor 10.0.2.3 next-hop-self
+neighbor 10.0.2.3 prefix-list remLo0 out
+
+neighbor 10.0.2.4 remote-as 1000
+neighbor 10.0.2.4 update-source lo0
+neighbor 10.0.2.4 next-hop-self
+neighbor 10.0.2.4 prefix-list remLo0 out
+
+
+address-family ipv6 unicast
+redistribute ospf 1 match internal external 1 external 2
+
+
+neighbor 2001:4:4::1 remote-as 20000
+neighbor 2001:4:4::1 remove-private-as all
+neighbor 2001:4:4::1 route-map nonTransit out
+neighbor 2001:4:4::1 prefix-list intPublicv6 out
+neighbor 2001:4:4::1 prefix-list denySIPProxyNetv6 in
+neighbor 2001:4:4::1 route-map fromMadrid in
+
+neighbor 2001:4:4::1A remote-as 65400
+neighbor 2001:4:4::1A prefix-list routeToPrivateASv6 out
+neighbor 2001:4:4::1A prefix-list default-originate
+
+neighbor 2001:100:1:2::2 remote-as 1000
+neighbor 2001:100:1:2::2 update-source lo0
+neighbor 2001:100:1:2::2 next-hop-self
+neighbor 2001:100:1:2::2 prefix-list remLo0v6 out
+
+neighbor 2001:100:1:2::3 remote-as 1000
+neighbor 2001:100:1:2::3 update-source lo0
+neighbor 2001:100:1:2::3 next-hop-self
+neighbor 2001:100:1:2::3 prefix-list remLo0v6 out
+
+neighbor 2001:100:1:2::4 remote-as 1000
+neighbor 2001:100:1:2::4 update-source lo0
+neighbor 2001:100:1:2::4 next-hop-self
+neighbor 2001:100:1:2::4 prefix-list remLo0v6 out
+
+
+exit
+
+router ospf 1
+router-id 1.1.1.1
+distribute-list prefix denyDefaultRoute in
+exit
+
+ipv6 router ospf 1
+router-id 1.1.1.1
+distribute-list prefix denyDefaultRoutev6 in
+exit
+
+
+end
+write
+

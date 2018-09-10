@@ -1,0 +1,16 @@
+Jan 05 13:03:54.669 HYPERVISOR: Release 0.2.14-x86/Windows (tag 2014092320)
+Jan 05 13:03:54.669 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 63868.
+Jan 05 13:03:54.747 HYPERVISOR: exec_cmd: hypervisor version 
+Jan 05 13:03:54.779 HYPERVISOR: exec_cmd: hypervisor working_dir D:\dl-pc\Universidade\4ano\1semestre\ARA\Projeto\ARA-project\ATM-project\project-files\dynamips 
+Jan 05 13:03:54.779 GENERAL: working_dir=D:\dl-pc\Universidade\4ano\1semestre\ARA\Projeto\ARA-project\ATM-project\project-files\dynamips
+Jan 05 13:03:54.803 HYPERVISOR: exec_cmd: ethsw create InternetCore1 
+Jan 05 13:03:58.776 HYPERVISOR: exec_cmd: nio create_udp udp-077449af-f656-4550-b956-65ae49f20494 10027 127.0.0.1 10026 
+Jan 05 13:03:58.807 HYPERVISOR: exec_cmd: ethsw add_nio InternetCore1 udp-077449af-f656-4550-b956-65ae49f20494 
+Jan 05 13:03:58.838 HYPERVISOR: exec_cmd: ethsw set_access_port InternetCore1 udp-077449af-f656-4550-b956-65ae49f20494 1 
+Jan 05 13:03:59.401 HYPERVISOR: exec_cmd: nio create_udp udp-a8556b01-778b-4567-b990-c38b1b2d7792 10055 127.0.0.1 10054 
+Jan 05 13:03:59.432 HYPERVISOR: exec_cmd: ethsw add_nio InternetCore1 udp-a8556b01-778b-4567-b990-c38b1b2d7792 
+Jan 05 13:03:59.463 HYPERVISOR: exec_cmd: ethsw set_access_port InternetCore1 udp-a8556b01-778b-4567-b990-c38b1b2d7792 1 
+Jan 05 13:28:13.703 HYPERVISOR: exec_cmd: ethsw delete InternetCore1 
+Jan 05 13:28:13.748 HYPERVISOR: exec_cmd: hypervisor stop 
+Jan 05 13:28:13.915 HYPERVISOR: Stopped.
+Jan 05 13:28:13.915 GENERAL: reset done.

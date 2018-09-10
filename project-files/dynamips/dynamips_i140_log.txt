@@ -1,0 +1,73 @@
+Dec 21 01:02:19.089 HYPERVISOR: Release 0.2.17-amd64/Linux (tag 2017072410)
+Dec 21 01:02:19.089 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 41865.
+Dec 21 01:02:19.118 HYPERVISOR: exec_cmd: hypervisor version 
+Dec 21 01:02:19.119 HYPERVISOR: exec_cmd: hypervisor working_dir /home/diogof/Desktop/Projeto ARA/GNS3-project/project-files/dynamips 
+Dec 21 01:02:19.119 GENERAL: working_dir=/home/diogof/Desktop/Projeto ARA/GNS3-project/project-files/dynamips
+Dec 21 01:02:19.120 HYPERVISOR: exec_cmd: vm create Internet2 15 c7200 
+Dec 21 01:02:19.120 VM: VM Internet2 created.
+Dec 21 01:02:19.121 HYPERVISOR: exec_cmd: vm set_con_tcp_port Internet2 5024 
+Dec 21 01:02:19.123 HYPERVISOR: exec_cmd: c7200 get_mac_addr Internet2 
+Dec 21 01:02:19.124 HYPERVISOR: exec_cmd: vm get_status Internet2 
+Dec 21 01:02:19.125 HYPERVISOR: exec_cmd: vm slot_add_binding Internet2 0 0 C7200-IO-FE 
+Dec 21 01:02:19.126 HYPERVISOR: exec_cmd: vm set_nvram Internet2 512 
+Dec 21 01:02:19.128 HYPERVISOR: exec_cmd: vm get_status Internet2 
+Dec 21 01:02:19.129 HYPERVISOR: exec_cmd: vm slot_add_binding Internet2 1 0 PA-2FE-TX 
+Dec 21 01:02:19.131 HYPERVISOR: exec_cmd: vm set_ram Internet2 512 
+Dec 21 01:02:19.132 HYPERVISOR: exec_cmd: vm get_status Internet2 
+Dec 21 01:02:19.133 HYPERVISOR: exec_cmd: vm slot_remove_binding Internet2 0 0 
+Dec 21 01:02:19.134 HYPERVISOR: exec_cmd: vm get_status Internet2 
+Dec 21 01:02:19.136 HYPERVISOR: exec_cmd: vm slot_add_binding Internet2 0 0 C7200-IO-2FE 
+Dec 21 01:02:19.137 HYPERVISOR: exec_cmd: vm get_status Internet2 
+Dec 21 01:02:19.138 HYPERVISOR: exec_cmd: vm set_idle_pc Internet2 0x63184bc8 
+Dec 21 01:02:19.139 HYPERVISOR: exec_cmd: vm set_disk0 Internet2 0 
+Dec 21 01:02:19.141 HYPERVISOR: exec_cmd: c7200 set_mac_addr Internet2 ca0f.3a34.0000 
+Dec 21 01:02:19.147 HYPERVISOR: exec_cmd: vm set_ios Internet2 /home/diogof/GNS3/images/IOS/c7200-advipservicesk9-mz.152-4.S5.image 
+Dec 21 01:02:19.157 HYPERVISOR: exec_cmd: vm set_config Internet2 configs/i15_startup-config.cfg 
+Dec 21 01:02:20.757 HYPERVISOR: exec_cmd: nio create_udp udp-efe73581-0228-4bda-9d72-253cbb8ebbad 10079 127.0.0.1 10081 
+Dec 21 01:02:20.763 HYPERVISOR: exec_cmd: vm slot_add_nio_binding Internet2 0 0 udp-efe73581-0228-4bda-9d72-253cbb8ebbad 
+Dec 21 01:02:20.764 HYPERVISOR: exec_cmd: vm get_status Internet2 
+Dec 21 01:02:30.618 HYPERVISOR: exec_cmd: vm set_ghost_status Internet2 2 
+Dec 21 01:02:30.619 HYPERVISOR: exec_cmd: vm set_ghost_file Internet2 c7200-advipservicesk9-mz.152-4.S5.image-512.ghost 
+Dec 21 01:02:30.620 HYPERVISOR: exec_cmd: vm get_status Internet2 
+Dec 21 01:02:30.621 HYPERVISOR: exec_cmd: vm start Internet2 
+Dec 21 01:10:26.177 HYPERVISOR: exec_cmd: vm extract_config Internet2 
+Dec 21 01:10:26.843 HYPERVISOR: exec_cmd: vm get_status Internet2 
+Dec 21 01:10:26.861 HYPERVISOR: exec_cmd: vm stop Internet2 
+Dec 21 01:10:26.947 VM: VM Internet2 shutdown.
+Dec 21 01:10:26.954 HYPERVISOR: exec_cmd: vm extract_config Internet2 
+Dec 21 01:10:29.346 HYPERVISOR: exec_cmd: vm get_status Internet2 
+Dec 21 01:10:29.377 HYPERVISOR: exec_cmd: vm start Internet2 
+Dec 21 01:17:14.343 HYPERVISOR: exec_cmd: vm extract_config Internet2 
+Dec 21 01:17:14.700 HYPERVISOR: exec_cmd: vm get_status Internet2 
+Dec 21 01:17:14.706 HYPERVISOR: exec_cmd: vm stop Internet2 
+Dec 21 01:17:14.786 VM: VM Internet2 shutdown.
+Dec 21 01:17:14.788 HYPERVISOR: exec_cmd: vm extract_config Internet2 
+Dec 21 01:17:17.829 HYPERVISOR: exec_cmd: vm get_status Internet2 
+Dec 21 01:17:17.842 HYPERVISOR: exec_cmd: vm start Internet2 
+Dec 21 01:20:58.195 HYPERVISOR: exec_cmd: vm extract_config Internet2 
+Dec 21 01:28:21.840 HYPERVISOR: exec_cmd: vm get_status Internet2 
+Dec 21 01:28:21.855 HYPERVISOR: exec_cmd: vm stop Internet2 
+Dec 21 01:28:21.964 VM: VM Internet2 shutdown.
+Dec 21 01:28:21.969 HYPERVISOR: exec_cmd: vm extract_config Internet2 
+Dec 21 01:28:22.836 HYPERVISOR: exec_cmd: vm extract_config Internet2 
+Dec 21 01:28:54.804 HYPERVISOR: exec_cmd: vm get_status Internet2 
+Dec 21 01:28:54.815 HYPERVISOR: exec_cmd: vm start Internet2 
+Dec 21 01:35:06.374 HYPERVISOR: exec_cmd: vm extract_config Internet2 
+Dec 21 01:35:07.335 HYPERVISOR: exec_cmd: vm get_status Internet2 
+Dec 21 01:35:07.337 HYPERVISOR: exec_cmd: vm stop Internet2 
+Dec 21 01:35:07.414 VM: VM Internet2 shutdown.
+Dec 21 01:35:07.421 HYPERVISOR: exec_cmd: vm extract_config Internet2 
+Dec 21 01:35:10.090 HYPERVISOR: exec_cmd: vm get_status Internet2 
+Dec 21 01:35:10.100 HYPERVISOR: exec_cmd: vm start Internet2 
+Dec 21 01:42:52.092 HYPERVISOR: exec_cmd: vm get_status Internet2 
+Dec 21 01:42:52.107 HYPERVISOR: exec_cmd: vm stop Internet2 
+Dec 21 01:42:52.197 VM: VM Internet2 shutdown.
+Dec 21 01:42:52.204 HYPERVISOR: exec_cmd: vm extract_config Internet2 
+Dec 21 01:42:54.779 HYPERVISOR: exec_cmd: vm get_status Internet2 
+Dec 21 01:42:54.810 HYPERVISOR: exec_cmd: vm start Internet2 
+Dec 21 01:46:10.703 HYPERVISOR: exec_cmd: vm get_status Internet2 
+Dec 21 01:46:10.723 HYPERVISOR: exec_cmd: vm stop Internet2 
+Dec 21 01:46:10.855 VM: VM Internet2 shutdown.
+Dec 21 01:46:10.881 HYPERVISOR: exec_cmd: vm extract_config Internet2 
+Dec 21 02:29:17.571 HYPERVISOR: exec_cmd: vm extract_config Internet2 
+Dec 21 03:05:28.826 HYPERVISOR: exec_cmd: vm extract_config Internet2 

@@ -1,0 +1,16 @@
+Dec 21 00:59:04.172 HYPERVISOR: Release 0.2.17-amd64/Linux (tag 2017072410)
+Dec 21 00:59:04.172 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 36948.
+Dec 21 00:59:04.196 HYPERVISOR: exec_cmd: hypervisor version 
+Dec 21 00:59:04.198 HYPERVISOR: exec_cmd: hypervisor working_dir /home/diogof/Desktop/Projeto ARA/GNS3-project/project-files/dynamips 
+Dec 21 00:59:04.198 GENERAL: working_dir=/home/diogof/Desktop/Projeto ARA/GNS3-project/project-files/dynamips
+Dec 21 00:59:04.206 HYPERVISOR: exec_cmd: ethsw create netA1 
+Dec 21 00:59:05.395 HYPERVISOR: exec_cmd: nio create_udp udp-ebdfc368-5f0c-45c0-bd2b-eecef617da59 10009 127.0.0.1 10008 
+Dec 21 00:59:05.399 HYPERVISOR: exec_cmd: ethsw add_nio netA1 udp-ebdfc368-5f0c-45c0-bd2b-eecef617da59 
+Dec 21 00:59:05.417 HYPERVISOR: exec_cmd: ethsw set_access_port netA1 udp-ebdfc368-5f0c-45c0-bd2b-eecef617da59 1 
+Dec 21 00:59:05.761 HYPERVISOR: exec_cmd: nio create_udp udp-e02d3dd0-6205-4bdb-b1ce-55075823265d 10043 127.0.0.1 10042 
+Dec 21 00:59:05.762 HYPERVISOR: exec_cmd: ethsw add_nio netA1 udp-e02d3dd0-6205-4bdb-b1ce-55075823265d 
+Dec 21 00:59:05.785 HYPERVISOR: exec_cmd: ethsw set_access_port netA1 udp-e02d3dd0-6205-4bdb-b1ce-55075823265d 1 
+Dec 21 01:02:16.266 HYPERVISOR: exec_cmd: ethsw delete netA1 
+Dec 21 01:02:16.289 HYPERVISOR: exec_cmd: hypervisor stop 
+Dec 21 01:02:16.338 HYPERVISOR: Stopped.
+Dec 21 01:02:16.338 GENERAL: reset done.

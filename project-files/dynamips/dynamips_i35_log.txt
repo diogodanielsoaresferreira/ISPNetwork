@@ -1,0 +1,53 @@
+Jan 05 13:03:56.573 HYPERVISOR: Release 0.2.14-x86/Windows (tag 2014092320)
+Jan 05 13:03:56.573 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 63902.
+Jan 05 13:03:56.651 HYPERVISOR: exec_cmd: hypervisor version 
+Jan 05 13:03:56.651 HYPERVISOR: exec_cmd: hypervisor working_dir D:\dl-pc\Universidade\4ano\1semestre\ARA\Projeto\ARA-project\ATM-project\project-files\dynamips 
+Jan 05 13:03:56.651 GENERAL: working_dir=D:\dl-pc\Universidade\4ano\1semestre\ARA\Projeto\ARA-project\ATM-project\project-files\dynamips
+Jan 05 13:03:56.666 HYPERVISOR: exec_cmd: vm create LisboaServer1 24 c7200 
+Jan 05 13:03:56.666 VM: VM LisboaServer1 created.
+Jan 05 13:03:56.697 HYPERVISOR: exec_cmd: vm set_con_tcp_port LisboaServer1 5015 
+Jan 05 13:03:56.713 HYPERVISOR: exec_cmd: c7200 get_mac_addr LisboaServer1 
+Jan 05 13:03:56.729 HYPERVISOR: exec_cmd: vm get_status LisboaServer1 
+Jan 05 13:03:56.760 HYPERVISOR: exec_cmd: vm slot_add_binding LisboaServer1 0 0 C7200-IO-FE 
+Jan 05 13:03:56.776 HYPERVISOR: exec_cmd: vm set_nvram LisboaServer1 512 
+Jan 05 13:03:56.791 HYPERVISOR: exec_cmd: vm get_status LisboaServer1 
+Jan 05 13:03:56.807 HYPERVISOR: exec_cmd: vm set_idle_pc LisboaServer1 0x6318687c 
+Jan 05 13:03:56.822 HYPERVISOR: exec_cmd: vm set_exec_area LisboaServer1 64 
+Jan 05 13:03:56.854 HYPERVISOR: exec_cmd: vm get_status LisboaServer1 
+Jan 05 13:03:56.869 HYPERVISOR: exec_cmd: vm slot_add_binding LisboaServer1 1 0 PA-2FE-TX 
+Jan 05 13:03:56.885 HYPERVISOR: exec_cmd: vm set_ram LisboaServer1 512 
+Jan 05 13:03:56.901 HYPERVISOR: exec_cmd: c7200 set_mac_addr LisboaServer1 ca18.0833.0000 
+Jan 05 13:03:56.932 HYPERVISOR: exec_cmd: vm set_disk0 LisboaServer1 0 
+Jan 05 13:03:56.948 HYPERVISOR: exec_cmd: vm set_ios LisboaServer1 C:/Users/dl-pc/GNS3/images/IOS/c7200-advipservicesk9-mz.152-4.S5.image 
+Jan 05 13:03:56.963 HYPERVISOR: exec_cmd: vm get_status LisboaServer1 
+Jan 05 13:03:56.979 HYPERVISOR: exec_cmd: vm slot_remove_binding LisboaServer1 0 0 
+Jan 05 13:03:56.994 HYPERVISOR: exec_cmd: vm get_status LisboaServer1 
+Jan 05 13:03:57.026 HYPERVISOR: exec_cmd: vm slot_add_binding LisboaServer1 0 0 C7200-IO-2FE 
+Jan 05 13:03:57.041 HYPERVISOR: exec_cmd: vm set_config LisboaServer1 configs/i24_startup-config.cfg 
+Jan 05 13:04:00.057 HYPERVISOR: exec_cmd: nio create_udp udp-cb8960b1-7eb7-4fe1-9613-52feef681e39 10083 127.0.0.1 10082 
+Jan 05 13:04:00.073 HYPERVISOR: exec_cmd: vm slot_add_nio_binding LisboaServer1 0 0 udp-cb8960b1-7eb7-4fe1-9613-52feef681e39 
+Jan 05 13:04:00.088 HYPERVISOR: exec_cmd: vm get_status LisboaServer1 
+Jan 05 13:12:05.404 HYPERVISOR: exec_cmd: vm extract_config LisboaServer1 
+Jan 05 13:18:50.766 HYPERVISOR: exec_cmd: vm set_ghost_status LisboaServer1 2 
+Jan 05 13:18:50.781 HYPERVISOR: exec_cmd: vm set_ghost_file LisboaServer1 c7200-advipservicesk9-mz.152-4.S5.image-512.ghost 
+Jan 05 13:18:50.781 HYPERVISOR: exec_cmd: vm get_status LisboaServer1 
+Jan 05 13:18:50.781 HYPERVISOR: exec_cmd: vm start LisboaServer1 
+Jan 05 13:22:04.023 HYPERVISOR: exec_cmd: vm get_status LisboaServer1 
+Jan 05 13:22:04.043 HYPERVISOR: exec_cmd: vm stop LisboaServer1 
+Jan 05 13:22:04.243 VM: VM LisboaServer1 shutdown.
+Jan 05 13:22:04.263 HYPERVISOR: exec_cmd: vm extract_config LisboaServer1 
+Jan 05 13:22:09.039 HYPERVISOR: exec_cmd: vm get_status LisboaServer1 
+Jan 05 13:22:09.059 HYPERVISOR: exec_cmd: vm start LisboaServer1 
+Jan 05 13:27:53.819 HYPERVISOR: exec_cmd: vm get_status LisboaServer1 
+Jan 05 13:27:53.839 HYPERVISOR: exec_cmd: vm stop LisboaServer1 
+Jan 05 13:27:54.029 VM: VM LisboaServer1 shutdown.
+Jan 05 13:27:54.039 HYPERVISOR: exec_cmd: vm extract_config LisboaServer1 
+Jan 05 13:27:56.888 HYPERVISOR: exec_cmd: vm extract_config LisboaServer1 
+Jan 05 13:27:57.886 HYPERVISOR: exec_cmd: vm extract_config LisboaServer1 
+Jan 05 13:28:14.314 HYPERVISOR: exec_cmd: vm get_status LisboaServer1 
+Jan 05 13:28:14.409 HYPERVISOR: exec_cmd: vm extract_config LisboaServer1 
+Jan 05 13:28:14.522 HYPERVISOR: exec_cmd: vm delete LisboaServer1 
+Jan 05 13:28:14.522 VM: VM LisboaServer1 destroyed.
+Jan 05 13:28:14.640 HYPERVISOR: exec_cmd: hypervisor stop 
+Jan 05 13:28:14.659 HYPERVISOR: Stopped.
+Jan 05 13:28:14.659 GENERAL: reset done.

@@ -1,0 +1,46 @@
+----------------------
+--- Router Lisboa1 ---
+----------------------
+
+conf t
+ipv6 unicast-routing
+
+int f0/0
+ip add 4.4.4.21 255.255.255.252
+ipv6 add 2001:4:4::15/126
+no shut
+
+int f0/1
+ip add 4.4.4.14 255.255.255.252
+ipv6 add 2001:4:4::E/126
+no shut
+
+int f1/0
+ip add 4.4.4.9 255.255.255.252
+ipv6 add 2001:4:4::9/126
+no shut
+
+int f1/1
+ip add 65.0.1.1 255.255.255.0
+ipv6 add 2301:65:0::1/48
+no shut
+
+exit
+
+router bgp 40000
+address-family ipv4 unicast
+redistribute connected
+neighbor 4.4.4.10 remote-as 1000
+neighbor 4.4.4.10 default-originate
+neighbor 4.4.4.13 remote-as 20000
+neighbor 4.4.4.22 remote-as 2500
+
+address-family ipv6 unicast
+redistribute connected
+neighbor 2001:4:4::A remote-as 1000
+neighbor 2001:4:4::A default-originate
+neighbor 2001:4:4::D remote-as 20000
+neighbor 2001:4:4::16 remote-as 2500
+end
+
+write

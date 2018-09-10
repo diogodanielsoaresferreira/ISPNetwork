@@ -1,0 +1,86 @@
+Dec 21 01:02:19.080 HYPERVISOR: Release 0.2.17-amd64/Linux (tag 2017072410)
+Dec 21 01:02:19.080 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 52162.
+Dec 21 01:02:19.116 HYPERVISOR: exec_cmd: hypervisor version 
+Dec 21 01:02:19.118 HYPERVISOR: exec_cmd: hypervisor working_dir /home/diogof/Desktop/Projeto ARA/GNS3-project/project-files/dynamips 
+Dec 21 01:02:19.118 GENERAL: working_dir=/home/diogof/Desktop/Projeto ARA/GNS3-project/project-files/dynamips
+Dec 21 01:02:19.119 HYPERVISOR: exec_cmd: vm create Internet1 14 c7200 
+Dec 21 01:02:19.119 VM: VM Internet1 created.
+Dec 21 01:02:19.120 HYPERVISOR: exec_cmd: vm set_con_tcp_port Internet1 5023 
+Dec 21 01:02:19.121 HYPERVISOR: exec_cmd: c7200 get_mac_addr Internet1 
+Dec 21 01:02:19.122 HYPERVISOR: exec_cmd: vm get_status Internet1 
+Dec 21 01:02:19.123 HYPERVISOR: exec_cmd: vm slot_add_binding Internet1 0 0 C7200-IO-FE 
+Dec 21 01:02:19.124 HYPERVISOR: exec_cmd: vm set_nvram Internet1 512 
+Dec 21 01:02:19.126 HYPERVISOR: exec_cmd: vm get_status Internet1 
+Dec 21 01:02:19.127 HYPERVISOR: exec_cmd: vm slot_add_binding Internet1 1 0 PA-2FE-TX 
+Dec 21 01:02:19.128 HYPERVISOR: exec_cmd: vm set_ram Internet1 512 
+Dec 21 01:02:19.130 HYPERVISOR: exec_cmd: vm get_status Internet1 
+Dec 21 01:02:19.132 HYPERVISOR: exec_cmd: vm slot_remove_binding Internet1 0 0 
+Dec 21 01:02:19.133 HYPERVISOR: exec_cmd: vm get_status Internet1 
+Dec 21 01:02:19.133 HYPERVISOR: exec_cmd: vm slot_add_binding Internet1 0 0 C7200-IO-2FE 
+Dec 21 01:02:19.135 HYPERVISOR: exec_cmd: vm get_status Internet1 
+Dec 21 01:02:19.136 HYPERVISOR: exec_cmd: vm set_idle_pc Internet1 0x63184bc8 
+Dec 21 01:02:19.137 HYPERVISOR: exec_cmd: vm set_disk0 Internet1 0 
+Dec 21 01:02:19.139 HYPERVISOR: exec_cmd: c7200 set_mac_addr Internet1 ca0e.3a18.0000 
+Dec 21 01:02:19.140 HYPERVISOR: exec_cmd: vm set_ios Internet1 /home/diogof/GNS3/images/IOS/c7200-advipservicesk9-mz.152-4.S5.image 
+Dec 21 01:02:19.146 HYPERVISOR: exec_cmd: vm set_config Internet1 configs/i14_startup-config.cfg 
+Dec 21 01:02:20.731 HYPERVISOR: exec_cmd: nio create_udp udp-9f6d33af-0a30-4bea-a59e-d7aba82ce944 10078 127.0.0.1 10080 
+Dec 21 01:02:20.731 HYPERVISOR: exec_cmd: vm slot_add_nio_binding Internet1 0 0 udp-9f6d33af-0a30-4bea-a59e-d7aba82ce944 
+Dec 21 01:02:20.732 HYPERVISOR: exec_cmd: vm get_status Internet1 
+Dec 21 01:02:30.183 HYPERVISOR: exec_cmd: vm create Ghost 0 c7200 
+Dec 21 01:02:30.183 VM: VM Ghost created.
+Dec 21 01:02:30.184 HYPERVISOR: exec_cmd: vm set_ios Ghost /home/diogof/GNS3/images/IOS/c7200-advipservicesk9-mz.152-4.S5.image 
+Dec 21 01:02:30.185 HYPERVISOR: exec_cmd: vm set_ghost_status Ghost 1 
+Dec 21 01:02:30.185 HYPERVISOR: exec_cmd: vm set_ghost_file Ghost c7200-advipservicesk9-mz.152-4.S5.image-512.ghost 
+Dec 21 01:02:30.186 HYPERVISOR: exec_cmd: vm set_ram Ghost 512 
+Dec 21 01:02:30.187 HYPERVISOR: exec_cmd: vm get_status Ghost 
+Dec 21 01:02:30.187 HYPERVISOR: exec_cmd: vm start Ghost 
+Dec 21 01:02:30.503 HYPERVISOR: exec_cmd: vm get_status Ghost 
+Dec 21 01:02:30.504 HYPERVISOR: exec_cmd: vm stop Ghost 
+Dec 21 01:02:30.614 VM: VM Ghost shutdown.
+Dec 21 01:02:30.614 HYPERVISOR: exec_cmd: vm clean_delete Ghost 
+Dec 21 01:02:30.615 VM: VM Ghost destroyed.
+Dec 21 01:02:30.616 HYPERVISOR: exec_cmd: vm set_ghost_status Internet1 2 
+Dec 21 01:02:30.617 HYPERVISOR: exec_cmd: vm set_ghost_file Internet1 c7200-advipservicesk9-mz.152-4.S5.image-512.ghost 
+Dec 21 01:02:30.617 HYPERVISOR: exec_cmd: vm get_status Internet1 
+Dec 21 01:02:30.618 HYPERVISOR: exec_cmd: vm start Internet1 
+Dec 21 01:10:26.166 HYPERVISOR: exec_cmd: vm extract_config Internet1 
+Dec 21 01:10:26.856 HYPERVISOR: exec_cmd: vm get_status Internet1 
+Dec 21 01:10:26.886 HYPERVISOR: exec_cmd: vm stop Internet1 
+Dec 21 01:10:26.974 VM: VM Internet1 shutdown.
+Dec 21 01:10:26.975 HYPERVISOR: exec_cmd: vm extract_config Internet1 
+Dec 21 01:10:29.347 HYPERVISOR: exec_cmd: vm get_status Internet1 
+Dec 21 01:10:29.378 HYPERVISOR: exec_cmd: vm start Internet1 
+Dec 21 01:17:14.332 HYPERVISOR: exec_cmd: vm extract_config Internet1 
+Dec 21 01:17:14.701 HYPERVISOR: exec_cmd: vm get_status Internet1 
+Dec 21 01:17:14.706 HYPERVISOR: exec_cmd: vm stop Internet1 
+Dec 21 01:17:14.776 VM: VM Internet1 shutdown.
+Dec 21 01:17:14.777 HYPERVISOR: exec_cmd: vm extract_config Internet1 
+Dec 21 01:17:17.829 HYPERVISOR: exec_cmd: vm get_status Internet1 
+Dec 21 01:17:17.843 HYPERVISOR: exec_cmd: vm start Internet1 
+Dec 21 01:20:58.189 HYPERVISOR: exec_cmd: vm extract_config Internet1 
+Dec 21 01:28:21.847 HYPERVISOR: exec_cmd: vm get_status Internet1 
+Dec 21 01:28:21.861 HYPERVISOR: exec_cmd: vm stop Internet1 
+Dec 21 01:28:21.969 VM: VM Internet1 shutdown.
+Dec 21 01:28:21.973 HYPERVISOR: exec_cmd: vm extract_config Internet1 
+Dec 21 01:28:22.829 HYPERVISOR: exec_cmd: vm extract_config Internet1 
+Dec 21 01:28:54.805 HYPERVISOR: exec_cmd: vm get_status Internet1 
+Dec 21 01:28:54.815 HYPERVISOR: exec_cmd: vm start Internet1 
+Dec 21 01:35:06.360 HYPERVISOR: exec_cmd: vm extract_config Internet1 
+Dec 21 01:35:07.305 HYPERVISOR: exec_cmd: vm get_status Internet1 
+Dec 21 01:35:07.327 HYPERVISOR: exec_cmd: vm stop Internet1 
+Dec 21 01:35:07.409 VM: VM Internet1 shutdown.
+Dec 21 01:35:07.411 HYPERVISOR: exec_cmd: vm extract_config Internet1 
+Dec 21 01:35:10.091 HYPERVISOR: exec_cmd: vm get_status Internet1 
+Dec 21 01:35:10.100 HYPERVISOR: exec_cmd: vm start Internet1 
+Dec 21 01:42:52.085 HYPERVISOR: exec_cmd: vm get_status Internet1 
+Dec 21 01:42:52.101 HYPERVISOR: exec_cmd: vm stop Internet1 
+Dec 21 01:42:52.190 VM: VM Internet1 shutdown.
+Dec 21 01:42:52.196 HYPERVISOR: exec_cmd: vm extract_config Internet1 
+Dec 21 01:42:54.779 HYPERVISOR: exec_cmd: vm get_status Internet1 
+Dec 21 01:42:54.811 HYPERVISOR: exec_cmd: vm start Internet1 
+Dec 21 01:46:10.714 HYPERVISOR: exec_cmd: vm get_status Internet1 
+Dec 21 01:46:10.729 HYPERVISOR: exec_cmd: vm stop Internet1 
+Dec 21 01:46:10.827 VM: VM Internet1 shutdown.
+Dec 21 01:46:10.832 HYPERVISOR: exec_cmd: vm extract_config Internet1 
+Dec 21 02:29:17.535 HYPERVISOR: exec_cmd: vm extract_config Internet1 
+Dec 21 03:05:28.776 HYPERVISOR: exec_cmd: vm extract_config Internet1 

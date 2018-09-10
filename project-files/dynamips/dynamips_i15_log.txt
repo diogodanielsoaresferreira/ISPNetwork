@@ -1,0 +1,19 @@
+Jan 05 13:03:54.466 HYPERVISOR: Release 0.2.14-x86/Windows (tag 2014092320)
+Jan 05 13:03:54.466 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 63862.
+Jan 05 13:03:54.544 HYPERVISOR: exec_cmd: hypervisor version 
+Jan 05 13:03:54.560 HYPERVISOR: exec_cmd: hypervisor working_dir D:\dl-pc\Universidade\4ano\1semestre\ARA\Projeto\ARA-project\ATM-project\project-files\dynamips 
+Jan 05 13:03:54.560 GENERAL: working_dir=D:\dl-pc\Universidade\4ano\1semestre\ARA\Projeto\ARA-project\ATM-project\project-files\dynamips
+Jan 05 13:03:54.591 HYPERVISOR: exec_cmd: ethsw create netM1 
+Jan 05 13:03:58.682 HYPERVISOR: exec_cmd: nio create_udp udp-0697f3a5-bb83-477b-bb5e-1e4ebbf6cdf0 10021 127.0.0.1 10020 
+Jan 05 13:03:58.698 HYPERVISOR: exec_cmd: ethsw add_nio netM1 udp-0697f3a5-bb83-477b-bb5e-1e4ebbf6cdf0 
+Jan 05 13:03:58.744 HYPERVISOR: exec_cmd: ethsw set_access_port netM1 udp-0697f3a5-bb83-477b-bb5e-1e4ebbf6cdf0 1 
+Jan 05 13:03:59.088 HYPERVISOR: exec_cmd: nio create_udp udp-b360c5e7-e202-4e85-95bd-7317f941d3a0 10039 127.0.0.1 10038 
+Jan 05 13:03:59.104 HYPERVISOR: exec_cmd: ethsw add_nio netM1 udp-b360c5e7-e202-4e85-95bd-7317f941d3a0 
+Jan 05 13:03:59.151 HYPERVISOR: exec_cmd: ethsw set_access_port netM1 udp-b360c5e7-e202-4e85-95bd-7317f941d3a0 1 
+Jan 05 13:03:59.573 HYPERVISOR: exec_cmd: nio create_udp udp-2006f092-6b5a-4045-a28d-3e4e7abc32d3 10063 127.0.0.1 10062 
+Jan 05 13:03:59.604 HYPERVISOR: exec_cmd: ethsw add_nio netM1 udp-2006f092-6b5a-4045-a28d-3e4e7abc32d3 
+Jan 05 13:03:59.651 HYPERVISOR: exec_cmd: ethsw set_access_port netM1 udp-2006f092-6b5a-4045-a28d-3e4e7abc32d3 1 
+Jan 05 13:28:13.697 HYPERVISOR: exec_cmd: ethsw delete netM1 
+Jan 05 13:28:13.746 HYPERVISOR: exec_cmd: hypervisor stop 
+Jan 05 13:28:14.158 HYPERVISOR: Stopped.
+Jan 05 13:28:14.158 GENERAL: reset done.

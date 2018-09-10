@@ -1,0 +1,54 @@
+Jan 05 13:03:56.135 HYPERVISOR: Release 0.2.14-x86/Windows (tag 2014092320)
+Jan 05 13:03:56.135 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 63896.
+Jan 05 13:03:56.182 HYPERVISOR: exec_cmd: hypervisor version 
+Jan 05 13:03:56.198 HYPERVISOR: exec_cmd: hypervisor working_dir D:\dl-pc\Universidade\4ano\1semestre\ARA\Projeto\ARA-project\ATM-project\project-files\dynamips 
+Jan 05 13:03:56.198 GENERAL: working_dir=D:\dl-pc\Universidade\4ano\1semestre\ARA\Projeto\ARA-project\ATM-project\project-files\dynamips
+Jan 05 13:03:56.213 HYPERVISOR: exec_cmd: vm create AveiroServer2 21 c7200 
+Jan 05 13:03:56.213 VM: VM AveiroServer2 created.
+Jan 05 13:03:56.229 HYPERVISOR: exec_cmd: vm set_con_tcp_port AveiroServer2 5037 
+Jan 05 13:03:56.244 HYPERVISOR: exec_cmd: c7200 get_mac_addr AveiroServer2 
+Jan 05 13:03:56.244 HYPERVISOR: exec_cmd: vm get_status AveiroServer2 
+Jan 05 13:03:56.260 HYPERVISOR: exec_cmd: vm slot_add_binding AveiroServer2 0 0 C7200-IO-FE 
+Jan 05 13:03:56.260 HYPERVISOR: exec_cmd: vm set_nvram AveiroServer2 512 
+Jan 05 13:03:56.276 HYPERVISOR: exec_cmd: vm get_status AveiroServer2 
+Jan 05 13:03:56.291 HYPERVISOR: exec_cmd: vm set_idle_pc AveiroServer2 0x6318687c 
+Jan 05 13:03:56.307 HYPERVISOR: exec_cmd: vm set_exec_area AveiroServer2 64 
+Jan 05 13:03:56.323 HYPERVISOR: exec_cmd: vm get_status AveiroServer2 
+Jan 05 13:03:56.323 HYPERVISOR: exec_cmd: vm slot_add_binding AveiroServer2 1 0 PA-2FE-TX 
+Jan 05 13:03:56.338 HYPERVISOR: exec_cmd: vm set_ram AveiroServer2 512 
+Jan 05 13:03:56.354 HYPERVISOR: exec_cmd: c7200 set_mac_addr AveiroServer2 ca15.489f.0000 
+Jan 05 13:03:56.369 HYPERVISOR: exec_cmd: vm set_disk0 AveiroServer2 0 
+Jan 05 13:03:56.385 HYPERVISOR: exec_cmd: vm set_ios AveiroServer2 C:/Users/dl-pc/GNS3/images/IOS/c7200-advipservicesk9-mz.152-4.S5.image 
+Jan 05 13:03:56.401 HYPERVISOR: exec_cmd: vm get_status AveiroServer2 
+Jan 05 13:03:56.432 HYPERVISOR: exec_cmd: vm slot_remove_binding AveiroServer2 0 0 
+Jan 05 13:03:56.432 HYPERVISOR: exec_cmd: vm get_status AveiroServer2 
+Jan 05 13:03:56.447 HYPERVISOR: exec_cmd: vm slot_add_binding AveiroServer2 0 0 C7200-IO-2FE 
+Jan 05 13:03:56.463 HYPERVISOR: exec_cmd: vm set_config AveiroServer2 configs/i21_startup-config.cfg 
+Jan 05 13:03:56.479 HYPERVISOR: exec_cmd: vm set_config AveiroServer2 configs/i21_startup-config.cfg configs/i21_private-config.cfg 
+Jan 05 13:03:59.823 HYPERVISOR: exec_cmd: nio create_udp udp-a621a67a-a7f1-426b-8c6c-06e934047c40 10073 127.0.0.1 10072 
+Jan 05 13:03:59.838 HYPERVISOR: exec_cmd: vm slot_add_nio_binding AveiroServer2 0 0 udp-a621a67a-a7f1-426b-8c6c-06e934047c40 
+Jan 05 13:03:59.869 HYPERVISOR: exec_cmd: vm get_status AveiroServer2 
+Jan 05 13:12:05.436 HYPERVISOR: exec_cmd: vm extract_config AveiroServer2 
+Jan 05 13:18:50.817 HYPERVISOR: exec_cmd: vm set_ghost_status AveiroServer2 2 
+Jan 05 13:18:50.825 HYPERVISOR: exec_cmd: vm set_ghost_file AveiroServer2 c7200-advipservicesk9-mz.152-4.S5.image-512.ghost 
+Jan 05 13:18:50.825 HYPERVISOR: exec_cmd: vm get_status AveiroServer2 
+Jan 05 13:18:50.825 HYPERVISOR: exec_cmd: vm start AveiroServer2 
+Jan 05 13:22:04.367 HYPERVISOR: exec_cmd: vm get_status AveiroServer2 
+Jan 05 13:22:04.383 HYPERVISOR: exec_cmd: vm stop AveiroServer2 
+Jan 05 13:22:04.555 VM: VM AveiroServer2 shutdown.
+Jan 05 13:22:04.579 HYPERVISOR: exec_cmd: vm extract_config AveiroServer2 
+Jan 05 13:22:09.463 HYPERVISOR: exec_cmd: vm get_status AveiroServer2 
+Jan 05 13:22:09.583 HYPERVISOR: exec_cmd: vm start AveiroServer2 
+Jan 05 13:27:54.141 HYPERVISOR: exec_cmd: vm get_status AveiroServer2 
+Jan 05 13:27:54.158 HYPERVISOR: exec_cmd: vm stop AveiroServer2 
+Jan 05 13:27:54.321 VM: VM AveiroServer2 shutdown.
+Jan 05 13:27:54.337 HYPERVISOR: exec_cmd: vm extract_config AveiroServer2 
+Jan 05 13:27:56.931 HYPERVISOR: exec_cmd: vm extract_config AveiroServer2 
+Jan 05 13:27:57.943 HYPERVISOR: exec_cmd: vm extract_config AveiroServer2 
+Jan 05 13:28:14.310 HYPERVISOR: exec_cmd: vm get_status AveiroServer2 
+Jan 05 13:28:14.405 HYPERVISOR: exec_cmd: vm extract_config AveiroServer2 
+Jan 05 13:28:14.516 HYPERVISOR: exec_cmd: vm delete AveiroServer2 
+Jan 05 13:28:14.516 VM: VM AveiroServer2 destroyed.
+Jan 05 13:28:14.636 HYPERVISOR: exec_cmd: hypervisor stop 
+Jan 05 13:28:14.913 HYPERVISOR: Stopped.
+Jan 05 13:28:14.913 GENERAL: reset done.

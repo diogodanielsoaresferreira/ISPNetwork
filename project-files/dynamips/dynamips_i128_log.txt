@@ -1,0 +1,88 @@
+Dec 21 01:02:18.748 HYPERVISOR: Release 0.2.17-amd64/Linux (tag 2017072410)
+Dec 21 01:02:18.748 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 42386.
+Dec 21 01:02:18.799 HYPERVISOR: exec_cmd: hypervisor version 
+Dec 21 01:02:18.801 HYPERVISOR: exec_cmd: hypervisor working_dir /home/diogof/Desktop/Projeto ARA/GNS3-project/project-files/dynamips 
+Dec 21 01:02:18.801 GENERAL: working_dir=/home/diogof/Desktop/Projeto ARA/GNS3-project/project-files/dynamips
+Dec 21 01:02:18.804 HYPERVISOR: exec_cmd: vm create Lisboa1 13 c7200 
+Dec 21 01:02:18.804 VM: VM Lisboa1 created.
+Dec 21 01:02:18.807 HYPERVISOR: exec_cmd: vm set_con_tcp_port Lisboa1 5012 
+Dec 21 01:02:18.808 HYPERVISOR: exec_cmd: c7200 get_mac_addr Lisboa1 
+Dec 21 01:02:18.810 HYPERVISOR: exec_cmd: vm get_status Lisboa1 
+Dec 21 01:02:18.812 HYPERVISOR: exec_cmd: vm slot_add_binding Lisboa1 0 0 C7200-IO-FE 
+Dec 21 01:02:18.816 HYPERVISOR: exec_cmd: vm set_nvram Lisboa1 512 
+Dec 21 01:02:18.824 HYPERVISOR: exec_cmd: vm get_status Lisboa1 
+Dec 21 01:02:18.826 HYPERVISOR: exec_cmd: vm slot_add_binding Lisboa1 1 0 PA-2FE-TX 
+Dec 21 01:02:18.830 HYPERVISOR: exec_cmd: vm set_ram Lisboa1 512 
+Dec 21 01:02:18.838 HYPERVISOR: exec_cmd: vm get_status Lisboa1 
+Dec 21 01:02:18.840 HYPERVISOR: exec_cmd: vm slot_remove_binding Lisboa1 0 0 
+Dec 21 01:02:18.843 HYPERVISOR: exec_cmd: vm get_status Lisboa1 
+Dec 21 01:02:18.851 HYPERVISOR: exec_cmd: vm slot_add_binding Lisboa1 0 0 C7200-IO-2FE 
+Dec 21 01:02:18.854 HYPERVISOR: exec_cmd: vm get_status Lisboa1 
+Dec 21 01:02:18.856 HYPERVISOR: exec_cmd: vm set_idle_pc Lisboa1 0x63184bc8 
+Dec 21 01:02:18.858 HYPERVISOR: exec_cmd: vm set_disk0 Lisboa1 0 
+Dec 21 01:02:18.860 HYPERVISOR: exec_cmd: c7200 set_mac_addr Lisboa1 ca0d.2194.0000 
+Dec 21 01:02:18.868 HYPERVISOR: exec_cmd: vm set_ios Lisboa1 /home/diogof/GNS3/images/IOS/c7200-advipservicesk9-mz.152-4.S5.image 
+Dec 21 01:02:18.878 HYPERVISOR: exec_cmd: vm set_config Lisboa1 configs/i13_startup-config.cfg 
+Dec 21 01:02:20.205 HYPERVISOR: exec_cmd: nio create_udp udp-0d7a7849-bf7d-407a-9890-083cac9c169b 10032 127.0.0.1 10034 
+Dec 21 01:02:20.210 HYPERVISOR: exec_cmd: vm slot_add_nio_binding Lisboa1 1 0 udp-0d7a7849-bf7d-407a-9890-083cac9c169b 
+Dec 21 01:02:20.213 HYPERVISOR: exec_cmd: vm get_status Lisboa1 
+Dec 21 01:02:20.230 HYPERVISOR: exec_cmd: nio create_udp udp-6308e28a-f945-44fd-8607-78f93d5b2796 10033 127.0.0.1 10035 
+Dec 21 01:02:20.232 HYPERVISOR: exec_cmd: vm slot_add_nio_binding Lisboa1 0 1 udp-6308e28a-f945-44fd-8607-78f93d5b2796 
+Dec 21 01:02:20.233 HYPERVISOR: exec_cmd: vm get_status Lisboa1 
+Dec 21 01:02:20.262 HYPERVISOR: exec_cmd: nio create_udp udp-70dad139-4be5-4b13-94f3-840c594bc93b 10036 127.0.0.1 10038 
+Dec 21 01:02:20.266 HYPERVISOR: exec_cmd: vm slot_add_nio_binding Lisboa1 1 1 udp-70dad139-4be5-4b13-94f3-840c594bc93b 
+Dec 21 01:02:20.270 HYPERVISOR: exec_cmd: vm get_status Lisboa1 
+Dec 21 01:02:20.315 HYPERVISOR: exec_cmd: nio create_udp udp-91a4b911-28d0-4e84-bb49-399691605962 10041 127.0.0.1 10040 
+Dec 21 01:02:20.316 HYPERVISOR: exec_cmd: vm slot_add_nio_binding Lisboa1 0 0 udp-91a4b911-28d0-4e84-bb49-399691605962 
+Dec 21 01:02:20.316 HYPERVISOR: exec_cmd: vm get_status Lisboa1 
+Dec 21 01:02:30.620 HYPERVISOR: exec_cmd: vm set_ghost_status Lisboa1 2 
+Dec 21 01:02:30.622 HYPERVISOR: exec_cmd: vm set_ghost_file Lisboa1 c7200-advipservicesk9-mz.152-4.S5.image-512.ghost 
+Dec 21 01:02:30.622 HYPERVISOR: exec_cmd: vm get_status Lisboa1 
+Dec 21 01:02:30.623 HYPERVISOR: exec_cmd: vm start Lisboa1 
+Dec 21 01:10:26.178 HYPERVISOR: exec_cmd: vm extract_config Lisboa1 
+Dec 21 01:10:27.413 HYPERVISOR: exec_cmd: vm get_status Lisboa1 
+Dec 21 01:10:27.414 HYPERVISOR: exec_cmd: vm stop Lisboa1 
+Dec 21 01:10:27.550 VM: VM Lisboa1 shutdown.
+Dec 21 01:10:27.551 HYPERVISOR: exec_cmd: vm extract_config Lisboa1 
+Dec 21 01:10:29.652 HYPERVISOR: exec_cmd: vm get_status Lisboa1 
+Dec 21 01:10:29.660 HYPERVISOR: exec_cmd: vm start Lisboa1 
+Dec 21 01:17:14.348 HYPERVISOR: exec_cmd: vm extract_config Lisboa1 
+Dec 21 01:17:15.125 HYPERVISOR: exec_cmd: vm get_status Lisboa1 
+Dec 21 01:17:15.127 HYPERVISOR: exec_cmd: vm stop Lisboa1 
+Dec 21 01:17:15.274 VM: VM Lisboa1 shutdown.
+Dec 21 01:17:15.278 HYPERVISOR: exec_cmd: vm extract_config Lisboa1 
+Dec 21 01:17:18.073 HYPERVISOR: exec_cmd: vm get_status Lisboa1 
+Dec 21 01:17:18.076 HYPERVISOR: exec_cmd: vm start Lisboa1 
+Dec 21 01:20:58.196 HYPERVISOR: exec_cmd: vm extract_config Lisboa1 
+Dec 21 01:28:22.267 HYPERVISOR: exec_cmd: vm get_status Lisboa1 
+Dec 21 01:28:22.272 HYPERVISOR: exec_cmd: vm stop Lisboa1 
+Dec 21 01:28:22.430 VM: VM Lisboa1 shutdown.
+Dec 21 01:28:22.433 HYPERVISOR: exec_cmd: vm extract_config Lisboa1 
+Dec 21 01:28:22.838 HYPERVISOR: exec_cmd: vm extract_config Lisboa1 
+Dec 21 01:28:55.050 HYPERVISOR: exec_cmd: vm get_status Lisboa1 
+Dec 21 01:28:55.054 HYPERVISOR: exec_cmd: vm start Lisboa1 
+Dec 21 01:35:06.376 HYPERVISOR: exec_cmd: vm extract_config Lisboa1 
+Dec 21 01:35:07.798 HYPERVISOR: exec_cmd: vm get_status Lisboa1 
+Dec 21 01:35:07.805 HYPERVISOR: exec_cmd: vm stop Lisboa1 
+Dec 21 01:35:07.976 VM: VM Lisboa1 shutdown.
+Dec 21 01:35:07.978 HYPERVISOR: exec_cmd: vm extract_config Lisboa1 
+Dec 21 01:35:10.326 HYPERVISOR: exec_cmd: vm get_status Lisboa1 
+Dec 21 01:35:10.329 HYPERVISOR: exec_cmd: vm start Lisboa1 
+Dec 21 01:42:52.659 HYPERVISOR: exec_cmd: vm get_status Lisboa1 
+Dec 21 01:42:52.659 HYPERVISOR: exec_cmd: vm stop Lisboa1 
+Dec 21 01:42:52.789 VM: VM Lisboa1 shutdown.
+Dec 21 01:42:52.790 HYPERVISOR: exec_cmd: vm extract_config Lisboa1 
+Dec 21 01:42:55.068 HYPERVISOR: exec_cmd: vm get_status Lisboa1 
+Dec 21 01:42:55.079 HYPERVISOR: exec_cmd: vm start Lisboa1 
+Dec 21 01:46:11.143 HYPERVISOR: exec_cmd: vm get_status Lisboa1 
+Dec 21 01:46:11.144 HYPERVISOR: exec_cmd: vm stop Lisboa1 
+Dec 21 01:46:11.287 VM: VM Lisboa1 shutdown.
+Dec 21 01:46:11.289 HYPERVISOR: exec_cmd: vm extract_config Lisboa1 
+Dec 21 01:49:39.150 HYPERVISOR: exec_cmd: vm get_status Lisboa1 
+Dec 21 01:49:39.151 HYPERVISOR: exec_cmd: vm start Lisboa1 
+Dec 21 02:29:17.576 HYPERVISOR: exec_cmd: vm extract_config Lisboa1 
+Dec 21 03:05:28.838 HYPERVISOR: exec_cmd: vm extract_config Lisboa1 
+Dec 21 03:05:29.285 HYPERVISOR: exec_cmd: vm get_status Lisboa1 
+Dec 21 03:05:29.287 HYPERVISOR: exec_cmd: vm stop Lisboa1 
+Dec 21 03:05:29.415 VM: VM Lisboa1 shutdown.
+Dec 21 03:05:29.416 HYPERVISOR: exec_cmd: vm extract_config Lisboa1 

@@ -1,0 +1,48 @@
+Jan 05 13:03:55.170 HYPERVISOR: Release 0.2.14-x86/Windows (tag 2014092320)
+Jan 05 13:03:55.170 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 63881.
+Jan 05 13:03:55.249 HYPERVISOR: exec_cmd: hypervisor version 
+Jan 05 13:03:55.264 HYPERVISOR: exec_cmd: hypervisor working_dir D:\dl-pc\Universidade\4ano\1semestre\ARA\Projeto\ARA-project\ATM-project\project-files\dynamips 
+Jan 05 13:03:55.264 GENERAL: working_dir=D:\dl-pc\Universidade\4ano\1semestre\ARA\Projeto\ARA-project\ATM-project\project-files\dynamips
+Jan 05 13:03:55.264 HYPERVISOR: exec_cmd: vm create AV 10 c7200 
+Jan 05 13:03:55.264 VM: VM AV created.
+Jan 05 13:03:55.292 HYPERVISOR: exec_cmd: vm set_con_tcp_port AV 5027 
+Jan 05 13:03:55.295 HYPERVISOR: exec_cmd: c7200 get_mac_addr AV 
+Jan 05 13:03:55.319 HYPERVISOR: exec_cmd: vm get_status AV 
+Jan 05 13:03:55.327 HYPERVISOR: exec_cmd: vm slot_add_binding AV 0 0 C7200-IO-FE 
+Jan 05 13:03:55.347 HYPERVISOR: exec_cmd: vm set_nvram AV 512 
+Jan 05 13:03:55.357 HYPERVISOR: exec_cmd: vm get_status AV 
+Jan 05 13:03:55.372 HYPERVISOR: exec_cmd: vm set_idle_pc AV 0x6318687c 
+Jan 05 13:03:55.388 HYPERVISOR: exec_cmd: vm set_exec_area AV 64 
+Jan 05 13:03:55.399 HYPERVISOR: exec_cmd: vm set_ram AV 512 
+Jan 05 13:03:55.415 HYPERVISOR: exec_cmd: c7200 set_mac_addr AV ca0a.3ad4.0000 
+Jan 05 13:03:55.430 HYPERVISOR: exec_cmd: vm set_disk0 AV 0 
+Jan 05 13:03:55.446 HYPERVISOR: exec_cmd: vm set_ios AV C:/Users/dl-pc/GNS3/images/IOS/c7200-advipservicesk9-mz.152-4.S5.image 
+Jan 05 13:03:55.461 HYPERVISOR: exec_cmd: vm set_config AV configs/i10_startup-config.cfg 
+Jan 05 13:03:55.495 HYPERVISOR: exec_cmd: vm set_config AV configs/i10_startup-config.cfg configs/i10_private-config.cfg 
+Jan 05 13:03:59.323 HYPERVISOR: exec_cmd: nio create_udp udp-58150f59-6c52-4e20-8924-ce31ff9d9f98 10050 127.0.0.1 10051 
+Jan 05 13:03:59.354 HYPERVISOR: exec_cmd: vm slot_add_nio_binding AV 0 0 udp-58150f59-6c52-4e20-8924-ce31ff9d9f98 
+Jan 05 13:03:59.369 HYPERVISOR: exec_cmd: vm get_status AV 
+Jan 05 13:12:05.451 HYPERVISOR: exec_cmd: vm extract_config AV 
+Jan 05 13:19:01.442 HYPERVISOR: exec_cmd: vm set_ghost_status AV 2 
+Jan 05 13:19:01.546 HYPERVISOR: exec_cmd: vm set_ghost_file AV c7200-advipservicesk9-mz.152-4.S5.image-512.ghost 
+Jan 05 13:19:01.570 HYPERVISOR: exec_cmd: vm get_status AV 
+Jan 05 13:19:01.630 HYPERVISOR: exec_cmd: vm start AV 
+Jan 05 13:22:04.695 HYPERVISOR: exec_cmd: vm get_status AV 
+Jan 05 13:22:04.719 HYPERVISOR: exec_cmd: vm stop AV 
+Jan 05 13:22:04.891 VM: VM AV shutdown.
+Jan 05 13:22:04.911 HYPERVISOR: exec_cmd: vm extract_config AV 
+Jan 05 13:22:37.912 HYPERVISOR: exec_cmd: vm get_status AV 
+Jan 05 13:22:38.028 HYPERVISOR: exec_cmd: vm start AV 
+Jan 05 13:27:54.537 HYPERVISOR: exec_cmd: vm get_status AV 
+Jan 05 13:27:54.562 HYPERVISOR: exec_cmd: vm stop AV 
+Jan 05 13:27:54.763 VM: VM AV shutdown.
+Jan 05 13:27:54.769 HYPERVISOR: exec_cmd: vm extract_config AV 
+Jan 05 13:27:56.968 HYPERVISOR: exec_cmd: vm extract_config AV 
+Jan 05 13:27:57.980 HYPERVISOR: exec_cmd: vm extract_config AV 
+Jan 05 13:28:14.341 HYPERVISOR: exec_cmd: vm get_status AV 
+Jan 05 13:28:14.435 HYPERVISOR: exec_cmd: vm extract_config AV 
+Jan 05 13:28:14.560 HYPERVISOR: exec_cmd: vm delete AV 
+Jan 05 13:28:14.560 VM: VM AV destroyed.
+Jan 05 13:28:14.672 HYPERVISOR: exec_cmd: hypervisor stop 
+Jan 05 13:28:15.159 HYPERVISOR: Stopped.
+Jan 05 13:28:15.159 GENERAL: reset done.

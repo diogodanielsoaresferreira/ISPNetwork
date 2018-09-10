@@ -1,0 +1,32 @@
+Dec 28 17:05:42.538 HYPERVISOR: Release 0.2.17-amd64/Linux (tag 2017072410)
+Dec 28 17:05:42.538 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 34321.
+Dec 28 17:05:42.574 HYPERVISOR: exec_cmd: hypervisor version 
+Dec 28 17:05:42.575 HYPERVISOR: exec_cmd: hypervisor working_dir /home/diogof/Desktop/Projeto ARA/GNS3-project/project-files/dynamips 
+Dec 28 17:05:42.575 GENERAL: working_dir=/home/diogof/Desktop/Projeto ARA/GNS3-project/project-files/dynamips
+Dec 28 17:05:42.578 HYPERVISOR: exec_cmd: vm create AV 10 c7200 
+Dec 28 17:05:42.578 VM: VM AV created.
+Dec 28 17:05:42.580 HYPERVISOR: exec_cmd: vm set_con_tcp_port AV 5027 
+Dec 28 17:05:42.582 HYPERVISOR: exec_cmd: c7200 get_mac_addr AV 
+Dec 28 17:05:42.589 HYPERVISOR: exec_cmd: vm get_status AV 
+Dec 28 17:05:42.602 HYPERVISOR: exec_cmd: vm slot_add_binding AV 0 0 C7200-IO-FE 
+Dec 28 17:05:42.609 HYPERVISOR: exec_cmd: vm set_ram AV 512 
+Dec 28 17:05:42.621 HYPERVISOR: exec_cmd: vm set_disk0 AV 0 
+Dec 28 17:05:42.624 HYPERVISOR: exec_cmd: vm set_ios AV /home/diogof/GNS3/images/IOS/c7200-advipservicesk9-mz.152-4.S5.image 
+Dec 28 17:05:42.625 HYPERVISOR: exec_cmd: vm set_nvram AV 512 
+Dec 28 17:05:42.627 HYPERVISOR: exec_cmd: vm get_status AV 
+Dec 28 17:05:42.633 HYPERVISOR: exec_cmd: vm set_idle_pc AV 0x6318687c 
+Dec 28 17:05:42.636 HYPERVISOR: exec_cmd: c7200 set_mac_addr AV ca0a.3ad4.0000 
+Dec 28 17:05:42.638 HYPERVISOR: exec_cmd: vm set_config AV configs/i10_startup-config.cfg 
+Dec 28 17:05:42.642 HYPERVISOR: exec_cmd: vm set_config AV configs/i10_startup-config.cfg configs/i10_private-config.cfg 
+Dec 28 17:05:44.747 HYPERVISOR: exec_cmd: nio create_udp udp-7164de69-da3a-4984-bae4-c6969ea8a178 10078 127.0.0.1 10079 
+Dec 28 17:05:44.748 HYPERVISOR: exec_cmd: vm slot_add_nio_binding AV 0 0 udp-7164de69-da3a-4984-bae4-c6969ea8a178 
+Dec 28 17:05:44.750 HYPERVISOR: exec_cmd: vm get_status AV 
+Dec 28 17:05:54.745 HYPERVISOR: exec_cmd: vm extract_config AV 
+Dec 28 17:28:44.283 HYPERVISOR: exec_cmd: vm extract_config AV 
+Dec 28 17:28:56.952 HYPERVISOR: exec_cmd: vm get_status AV 
+Dec 28 17:28:56.964 HYPERVISOR: exec_cmd: vm extract_config AV 
+Dec 28 17:28:56.977 HYPERVISOR: exec_cmd: vm delete AV 
+Dec 28 17:28:56.977 VM: VM AV destroyed.
+Dec 28 17:28:56.985 HYPERVISOR: exec_cmd: hypervisor stop 
+Dec 28 17:28:57.313 HYPERVISOR: Stopped.
+Dec 28 17:28:57.313 GENERAL: reset done.

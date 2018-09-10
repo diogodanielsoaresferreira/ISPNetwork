@@ -1,0 +1,165 @@
+
+------------------
+--- DNS Server ---
+------------------
+
+-- /etc/network/interfaces ---
+auto lo
+iface lo inet loopback
+
+auto eth0
+iface eth0 inet static
+	address 192.100.1.150
+	netmask 255.255.255.128
+	gateway 192.100.1.129
+
+
+iface enp0s3 inet6 static
+	address 2001:100:1:101::150
+	netmask 64
+	gateway 2001:100:1:101::1
+
+
+-- /etc/bind/PT2.acl ---
+acl "AV" {
+	110.1.1.0/25;
+	111.1.1.0/25;
+	10.2.1.0/24;
+};
+
+acl "OE" {
+	110.1.1.128/25;
+	111.1.1.128/25;
+	192.100.1.0/25;
+	10.2.2.0/24;
+};
+
+
+-- /etc/bind/named.conf ---
+include "/etc/bind/named.conf.local";
+include "/etc/bind/PT2.acl";
+
+-- /etc/bind/named.conf.local ---
+view "aveiro" {
+	match-clients { AV; };
+	recursion no;
+	zone "aracdn.com" {
+		type master;
+		file "/etc/bind/aracdn.com-aveiro-symlink";
+	};
+};
+
+view "oeiras" {
+	match-clients { OE; };
+	recursion no;
+	zone "aracdn.com"{
+		type master;
+		file "/etc/bind/aracdn.com-oeiras-symlink";
+	};
+};
+
+view "lisboa" {
+	match-clients { any; };
+	recursion no;
+	zone "aracdn.com" {
+		type master;
+		file "/etc/bind/aracdn.com-lisboa-symlink";
+	};
+};
+
+-- Criar symlinks de aveiro, lisboa e oeiras para um dos ficheiros de configuração de cada zona
+
+-- /etc/bind/aracdn.com-aveiro.db
+$TTL 604800
+$ORIGIN aracdn.com.
+@	IN	SOA	ns1.aracdn.com.	adm.arxcdn.com. (
+			2 ; Serial
+			604800 ; Refresh
+			86400 ; Retry
+			2419200 ; Expire
+			604800 ) ; Negative Cache TTL
+	IN	NS	ns1.aracdn.com.
+	IN	A	10.2.1.2
+	IN 	AAAA	3001:10:2:1::2
+ns1	IN	A	192.100.1.150
+ns1 IN 	AAAA 	2001:100:1:101::150
+
+-- /etc/bind/aracdn.com-aveiro2.db
+$TTL 604800
+$ORIGIN aracdn.com.
+@	IN	SOA	ns1.aracdn.com. adm.arxcdn.com. (
+				2
+				604800
+				86400
+				2419200
+				604800 )
+	IN	NS 	ns1.aracdn.com.
+	IN	A 	10.2.1.3
+	IN	AAAA	3001:10:2:1::3
+NS1 IN	A 	192.100.1.150
+NS1 IN	AAAA	2001:100:1:101::150
+
+-- /etc/bind/aracdn.com-oeiras.db
+$TTL 604800
+$ORIGIN aracdn.com.
+@	IN	SOA	ns1.aracdn.com.	adm.arxcdn.com. (
+			2 ; Serial
+			604800 ; Refresh
+			86400 ; Retry
+			2419200 ; Expire
+			604800 ) ; Negative Cache TTL
+	IN	NS	ns1.aracdn.com.
+	IN	A	10.2.2.2
+ns1	IN	A	192.100.1.150
+	IN 	AAAA	3001:10:2:2::2
+ns1 IN 	AAAA 	2001:100:1:101::150
+
+-- /etc/bind/aracdn.com-oeiras2.db
+$TTL 604800
+$ORIGIN aracdn.com.
+@	IN	SOA	ns1.aracdn.com. adm.arxcdn.com. (
+				2
+				604800
+				86400
+				2419200
+				604800 )
+	IN	NS 	ns1.aracdn.com.
+	IN	A 	10.2.2.3
+	IN	AAAA	3001:10:2:2::3
+NS1 IN	A 	192.100.1.150
+NS1 IN	AAAA	2001:100:1:101::150
+
+-- /etc/bind/aracdn.com-lisboa.db
+$TTL 604800
+$ORIGIN aracdn.com.
+@	IN	SOA	ns1.aracdn.com.	adm.arxcdn.com. (
+			2 ; Serial
+			604800 ; Refresh
+			86400 ; Retry
+			2419200 ; Expire
+			604800 ) ; Negative Cache TTL
+	IN	NS	ns1.aracdn.com.
+	IN	A	192.100.1.130
+	IN 	AAAA	2001:100:1:101::2
+ns1	IN	A	192.100.1.150
+ns1 IN 	AAAA 	2001:100:1:101::150
+
+-- /etc/bind/aracdn.com-lisboa2.db
+$TTL 604800
+$ORIGIN aracdn.com.
+@	IN	SOA	ns1.aracdn.com. adm.arxcdn.com. (
+				2
+				604800
+				86400
+				2419200
+				604800 )
+	IN	NS 	ns1.aracdn.com.
+	IN	A 	192.100.1.131
+	IN	AAAA	2001:100:1:101::3
+NS1 IN	A 	192.100.1.150
+NS1 IN	AAAA	2001:100:1:101::150
+
+----  Ekiga ---
+Registrar: 192.100.1.3
+User: Client1_EMPA
+Password: labcom

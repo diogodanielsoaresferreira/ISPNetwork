@@ -1,0 +1,31 @@
+Dec 28 17:05:42.683 HYPERVISOR: Release 0.2.17-amd64/Linux (tag 2017072410)
+Dec 28 17:05:42.683 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 42812.
+Dec 28 17:05:42.715 HYPERVISOR: exec_cmd: hypervisor version 
+Dec 28 17:05:42.723 HYPERVISOR: exec_cmd: hypervisor working_dir /home/diogof/Desktop/Projeto ARA/GNS3-project/project-files/dynamips 
+Dec 28 17:05:42.723 GENERAL: working_dir=/home/diogof/Desktop/Projeto ARA/GNS3-project/project-files/dynamips
+Dec 28 17:05:42.724 HYPERVISOR: exec_cmd: vm create PP 18 c7200 
+Dec 28 17:05:42.725 VM: VM PP created.
+Dec 28 17:05:42.726 HYPERVISOR: exec_cmd: vm set_con_tcp_port PP 5033 
+Dec 28 17:05:42.727 HYPERVISOR: exec_cmd: c7200 get_mac_addr PP 
+Dec 28 17:05:42.728 HYPERVISOR: exec_cmd: vm get_status PP 
+Dec 28 17:05:42.729 HYPERVISOR: exec_cmd: vm slot_add_binding PP 0 0 C7200-IO-FE 
+Dec 28 17:05:42.729 HYPERVISOR: exec_cmd: vm set_ram PP 512 
+Dec 28 17:05:42.730 HYPERVISOR: exec_cmd: vm set_disk0 PP 0 
+Dec 28 17:05:42.738 HYPERVISOR: exec_cmd: vm set_ios PP /home/diogof/GNS3/images/IOS/c7200-advipservicesk9-mz.152-4.S5.image 
+Dec 28 17:05:42.750 HYPERVISOR: exec_cmd: vm set_nvram PP 512 
+Dec 28 17:05:42.750 HYPERVISOR: exec_cmd: vm get_status PP 
+Dec 28 17:05:42.751 HYPERVISOR: exec_cmd: vm set_idle_pc PP 0x6318687c 
+Dec 28 17:05:42.751 HYPERVISOR: exec_cmd: c7200 set_mac_addr PP ca12.2198.0000 
+Dec 28 17:05:42.752 HYPERVISOR: exec_cmd: vm set_config PP configs/i18_startup-config.cfg 
+Dec 28 17:05:44.928 HYPERVISOR: exec_cmd: nio create_udp udp-7f349fa2-0c98-42c7-8b22-3d0b110c9def 10091 127.0.0.1 10090 
+Dec 28 17:05:44.929 HYPERVISOR: exec_cmd: vm slot_add_nio_binding PP 0 0 udp-7f349fa2-0c98-42c7-8b22-3d0b110c9def 
+Dec 28 17:05:44.930 HYPERVISOR: exec_cmd: vm get_status PP 
+Dec 28 17:05:54.748 HYPERVISOR: exec_cmd: vm extract_config PP 
+Dec 28 17:28:44.285 HYPERVISOR: exec_cmd: vm extract_config PP 
+Dec 28 17:28:56.955 HYPERVISOR: exec_cmd: vm get_status PP 
+Dec 28 17:28:56.964 HYPERVISOR: exec_cmd: vm extract_config PP 
+Dec 28 17:28:56.977 HYPERVISOR: exec_cmd: vm delete PP 
+Dec 28 17:28:56.977 VM: VM PP destroyed.
+Dec 28 17:28:56.985 HYPERVISOR: exec_cmd: hypervisor stop 
+Dec 28 17:28:57.460 HYPERVISOR: Stopped.
+Dec 28 17:28:57.460 GENERAL: reset done.

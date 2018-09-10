@@ -1,0 +1,48 @@
+Jan 05 13:03:55.202 HYPERVISOR: Release 0.2.14-x86/Windows (tag 2014092320)
+Jan 05 13:03:55.202 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 63882.
+Jan 05 13:03:55.264 HYPERVISOR: exec_cmd: hypervisor version 
+Jan 05 13:03:55.286 HYPERVISOR: exec_cmd: hypervisor working_dir D:\dl-pc\Universidade\4ano\1semestre\ARA\Projeto\ARA-project\ATM-project\project-files\dynamips 
+Jan 05 13:03:55.286 GENERAL: working_dir=D:\dl-pc\Universidade\4ano\1semestre\ARA\Projeto\ARA-project\ATM-project\project-files\dynamips
+Jan 05 13:03:55.295 HYPERVISOR: exec_cmd: vm create OE 11 c7200 
+Jan 05 13:03:55.295 VM: VM OE created.
+Jan 05 13:03:55.311 HYPERVISOR: exec_cmd: vm set_con_tcp_port OE 5028 
+Jan 05 13:03:55.327 HYPERVISOR: exec_cmd: c7200 get_mac_addr OE 
+Jan 05 13:03:55.327 HYPERVISOR: exec_cmd: vm get_status OE 
+Jan 05 13:03:55.355 HYPERVISOR: exec_cmd: vm slot_add_binding OE 0 0 C7200-IO-FE 
+Jan 05 13:03:55.357 HYPERVISOR: exec_cmd: vm set_nvram OE 512 
+Jan 05 13:03:55.372 HYPERVISOR: exec_cmd: vm get_status OE 
+Jan 05 13:03:55.397 HYPERVISOR: exec_cmd: vm set_idle_pc OE 0x6318687c 
+Jan 05 13:03:55.399 HYPERVISOR: exec_cmd: vm set_exec_area OE 64 
+Jan 05 13:03:55.415 HYPERVISOR: exec_cmd: vm set_ram OE 512 
+Jan 05 13:03:55.430 HYPERVISOR: exec_cmd: c7200 set_mac_addr OE ca0b.2374.0000 
+Jan 05 13:03:55.455 HYPERVISOR: exec_cmd: vm set_disk0 OE 0 
+Jan 05 13:03:55.471 HYPERVISOR: exec_cmd: vm set_ios OE C:/Users/dl-pc/GNS3/images/IOS/c7200-advipservicesk9-mz.152-4.S5.image 
+Jan 05 13:03:55.510 HYPERVISOR: exec_cmd: vm set_config OE configs/i11_startup-config.cfg 
+Jan 05 13:03:55.537 HYPERVISOR: exec_cmd: vm set_config OE configs/i11_startup-config.cfg configs/i11_private-config.cfg 
+Jan 05 13:03:59.338 HYPERVISOR: exec_cmd: nio create_udp udp-f861f361-9706-48ae-a3fa-b800c9899c3f 10053 127.0.0.1 10052 
+Jan 05 13:03:59.354 HYPERVISOR: exec_cmd: vm slot_add_nio_binding OE 0 0 udp-f861f361-9706-48ae-a3fa-b800c9899c3f 
+Jan 05 13:03:59.369 HYPERVISOR: exec_cmd: vm get_status OE 
+Jan 05 13:12:05.373 HYPERVISOR: exec_cmd: vm extract_config OE 
+Jan 05 13:18:52.384 HYPERVISOR: exec_cmd: vm set_ghost_status OE 2 
+Jan 05 13:18:52.431 HYPERVISOR: exec_cmd: vm set_ghost_file OE c7200-advipservicesk9-mz.152-4.S5.image-512.ghost 
+Jan 05 13:18:52.447 HYPERVISOR: exec_cmd: vm get_status OE 
+Jan 05 13:18:52.478 HYPERVISOR: exec_cmd: vm start OE 
+Jan 05 13:22:04.643 HYPERVISOR: exec_cmd: vm get_status OE 
+Jan 05 13:22:04.679 HYPERVISOR: exec_cmd: vm stop OE 
+Jan 05 13:22:04.871 VM: VM OE shutdown.
+Jan 05 13:22:04.891 HYPERVISOR: exec_cmd: vm extract_config OE 
+Jan 05 13:22:31.472 HYPERVISOR: exec_cmd: vm get_status OE 
+Jan 05 13:22:31.619 HYPERVISOR: exec_cmd: vm start OE 
+Jan 05 13:27:54.471 HYPERVISOR: exec_cmd: vm get_status OE 
+Jan 05 13:27:54.515 HYPERVISOR: exec_cmd: vm stop OE 
+Jan 05 13:27:54.682 VM: VM OE shutdown.
+Jan 05 13:27:54.685 HYPERVISOR: exec_cmd: vm extract_config OE 
+Jan 05 13:27:56.824 HYPERVISOR: exec_cmd: vm extract_config OE 
+Jan 05 13:27:57.809 HYPERVISOR: exec_cmd: vm extract_config OE 
+Jan 05 13:28:14.330 HYPERVISOR: exec_cmd: vm get_status OE 
+Jan 05 13:28:14.423 HYPERVISOR: exec_cmd: vm extract_config OE 
+Jan 05 13:28:14.542 HYPERVISOR: exec_cmd: vm delete OE 
+Jan 05 13:28:14.542 VM: VM OE destroyed.
+Jan 05 13:28:14.651 HYPERVISOR: exec_cmd: hypervisor stop 
+Jan 05 13:28:14.659 HYPERVISOR: Stopped.
+Jan 05 13:28:14.659 GENERAL: reset done.
